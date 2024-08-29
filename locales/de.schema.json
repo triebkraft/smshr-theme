@@ -337,6 +337,33 @@
         }
       }
     },
+    "color_swatches": {
+      "name": "Farbfelder",
+      "settings": {
+        "option_name": {
+          "label": "Name der Swatch-Option",
+          "info": "Vergewissern Sie sich, dass die Großschreibung mit der Variante übereinstimmt, z.B. Color nicht color",
+          "description": "Wenn Ihr Geschäft in verschiedenen Sprachen ist, geben Sie die verschiedenen Wörter ein und trennen Sie sie durch Kommas. Zum Beispiel: Color, Farbe, Couleur"
+        },
+        "swatch_type": {
+          "label_1": "Farbe",
+          "label_2": "Abweichendes Bild"
+        },
+        "swatch_colors": {
+          "label": "Swatch Farben",
+          "info": "Eine Regel pro Zeile. Beispiel: Blau:#005eff\n 2 Color Swatch Beispiel: GreenRed:#008000#c9002c",
+          "image_info": "Sie können auch [Bilddateien](\/admin\/content\/files?selectedView=all&media_type=Image) anstelle von Farben hinzufügen, in Kleinbuchstaben, wobei Leerzeichen durch Bindestriche ersetzt werden. Beispiel: Grüne Kaki: grün-kaki.png"
+        }
+      }
+    },
+    "store_information": {
+      "name": "Informationen speichern",
+      "settings": {
+        "opening_hours": {
+          "label": "Ladenöffnungszeiten eingeben"
+        }
+      }
+    },
     "brand_information": {
       "name": "Markeninformationen",
       "settings": {
