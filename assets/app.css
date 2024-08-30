@@ -938,16 +938,16 @@ video {
   margin-right: 16px;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .mt-8 {
   margin-top: 2rem;
 }
 
 .mt-\[120px\] {
   margin-top: 120px;
-}
-
-.mt-\[33px\] {
-  margin-top: 33px;
 }
 
 .mt-base {

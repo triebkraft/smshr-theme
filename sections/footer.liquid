@@ -87,23 +87,12 @@
         </div>
       </div>
     </div>
-
-    <div class="mt-[33px]">
-      <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
-      <ul class="list list-payment flex items-center gap-small flex-wrap" role="list">
-        {%- for type in shop.enabled_payment_types -%}
-          <li class="">
-            {{ type | payment_type_svg_tag: class: 'icon w-[30px] h-5' }}
-          </li>
-        {%- endfor -%}
-      </ul>
-    </div>
   </div>
 
-  <div class="overflow-hidden pt-base">
+  <div class="overflow-hidden pt-base mt-5">
     <div class="lg:absolute mb-large lg:mb-0 w-full px-large lg:px-0">
       {% if shop.enabled_payment_types.size > 0 %}
-        <ul class="max-w-[1080px] mx-auto flex pt-small gap-mini flex-grow-0 flex-wrap" role="list">
+        <ul class="max-w-[1080px] mx-auto mb-base flex pt-small gap-mini flex-grow-0 flex-wrap" role="list">
           {%- for type in shop.enabled_payment_types -%}
             <li class="">
               {{ type | payment_type_svg_tag: class: 'icon w-[30px] h-5 !fill-[#D8E3F3]' }}
