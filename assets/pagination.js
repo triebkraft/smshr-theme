@@ -47,8 +47,10 @@ class Paginate extends HTMLElement {
   }
 
   loadNextPage(e) {
-    this.toggleLoading();
-    this.renderNextPage(this.nextUrl);
+    if (this.nextUrl) {
+      this.toggleLoading();
+      this.renderNextPage(this.nextUrl);
+    }
   }
 
   renderNextPage(url) {
@@ -63,13 +65,21 @@ class Paginate extends HTMLElement {
         const newUrl = newProducts.getAttribute('data-next-url');
 
         this.paginationContainer.innerHTML += newProducts.innerHTML;
-        this.nextUrl = newUrl;
+
+        if (newUrl) {
+          this.nextUrl = newUrl;
+          this.paginationContainer.setAttribute('data-next-url', newUrl);
+        }
 
         this.renderItemsCount();
+
+        if (newUrl) {
+          this.loadMoreBtn.classList.toggle('hidden', true);
+        }
       })
       .catch((err) => console.error(err))
       .finally(() => {
-        this.toggleLoading();
+        this.loadMoreSpinner.classList.toggle('hidden', true);
       });
   }
 }
