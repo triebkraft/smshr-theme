@@ -7,44 +7,81 @@
 
   Usage: {% render 'price-filter', filter: filter  %}
 {% endcomment %}
+{% comment %}
+  {% assign max_price_cents = 21999 %}
+
+  {% assign rounding_factor = 1 %}
+
+  {% if max_price_cents < 100 %}
+    {% assign rounding_factor = 10 %}
+  {% elsif max_price_cents < 1000 %}
+    {% assign rounding_factor = 100 %}
+  {% elsif max_price_cents < 10000 %}
+    {% assign rounding_factor = 1000 %}
+  {% else %}
+    {% assign rounding_factor = 10000 %}
+  {% endif %}
+
+
+  <!-- Calculate the number of digits in max_price_cents -->
+  {% assign number_of_digits = max_price_cents | ceil | ceil %}
+
+  <!-- Calculate the rounding factor dynamically based on the number of digits -->
+  {% assign rounding_factor = 10 | times: number_of_digits | divided_by: 10 %}
+
+  {% assign rounded_max = max_price_cents | divided_by: rounding_factor | ceil | times: rounding_factor %}
+  {% assign gap = rounded_max | divided_by: 5 | divided_by: rounding_factor | ceil | times: rounding_factor %}
+
+  <!-- Output -->
+  Rounded Max: {{ rounded_max }} Gap: {{ gap }}
+{% endcomment %}
 
 {% liquid
   if price_groups == blank
     assign max_price_cents = filter.range_max
     assign min_price_cents = 0
+    assign temp_price = max_price_cents | minus: 1
+    assign rounding_factor = 1
 
-    if max_price_cents < 10000
-      assign rounded_max = 10000
-      assign price_ranges = min_price_cents | append: '-' | append: rounded_max
-    else
-      assign rounded_max = max_price_cents | times: 0.0001 | ceil | times: 10000
-      assign gap = rounded_max | divided_by: 5 | times: 0.0001 | ceil | times: 10000
+    for i in (1..10)
+      assign temp_price = temp_price | divided_by: 10
+      assign rounding_factor = rounding_factor | times: 10
 
-      assign price_ranges = ''
+      if temp_price < 10
+        break
+      endif
+    endfor
 
-      assign current_min = min_price_cents
-      assign current_max = gap
+    assign inverse_divisor = rounding_factor | times: 1.0
+    assign inverse_factor = 1 | divided_by: inverse_divisor
 
-      for i in (1..5)
-        assign current_max = current_min | plus: gap
-        if current_max > rounded_max
-          assign current_max = rounded_max
-        endif
+    assign rounded_max = max_price_cents | times: inverse_factor | ceil | times: inverse_divisor | round
+    assign gap = rounded_max | divided_by: 5 | times: inverse_factor | ceil | times: rounding_factor
 
-        assign range = current_min | append: '-' | append: current_max
+    assign price_ranges = ''
 
-        if forloop.first
-          assign price_ranges = range
-        else
-          assign price_ranges = price_ranges | append: ',' | append: range
-        endif
+    assign current_min = min_price_cents
+    assign current_max = gap
 
-        assign current_min = current_max
-        if current_min >= rounded_max
-          break
-        endif
-      endfor
-    endif
+    for i in (1..5)
+      assign current_max = current_min | plus: gap
+      if current_max > rounded_max
+        assign current_max = rounded_max
+      endif
+
+      assign range = current_min | append: '-' | append: current_max
+
+      if forloop.first
+        assign price_ranges = range
+      else
+        assign price_ranges = price_ranges | append: ',' | append: range
+      endif
+
+      assign current_min = current_max
+      if current_min >= rounded_max
+        break
+      endif
+    endfor
 
     assign price_groups = price_ranges | split: ','
   endif
@@ -68,11 +105,6 @@
 
       assign group_value = lower_group_value | append: '-' | append: upper_group_value
       assign label = lower_price | append: ' - ' | append: upper_price
-
-      if forloop.index0 == 0
-        assign prefix = 'Under'
-        assign label = prefix | append: ' ' | append: upper_price
-      endif
 
       assign filter_name = filter.param_name | split: '.' | last | downcase
       assign input_id = id_prefix | append: filter_name | append: group
