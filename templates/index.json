@@ -152,14 +152,14 @@
           "type": "brand-item",
           "settings": {
             "brand_image": "shopify:\/\/shop_images\/logo-victas-1c_1.svg",
-            "brand_url": "shopify:\/\/collections\/victas-belage"
+            "brand_url": "shopify:\/\/collections\/victas"
           }
         },
         "brand_item_KC4A6c": {
           "type": "brand-item",
           "settings": {
             "brand_image": "shopify:\/\/shop_images\/logo-gewo-1c_1.svg",
-            "brand_url": "shopify:\/\/collections\/gewo-belage"
+            "brand_url": "shopify:\/\/collections\/gewo"
           }
         },
         "brand_item_zwhiVc": {
