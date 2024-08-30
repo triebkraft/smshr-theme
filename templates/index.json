@@ -241,7 +241,7 @@
         "brand_item_Xk6kpP": {
           "type": "brand-item",
           "settings": {
-            "brand_image": "shopify:\/\/shop_images\/Kempa.png",
+            "brand_image": "shopify:\/\/shop_images\/logo-kempa-1c.svg",
             "brand_url": "shopify:\/\/collections\/kempa"
           }
         },
@@ -272,6 +272,13 @@
             "brand_image": "shopify:\/\/shop_images\/logo-baden-1c_1.svg",
             "brand_url": "shopify:\/\/collections\/baden"
           }
+        },
+        "brand_item_THWpgA": {
+          "type": "brand-item",
+          "settings": {
+            "brand_image": "shopify:\/\/shop_images\/logo-jako-1c.svg",
+            "brand_url": ""
+          }
         }
       },
       "block_order": [
@@ -282,7 +289,8 @@
         "brand_item_EYAqWf",
         "brand_item_m8p3iE",
         "brand_item_XEpzy6",
-        "brand_item_BdKLDB"
+        "brand_item_BdKLDB",
+        "brand_item_THWpgA"
       ],
       "settings": {
         "headline": "Unsere teamsport marken",
