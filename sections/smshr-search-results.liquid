@@ -9,7 +9,7 @@
 %}
 
 {%- paginate search.results by products_per_page -%}
-  <div class="sticky top-14  bg-white py-2.5 px-base lg:px-0 lg:py-[6px] flex justify-between items-center border-b border-b-grey100 lg:border-b-0 lg:pt-[14px] lg:-mt-small">
+  <div class="sticky top-14 z-10  bg-white py-2.5 px-base lg:px-0 lg:py-[6px] flex justify-between items-center border-b border-b-grey100 lg:border-b-0 lg:pt-[14px] lg:-mt-small">
     <div class="flex flex-col">
       <h4 class="text-body-xs text-grey500">
         {%- if search.performed -%}
@@ -84,50 +84,52 @@
       <div class="collection">
         <div class="loading-overlay gradient"></div>
 
-        <ul
-          id="product-grid"
-          data-next-url="{{ paginate.next.url }}"
-          data-per-page="{{ paginate.page_size }}"
-          data-id="{{section.id}}"
-          class="mx-auto flex flex-wrap justify-center xl:justify-start flex-grow products-wrapper"
-        >
-          {%- for item in search.results -%}
-            {%- case item.object_type -%}
-              {%- when 'product' -%}
-                <li
-                  class="min-[380px]:w-[190px] min-[396px]:w-[198px] lg:basis-[320px] shrink-0 product-item"
-                >
-                  {% render 'product-card', product: item %}
-                </li>
-              {%- else -%}
-            {%- endcase -%}
-          {%- endfor -%}
-        </ul>
+        <pagination-block>
+          <ul
+            id="product-grid"
+            data-next-url="{{ paginate.next.url }}"
+            data-per-page="{{ paginate.page_size }}"
+            data-id="{{section.id}}"
+            class="pagination-wrapper mx-auto flex flex-wrap justify-center xl:justify-start flex-grow products-wrapper"
+          >
+            {%- for item in search.results -%}
+              {%- case item.object_type -%}
+                {%- when 'product' -%}
+                  <li
+                    class="min-[380px]:w-[190px] min-[396px]:w-[198px] lg:basis-[320px] shrink-0 product-item"
+                  >
+                    {% render 'product-card', product: item %}
+                  </li>
+                {%- else -%}
+              {%- endcase -%}
+            {%- endfor -%}
+          </ul>
 
-        {% unless paginate.items == 0 %}
-          <div class="pt-8 pb-12 flex flex-col items-center w-full gap-small">
-            <p id="PaginationCount" class="text-body-xs text-grey500">
-              {{ 'general.pagination.showing' | t }}
-              <span id="item_count"> </span>
-              {{ 'general.pagination.of' | t }}
-              <span id="total_item_count">
-                {{ paginate.items }}
-              </span>
-              {{ 'general.pagination.results' | t }}
-            </p>
-            {% if paginate.pages > 1 %}
-              <div class="flex self-stretch relative justify-center">
-                {% render 'button',
-                  variant: 'secondary',
-                  size: 'lg',
-                  text: 'load more',
-                  classes: 'flex-grow load-more max-w-[360px]'
-                %}
-                {% render 'loading-spinner', class: 'stroke-grey500 load-more-spinner hidden' %}
-              </div>
-            {% endif %}
-          </div>
-        {% endunless %}
+          {% unless paginate.items == 0 %}
+            <div class="pt-8 pb-12 flex flex-col items-center w-full gap-small">
+              <p id="PaginationCount" class="text-body-xs text-grey500">
+                {{ 'general.pagination.showing' | t }}
+                <span id="item_count"> </span>
+                {{ 'general.pagination.of' | t }}
+                <span id="total_item_count">
+                  {{ paginate.items }}
+                </span>
+                {{ 'general.pagination.results' | t }}
+              </p>
+              {% if paginate.pages > 1 %}
+                <div class="flex self-stretch relative justify-center">
+                  {% render 'button',
+                    variant: 'secondary',
+                    size: 'lg',
+                    text: 'load more',
+                    classes: 'flex-grow load-more max-w-[360px]'
+                  %}
+                  {% render 'loading-spinner', class: 'stroke-grey500 load-more-spinner hidden' %}
+                </div>
+              {% endif %}
+            </div>
+          {% endunless %}
+        </pagination-block>
       </div>
     </div>
   </div>
