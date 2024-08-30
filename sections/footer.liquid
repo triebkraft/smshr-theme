@@ -101,9 +101,9 @@
   </div>
 
   <div class="overflow-hidden pt-base">
-    <div class="max-w-[1080px] mx-auto lg:absolute mb-large lg:mb-0 w-full px-large lg:px-0">
+    <div class="lg:absolute mb-large lg:mb-0 w-full px-large lg:px-0">
       {% if shop.enabled_payment_types.size > 0 %}
-        <ul class="flex pt-small gap-mini flex-grow-0 flex-wrap" role="list">
+        <ul class="max-w-[1080px] mx-auto flex pt-small gap-mini flex-grow-0 flex-wrap" role="list">
           {%- for type in shop.enabled_payment_types -%}
             <li class="">
               {{ type | payment_type_svg_tag: class: 'icon w-[30px] h-5 !fill-[#D8E3F3]' }}
@@ -112,7 +112,9 @@
         </ul>
       {% endif %}
 
-      <p class="text-body-xs text-white">&copy; {{ 'now' | date: '%Y' }} Smshrs GmbH. Alle Rechte vorbehalten</p>
+      <p class="max-w-[1080px] mx-auto text-body-xs text-white">
+        &copy; {{ 'now' | date: '%Y' }} Smshrs GmbH. Alle Rechte vorbehalten
+      </p>
     </div>
 
     {% render 'footer-logo', class: 'fill-grey700 relative -bottom-[12px] md:bottom-0 opacity-1/2 w-full' %}
