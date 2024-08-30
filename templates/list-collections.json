@@ -68,6 +68,13 @@
             "image": "shopify:\/\/shop_images\/logo-baden-1c_1.svg",
             "url": "https:\/\/uhlsport.group\/catalog\/2024\/pdf\/kempa\/Kempa_Teamkatalog_2024_DE.pdf"
           }
+        },
+        "brand_item_n7DnqH": {
+          "type": "brand-item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-jako-1c.svg",
+            "url": ""
+          }
         }
       },
       "block_order": [
@@ -77,7 +84,8 @@
         "brand_item_Q9LGCt",
         "brand_item_9cGXb9",
         "brand_item_FY8HgX",
-        "brand_item_NMQ6PY"
+        "brand_item_NMQ6PY",
+        "brand_item_n7DnqH"
       ],
       "settings": {
         "headline": "Brand Catalogue"
