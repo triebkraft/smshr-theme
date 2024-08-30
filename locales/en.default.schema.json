@@ -188,8 +188,8 @@
         "opening_hours": {
           "label": "Enter Store Opening Hours"
         },
-        "copyright_notice":{
-          "label":"Add Copyright Notice"
+        "copyright_notice": {
+          "label": "Add Copyright Notice"
         }
       }
     },
