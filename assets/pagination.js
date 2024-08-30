@@ -66,15 +66,12 @@ class Paginate extends HTMLElement {
 
         this.paginationContainer.innerHTML += newProducts.innerHTML;
 
-        if (newUrl) {
-          this.nextUrl = newUrl;
-          this.paginationContainer.setAttribute('data-next-url', newUrl);
-        }
-
         this.renderItemsCount();
 
         if (newUrl) {
-          this.loadMoreBtn.classList.toggle('hidden', true);
+          this.nextUrl = newUrl;
+          this.paginationContainer.setAttribute('data-next-url', newUrl);
+          this.loadMoreBtn.classList.toggle('hidden', false);
         }
       })
       .catch((err) => console.error(err))
