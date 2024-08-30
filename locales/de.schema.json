@@ -361,6 +361,9 @@
       "settings": {
         "opening_hours": {
           "label": "Ladenöffnungszeiten eingeben"
+        },
+        "copyright_notice": {
+          "label": "Add Copyright Notice Copyright-Hinweis hinzufügen"
         }
       }
     },
