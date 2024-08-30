@@ -16,8 +16,12 @@
     {% render 'price-b' %}
 
     {%- if cart.taxes_included -%}
-      <span class="text-body-xs text-grey500 mt-mini"> ({{ 'products.product.include_taxes' | t }}) </span>
+      <p class="text-body-xs text-grey500 mt-mini">({{ 'products.product.include_taxes' | t }})</p>
     {%- endif -%}
+
+    {% if product.selected_or_first_available_variant.sku %}
+      <p class="text-body-xs text-grey500 mt-mini">{{ product.selected_or_first_available_variant.sku }}</p>
+    {% endif %}
   </div>
 
   <div {{ block.shopify_attributes }}>
