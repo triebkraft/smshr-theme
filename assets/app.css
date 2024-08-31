@@ -970,10 +970,6 @@ video {
   margin-top: 8px;
 }
 
-.mt-\[33px\] {
-  margin-top: 33px;
-}
-
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -1641,6 +1637,16 @@ video {
   row-gap: 20px;
 }
 
+.gap-x-base {
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+
+.gap-x-5 {
+  -moz-column-gap: 1.25rem;
+       column-gap: 1.25rem;
+}
+
 .space-x-3 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.75rem * var(--tw-space-x-reverse));
@@ -2068,6 +2074,11 @@ video {
 .py-small {
   padding-top: 8px;
   padding-bottom: 8px;
+}
+
+.px-14 {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
 }
 
 .\!pl-base {
@@ -3010,6 +3021,14 @@ video {
 }
 
 @media (min-width: 1280px) {
+  .xl\:block {
+    display: block;
+  }
+
+  .xl\:hidden {
+    display: none;
+  }
+
   .xl\:aspect-\[20_\/_27\] {
     aspect-ratio: 20 / 27;
   }

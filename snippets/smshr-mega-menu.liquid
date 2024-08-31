@@ -31,16 +31,25 @@
               </summary>
               <div
                 id="MegaMenu-Content-{{ forloop.index }}"
-                class="mega-menu__content  z-50 gradient motion-reduce global-settings-popup"
+                class="mega-menu__content !bg-white z-50"
                 tabindex="-1"
               >
                 <div class="bg-transparent w-full h-4"></div>
                 <ul
-                  class="mega-menu__list min-h-[80px] !bg-white pt-large pb-huge flex gap-mega justify-center {% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
+                  class="mega-menu__list min-h-[80px] !bg-white pt-large pb-huge flex gap-mega {% if link.links.size < 5 %} justify-center {% else %} px-14 {% endif %}  {% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
                   role="list"
                 >
                   {%- for childlink in link.links -%}
-                    <li class="flex flex-col gap-base min-w-[120px]">
+                    {% assign no_of_columns = childlink.links.size | divided_by: 9.0 | ceil %}
+
+                    <style>
+                      .childlink_container--{{childlink.title | strip}}--{{ forloop.index0 }} {
+                        display: grid;
+                        grid-template-columns: repeat({{ no_of_columns }}, max-content);
+                      }
+                    </style>
+
+                    <li class="flex flex-col gap-base min-w-[120px] shrink-0">
                       <a
                         id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
                         href="{{ childlink.url }}"
@@ -53,7 +62,7 @@
                       </a>
                       {%- if childlink.links != blank -%}
                         <div
-                          class="list-unstyled max-h-[216px] flex flex-col flex-wrap gap-x-huge gap-small"
+                          class="childlink_container--{{childlink.title | strip}}--{{ forloop.index0}} list-unstyled max-h-[216px]  gap-x-5 gap-small"
                           role="list"
                         >
                           {%- for grandchildlink in childlink.links -%}
