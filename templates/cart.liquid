@@ -1,5 +1,9 @@
 {%- style -%}
   @media (min-width: 1024px) {
+    #cart-items-container {
+      width: 44.5% !important;
+    }
+
     #cart-items-container.is-empty {
       width: 100% !important;
     }
@@ -8,11 +12,14 @@
 
 <div class="w-full max-w-[1080px] mx-auto mt-large">
   <div class="flex flex-wrap justify-between gap-y-huge lg:px-large xl:px-0 xl:gap-[120px]">
-    <div id="cart-items-container" class="w-full px-base lg:px-0 {% if cart == empty %} is-empty{% endif %}">
+    <div
+      id="cart-items-container"
+      class=" w-full mx-auto max-w-[750px] px-base lg:px-0 {% if cart == empty %} is-empty{% endif %}"
+    >
       {% section 'main-cart-items-smshr' %}
     </div>
 
-    <div class="w-full px-base lg:w-[33.3%] lg:px-0">
+    <div class="w-full px-base lg:w-[33.3%] lg:px-0  mx-auto max-w-[750px]">
       {% section 'main-cart-checkout' %}
     </div>
   </div>
