@@ -1,0 +1,585 @@
+{% comment %} V 2.0.1 {% endcomment %}
+{% unless request.design_mode %}
+    {% assign metafields = shop.metafields.bc_cookie %}
+
+    {% assign data = null -%}
+    {%- if shop.metafields.bc_cookie.value == blank -%}
+      {%- assign data = shop.metafields.bc_cookie -%}
+    {%- else -%}
+      {%- assign data = shop.metafields.bc_cookie.value -%}
+    {%- endif %}
+
+    {% assign bc_cookie_list = null -%}
+    {%- if data.bc_cookie_list.value == blank -%}
+      {%- assign bc_cookie_list = data.bc_cookie_list -%}
+    {%- else -%}
+      {%- assign bc_cookie_list = data.bc_cookie_list.value -%}
+    {%- endif %}
+
+    {% if data.size > 0 and bc_cookie_list._bc_c_set.live == '1' and content_for_header contains '\/get-script.php' %}
+
+        <script>
+            var sDomain = location.host;
+
+            /****** Start thirdPartyScriptDefinition ******/
+            (function(){
+                  window.thirdPartyScriptDefinition = [
+                      {% comment %}
+                      /* start example
+
+                    {
+                          "src" : "facebook",
+                          "cookie" : "fr",
+                          "provider" : "facebook.com",
+                        "description" : "",
+                          "expires" : 7776000,
+                          "domain" : "facebook.com",
+                        "declaration" : 1,
+                          "group" : "facebook"
+                      },{
+                          "src" : "facebook",
+                          "cookie" : "_fbp",
+                          "provider" : sDomain,
+                        "description" : "",
+                          "expires" : 7776000,
+                        "domain" : sDomain,
+                        "declaration" : 1,
+                          "group" : "facebook"
+                    }
+
+                      end example */
+                      {% endcomment %}
+                  ]
+              })();
+              /****** End thirdPartyScriptDefinition ******/
+
+              {% render 'zload-metafields' %}
+
+        window.thirdPartyScriptDefinition.push(
+                { "src" : "analytics.js", "cookie" : "_shopify_fs", "provider" : "shopify.com", "description" : "", "expires" : 0, "domain" : sDomain, "declaration" : 1, "group" : "shopify" },
+                { "src" : "doubleclick.net","cookie" : "_shopify_fs","provider" : "shopify.com","description" : "","expires" : 0,"domain" : sDomain,"declaration" : 1,"group" : "shopify" },
+                { "src" : "trekkie", "cookie" : "_shopify_fs", "provider" : "shopify.com", "description" : "", "expires" : 0, "domain" : sDomain, "declaration" : 1, "group" : "shopify" },
+                { "src" : "luckyorange", "cookie" : "_shopify_fs", "provider" : "shopify.com", "description" : "", "expires" : 0, "domain" : sDomain, "declaration" : 1, "group" : "shopify" },
+                { "src" : "googletagmanager", "cookie" : "_gat", "provider" : "googletagmanager.com", "description" : "", "expires" : 0, "domain" : sDomain, "declaration" : 1, "group" : "googletagmanager" }
+            );
+
+            {% comment %}
+            /**************************** start custom section *******************************/
+
+            // Declaration of the cookie to be listened to
+
+            /* example start
+
+            var customCookies = {
+               "myCookie" : true,
+               "myOtherCookie" : true
+            };
+
+            example end */
+            {% endcomment %}
+
+            var customCookies = {};
+
+            function BC_GDPR_CustomScriptForShop () {
+                return [
+
+                    function testCookie () {
+                        // your additional script
+                    }
+
+                    {% comment %}
+                    /* example start
+
+                    --------------------------------------------
+                    **************   define function   **************
+
+                    **************   the name of the function is the cookie name   **************
+                    **************   Important, the use of commas as separators    **************
+
+                    function myCookie () {
+                        your additional code
+                    },
+
+                    function myOtherCookie () {
+                        your additional code
+                    }
+
+                    --------------------------------------------
+                    example end */
+
+                    /**************************** End custom section *******************************/
+                    {% endcomment %}
+                ];
+            }
+
+            /**
+            #####################################################################
+            #####                    PRIOR BLOCKING FEATURE                 #####
+            #####################################################################
+            */
+
+            // Convert the Liquid object to a valid JavaScript object
+            let settingsJson = {{ data.settings }}
+
+            // Check if settingsJson is an object and has the priorBlockingEnabled property
+            if (typeof settingsJson === 'object' && settingsJson !== null && 'priorBlockingEnabled' in settingsJson) {
+                window.bc_settings_prior_blocking_enabled = settingsJson.priorBlockingEnabled ?? false;
+            } else {
+                window.bc_settings_prior_blocking_enabled = false; // Default to false if the property doesn't exist
+            }
+
+            /**
+             * Initializes and injects CSS styles into the document to support iframe blocking.
+             * Specifically, it adds styles to create a skeleton loader and to hide iframes that should be blocked.
+             * The styles are added only if they haven't been added already.
+             */
+            function initializeStylesOfIframeBlocking() {
+                // Dynamically add CSS styles
+                if (!document.getElementById('bc-iframe-styles')) {
+                    const style = document.createElement('style');
+                    style.id = 'bc-iframe-styles';
+                    style.innerHTML = `
+                        .bc-iframe-skeleton {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: #f0f0f0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                        }
+                        .bc-iframe-wrapper {
+                            position: relative;
+                            display: inline-block;
+                            width: 100%;
+                            height: 100%;
+                        }
+                        iframe.bc-blocked {
+                            display: none;
+                        }
+                        .bc-button {
+                            background: linear-gradient(145deg, #000000, #1a1a1a);
+                            color: white;
+                            padding: 8px 10px;
+                            border: none;
+                            border-radius: 5px;
+                            cursor: pointer;
+                            font-size: 12px;
+                            font-weight: bold;
+                            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3),
+                                        0 8px 10px rgba(0, 0, 0, 0.2),
+                                        0 12px 20px rgba(0, 0, 0, 0.1);
+                            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+                        }
+
+                        .bc-button:hover {
+                            background: linear-gradient(145deg, #1a1a1a, #000000);
+                            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4),
+                                        0 12px 14px rgba(0, 0, 0, 0.3),
+                                        0 16px 24px rgba(0, 0, 0, 0.2);
+                        }
+                    `;
+                    document.head.appendChild(style);
+                }
+            }
+
+            /**
+             * Initializes the blockable iframes and patterns used to identify them.
+             * Sets up the blockable iframe categories and corresponding URL patterns that can be blocked.
+             * Also converts wildcard patterns to regular expressions for matching.
+             */
+            const initializeBlockableIframes = () => {
+                window._bc_blockable_iframes = new Map();
+                window._bc_blockable_iframe_patterns = [];
+                window._bc_blockable_iframes.set("preferences", [
+                    {url: "google.com/recaptcha", serviceName: "Google Recaptcha"},
+                    {url: "grecaptcha", serviceName: "Google Recaptcha"},
+                    {url: "recaptcha.js", serviceName: "Google Recaptcha"},
+                    {url: "recaptcha/api", serviceName: "Google Recaptcha"},
+                    {url: "apis.google.com/js/platform.js", serviceName: "Google Recaptcha"},
+                    {url: "cdn.livechatinc.com/tracking.js", serviceName: "Livechat"},
+                ]);
+                window._bc_blockable_iframes.set('analytics', [
+                    {url: "vimeo.com", serviceName: "Vimeo"},
+                    {url: "i.vimeocdn.com", serviceName: "Vimeo"},
+                    {url: "google-analytics.com/ga.js", serviceName: "Google Analytics"},
+                    {url: "www.google-analytics.com/analytics.js", serviceName: "Google Analytics"},
+                    {url: "www.googletagmanager.com/gtag/js", serviceName: "Google Analytics"},
+                    {url: "_getTracker", serviceName: "Google Analytics"},
+                    {url: "apis.google.com/js/platform.js", serviceName: "Google Analytics"},
+                    {url: "apis.google.com", serviceName: "Google Map"},
+                    {url: "maps.google.it", serviceName: "Google Map"},
+                    {url: "maps.google.de", serviceName: "Google Map"},
+                    {url: "maps.google.com", serviceName: "Google Map"},
+                    {url: "www.google.com/maps/embed", serviceName: "Google Map"},
+                    {url: "google.com", serviceName: "Google Map"},
+                    {url: "google.maps.", serviceName: "Google Maps"},
+                    {url: "google.com/maps", serviceName: "Google Maps"},
+                    {url: "apis.google.com", serviceName: "Google Maps"},
+                    {url: "maps.google.de", serviceName: "Google Maps"},
+                    {url: "fonts.googleapis.com", serviceName: "Google Fonts"},
+                    {url: "ajax.googleapis.com/ajax/libs/webfont", serviceName: "Google Fonts"},
+                    {url: "fonts.gstatic.com", serviceName: "Google Fonts"},
+                    {url: "www.youtube.com", serviceName: "Youtube"},
+                    {url: "www.youtube.com/iframe_api", serviceName: "Youtube"},
+                    {url: "youtube.com", serviceName: "Youtube"},
+                    {url: "youtube-nocookie.com", serviceName: "Youtube"},
+                    {url: "youtu.be", serviceName: "Youtube"},
+                    {url: "matomo.js", serviceName: "matomo"},
+                    {url: "piwik.js", serviceName: "matomo"},
+                    {url: "soundcloud.com/player", serviceName: "Sound Cloud"},
+                    {url: "openstreetmap.org", serviceName: "Open Street Maps"},
+                    {url: "videopress.com/videopress-iframe", serviceName: "VideoPress"},
+                    {url: "videopress.com/embed", serviceName: "VideoPress"},
+                    {url: "static.hotjar.com", serviceName: "Hotjar"},
+                    {url: "open.spotify.com/embed", serviceName: "Spotify"},
+                    {url: "js.hs-analytics.net", serviceName: "Hubspot"},
+                    {url: "track.hubspot.com", serviceName: "Hubspot"},
+                    {url: "assets.calendly.com", serviceName: "Calendly"},
+                    {url: "calendly.com", serviceName: "Calendly"},
+                    {url: "player.twitch.tv", serviceName: "Twitch"},
+                    {url: "twitch.tv", serviceName: "Twitch"},
+                    {url: "twitch.embed", serviceName: "Twitch"},
+                    {url: "platform.linkedin.com/in.js", serviceName: "Linkedin"},
+                    {url: "linkedin.com/embed/feed/update", serviceName: "Linkedin"},
+                    {url: "instawidget.net/js/instawidget.js", serviceName: "instagram"},
+                    {url: "instagram.com", serviceName: "instagram"},
+                ]);
+                window._bc_blockable_iframes.set("marketing", [
+                    {url: "window.adsbygoogle", serviceName: "Google Ads"},
+                    {url: "4wnet.com", serviceName: "4wnet"},
+                    {url: "platform.twitter.com", serviceName: "Twitter"},
+                    {url: "player.vimeo.com", serviceName: "Vimeo"},
+                    {url: "www.facebook.com/plugins/like.php", serviceName: "Facebook"},
+                    {url: "www.facebook.com/*/plugins/like.php", serviceName: "Facebook"},
+                    {url: "www.facebook.com/plugins/likebox.php", serviceName: "Facebook"},
+                    {url: "www.facebook.com/*/plugins/likebox.php", serviceName: "Facebook"},
+                    {url: "connect.facebook.net", serviceName: "Facebook"},
+                    {url: "facebook.com/plugins", serviceName: "Facebook"},
+                    {url: "dailymotion.com/embed/video/", serviceName: "Dailymotion"},
+                    {url: "geo.dailymotion.com", serviceName: "Dailymotion"},
+                    {url: "disqus.com", serviceName: "Disqus"},
+                    {url: "addthis.com", serviceName: "AddThis"},
+                    {url: "sharethis.com", serviceName: "ShareThis"},
+                    {url: "bat.bing.com", serviceName: "Microsoft Ads"},
+                    {url: "bing.com", serviceName: "Microsoft Bing"},
+                    {url: "window.uetq", serviceName: "Microsoft Advertising Universal Event Tracking"},
+                    {url: "platform.twitter.com", serviceName: "Twitter"},
+                    {url: "twitter-widgets.js", serviceName: "Twitter"},
+                    {url: "assets.pinterest.com", serviceName: "Pinterest"},
+                    {url: "pinmarklet.js", serviceName: "Pinterest"},
+                    {url: "tiktok.com", serviceName: "tiktok"},
+                ]);
+
+                for (let [key, valueArray] of window._bc_blockable_iframes) {
+                    for (let entry of valueArray) {
+                        if (entry.url.includes('*')) {
+                            const regexPattern = entry.url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace('\\*', '.*');
+                            const regex = new RegExp(`^${regexPattern}$`);
+                            window._bc_blockable_iframe_patterns.push({ pattern: regex, type: key, serviceName: entry.serviceName});
+                        } else {
+                            window._bc_blockable_iframe_patterns.push({ pattern: entry.url, type: key, serviceName: entry.serviceName });
+                        }
+                    }
+                }
+            };
+
+            /**
+             * Creates a skeleton function map for special Service like Youtube
+             * that we can generate the placeholder with thumbnails. and in case
+             * it can not generate the special placeholder it should return createIframePlaceholder
+             * as fallback. this way we can in the future add other special placeholders for
+             * other services
+             *
+             * @returns {HTMLElement} The skeleton loader element.
+             */
+            const specialPlaceHoldersFunctions = new Map([
+                ['Youtube', function(serviceName, category, iframeSrc) {
+                    const regex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/embed\/|youtube\.com\/watch\?v=|youtu\.be\/|youtube-nocookie\.com\/embed\/)([a-zA-Z0-9_-]{11})/;
+                    const match = iframeSrc.match(regex);
+                    const videoID = match ? match[1] : null;
+                    if(!videoID){
+                        return createIframePlaceholder(serviceName, category);
+                    }
+
+                    return createIframePlaceholder(serviceName, category, `https://img.youtube.com/vi/${videoID}/maxresdefault.jpg`);
+                }],
+                ['Dailymotion', function(serviceName, category, iframeSrc) {
+                    const patterns = [
+                        /dailymotion\.com\/embed\/video\/([a-zA-Z0-9]+)/, // Direct video embed
+                        /dailymotion\.com\/embed\/playlist\/([a-zA-Z0-9]+)/, // Playlist embed
+                        /dailymotion\.com\/embed\/channel\/([a-zA-Z0-9]+)/, // Channel embed
+                        /dailymotion\.com\/embed\/live\/([a-zA-Z0-9]+)/, // Live embed
+                        /geo\.dailymotion\.com\/player\.html\?video=([a-zA-Z0-9]+)/, // Geo-specific player embed
+                        /dailymotion\.com\/player\.html\?video=([a-zA-Z0-9]+)/ // Player embed (geo or regular)
+                    ];
+                    let videoID;
+
+                    for (let pattern of patterns) {
+                        const match = iframeSrc.match(pattern);
+                        if (match && match[1]) {
+                            videoID = match[1];
+                            break;
+                        }
+                    }
+
+                    if(!videoID){
+                        return createIframePlaceholder(serviceName, category);
+                    }
+
+                    return createIframePlaceholder(serviceName, category, `https://www.dailymotion.com/thumbnail/video/${videoID}`);
+                }],
+                ['Vimeo', function(serviceName, category, iframeSrc) {
+                      const patterns = [
+                          /vimeo\.com\/(\d+)/, // Standard Vimeo URL
+                          /player\.vimeo\.com\/video\/(\d+)/, // Embedded Vimeo video
+
+                        /vimeo\.com\/(\d+)/, // Standard Vimeo URL
+                        /player\.vimeo\.com\/video\/(\d+)/, // Embedded Vimeo video with or without query parameters
+                        /i\.vimeocdn\.com\/video\/(\d+)_/ // CDN/thumbnail URL
+                      ];
+
+                      let videoID;
+
+                      for (let pattern of patterns) {
+                          const match = iframeSrc.match(pattern);
+                          if (match && match[1]) {
+                              videoID = match[1];
+                            console.log('video Id',videoID)
+                              break;
+                          }
+                      }
+
+                      if(!videoID){
+                          return createIframePlaceholder(serviceName, category);
+                      }
+
+                      return createIframePlaceholder(serviceName, category, `https://vumbnail.com/${videoID}.jpg`);
+                  }]
+            ]);
+
+            /**
+             * Creates a placeholder for an iframe that prompts users to accept cookies for a specific category.
+             *
+             * @param {string} serviceName - The name of the service related to the iframe.
+             * @param {string} category - The cookie category that needs to be accepted to unblock the iframe.
+             * @param {string} [imgSrc=''] - The optional image source URL. If provided, the image will be used as a background. Otherwise, an SVG graphic is used.
+             *
+             * @returns {HTMLDivElement} A div element containing the iframe placeholder with a prompt to accept cookies.
+             */
+            function createIframePlaceholder(serviceName, category, imgSrc = '') {
+                // Determine the content and styles based on whether an image source is provided
+                let backgroundContent = '';
+                let outerWrapperStyle = '';
+                let innerContainerStyle = '';
+
+                if (imgSrc) {
+                    backgroundContent = `<img src='${imgSrc}' style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">`;
+                    outerWrapperStyle = `position: relative; width: 100%; height: 100%; overflow: hidden;`
+                    innerContainerStyle = `position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%;height: 100%; color: #000000; background: rgba(255, 255, 255, 0.8); padding: 5%;`
+                } else {
+                    backgroundContent = `<svg width="50%" height="50%" viewBox="0 0 560 315" xmlns="http://www.w3.org/2000/svg" style="background-color: #f0f0f0;">
+                        <defs>
+                            <linearGradient id="shackleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#d0d0d0;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#a0a0a0;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="bodyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#e0e0e0;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#c0c0c0;stop-opacity:1" />
+                            </linearGradient>
+                            <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+                                <feOffset dx="2" dy="2" result="offsetblur"/>
+                                <feMerge>
+                                    <feMergeNode/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <rect width="50%" height="50%" fill="#f0f0f0"/>
+                        <g transform="translate(250, 90) scale(0.8)" filter="url(#shadow)">
+                            <!-- Lock Shackle -->
+                            <path d="M50 20 C35 20 25 30 25 45 L25 60 L75 60 L75 45 C75 30 65 20 50 20 Z" fill="url(#shackleGradient)" stroke="#707070" stroke-width="2"/>
+                            <!-- Lock Body -->
+                            <rect x="20" y="60" width="60" height="70" fill="url(#bodyGradient)" stroke="#707070" stroke-width="2" rx="10" ry="10"/>
+                            <!-- Lock Body Highlight -->
+                            <rect x="25" y="65" width="50" height="60" fill="none" stroke="#ffffff" stroke-width="2" rx="8" ry="8"/>
+                            <!-- Keyhole -->
+                            <circle cx="50" cy="100" r="8" fill="#707070"/>
+                            <rect x="48" y="105" width="4" height="15" fill="#707070"/>
+                            <!-- Keyhole Details -->
+                            <circle cx="50" cy="108" r="2" fill="#505050"/>
+                        </g>
+                    </svg>`
+                    outerWrapperStyle = `align-items: center; display: flex; flex-direction: column; height:100%; justify-content: center; width:100%;`
+                    innerContainerStyle = `text-align: center; height:50%;  font-size: 16px; color: #707070; padding-inline: 5%;`
+                }
+
+                const placeholder = `
+                    <div style="${outerWrapperStyle}">
+                        ${backgroundContent}
+                        <div style="${innerContainerStyle}">
+                            <p>This iframe is for ${serviceName}. If you want to unblock it, you can allow cookies in the ${category} category by clicking this button.</p>
+                            <button class='bc-button bc-thumbnails-button' onclick="handleCategoryConsent('${category}')">Accept ${category} cookies</button>
+                        </div>
+                    </div>
+                `;
+
+                const skeleton = document.createElement('div');
+                skeleton.className = 'bc-iframe-skeleton';
+                skeleton.innerHTML = placeholder;
+
+                return skeleton;
+            }
+
+            /**
+             * Checks if a given URL matches any of the blocked iframe patterns.
+             *
+             * @param {string} url - The URL of the iframe to check.
+             * @returns {Object} An object containing the blocking status and the category of the blocked iframe.
+             *                   Returns {status: true, category: 'category-name'} if the URL is blocked, otherwise {status: false}.
+             */
+            function containsBlockedIframe(url) {
+                for (let entry of window._bc_blockable_iframe_patterns) {
+                    if (entry.pattern instanceof RegExp) {
+                        if (entry.pattern.test(url)) {
+                            return {
+                                status: true,
+                                category: entry.type,
+                                serviceName: entry.serviceName
+                            };
+                        }
+                    } else if(url.includes(entry.pattern)){
+                        return {
+                            status: true,
+                            category: entry.type,
+                            serviceName: entry.serviceName
+                        };
+                    }
+                }
+
+                return false;
+            }
+
+            /**
+             * Handles the blocking of iframes based on their `src` URL and user consent settings.
+             *
+             * The function checks whether an iframe should be blocked by examining its `src` URL.
+             * If blocking is required, the iframe is wrapped in a container, a skeleton loader is added
+             * as a placeholder, and the iframe's `src` is set to `about:blank` to prevent it from loading.
+             * The original `src` and the blocking category are stored as data attributes on the iframe.
+             *
+             * @param {HTMLElement} iframe - The iframe element to be blocked.
+             *
+             * @returns {void} This function does not return any value.
+             */
+            function handleIframeBlocking(iframe) {
+                const { status, category, serviceName } = containsBlockedIframe(iframe.src);
+
+                if('about:blank' === iframe.src ) return;
+
+                if (window.Shopify && window.Shopify.trackingConsent && undefined !== window.Shopify.trackingConsent.currentVisitorConsent()[category]
+                    && 'yes' === window.Shopify.trackingConsent.currentVisitorConsent()[category]
+                ) return;
+
+                if (!status) return;
+
+                const wrapper = document.createElement('div');
+
+                wrapper.className = 'bc-iframe-wrapper';
+                wrapper.style.width = iframe.width + 'px';
+                wrapper.style.height = iframe.height + 'px';
+                if("Dailymotion" ===serviceName){
+                    wrapper.style='position:relative;padding-bottom:56.25%;height:0;overflow:hidden;'
+                }
+                iframe.parentNode.insertBefore(wrapper, iframe);
+                wrapper.appendChild(iframe);
+
+                // Determine which skeleton to use
+                const skeleton = specialPlaceHoldersFunctions.has(serviceName)
+                    ? specialPlaceHoldersFunctions.get(serviceName)(serviceName, category, iframe.src)
+                    : createIframePlaceholder(serviceName, category);
+                wrapper.appendChild(skeleton);
+
+                iframe.setAttribute('bc-original-src', iframe.src);
+                iframe.setAttribute('bc-iframe-category', category);
+                iframe.src = "about:blank";
+                iframe.classList.add('bc-blocked');
+            }
+
+            /**
+             * A callback to check document.readyState and when it is 'loading' start observer
+             * to check every mutation to find iframes before parsing to body of page
+             *
+             * @return {void}
+             */
+            function handleReadyStateChange() {
+                // Define the bcObsever callback function
+                const bcObserverCallback = (mutationsList) => {
+                    for (const mutation of mutationsList) {
+                        if (mutation.type !== 'childList') continue;
+
+                        for (const node of mutation.addedNodes) {
+                            if (node.tagName === 'IFRAME') {
+                                // Intercept the Iframes creations and change the src or them to prevent
+                                // loading of them before dom loads
+                                handleIframeBlocking(node)
+                            }
+                        }
+                    }
+                };
+
+                if ('loading' === document.readyState) {
+                    // The document is still loading
+                    // Create and register an observer or perform actions here
+                    const bcObsever = new MutationObserver(bcObserverCallback);
+                    bcObsever.observe(document, {childList: true, subtree: true});
+                } else if ('complete' === document.readyState) {
+                    // clean up:
+                    // after page load completed we dont need this observer anymore
+                    // disconnect observer after laod completed to avoid slowing down the page
+                    bcObsever.disconnect()
+                }
+            }
+
+            /**
+             * this part is responsible for blocking the iframes injected to dom by any Javascipt
+             * code after the dom loads, to achieve this goal we will intercept iframe creation by
+             * overwriting the createElement if the Element Type is iframe
+             *
+             */
+            if (true === window.bc_settings_prior_blocking_enabled) {
+                const originalCreateElement = document.createElement.bind(document);
+                document.createElement = function (tagName, options) {
+                    const element = originalCreateElement(tagName, options);
+
+                    if (tagName.toLowerCase() === 'iframe') {
+                        try {
+                            const observer = new MutationObserver((mutations) => {
+                                mutations.forEach((mutation) => {
+                                    if (mutation.attributeName === 'src') {
+                                        handleIframeBlocking(element);
+                                        observer.disconnect(); // Stop observing after handling
+                                    }
+                                });
+                            });
+                            observer.observe(element, {attributes: true});
+                        } catch (error) {
+                            console.error("Error during iframe blocking or setting up MutationObserver for iframe:", error);
+                        }
+                    }
+
+                    return element;
+                };
+
+                initializeStylesOfIframeBlocking();
+                initializeBlockableIframes();
+                handleReadyStateChange();
+            }
+        </script>
+    {% endif %}
+{% endunless %}

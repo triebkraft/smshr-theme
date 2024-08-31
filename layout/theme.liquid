@@ -1,52 +1,42 @@
 {%- comment %}<locksmith:8256>{% endcomment -%}
   {%- include 'locksmith' -%}
 {%- comment %}</locksmith:8256>{% endcomment -%}
-
 <!doctype html>
 <html class="js" lang="{{ request.locale.iso_code }}">
-  <head>
+  <head>{% render "load-metafields" %}
     {{ locksmith_initializations }}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
-
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
-
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
-
     {{ 'fonts.css' | asset_url | stylesheet_tag: preload: true }}
-
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
       {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
       {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
     </title>
-
     {% if page_description %}
       {%- comment %}<locksmith:4892>{% endcomment -%}
         {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta name="description" content="{{ page_description | escape }}">{% endif -%}
         {%- comment %}original: <meta name="description" content="{{ page_description | escape }}">{%- endcomment %}
       {%- comment %}</locksmith:4892>{% endcomment -%}
     {% endif %}
-
     {% render 'meta-tags' %}
-
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-
     {{ content_for_header }}
-
     {% comment %} {{ 'base.css' | asset_url | stylesheet_tag }} {% endcomment %}
     {% comment %}
       {%- if request.design_mode -%}
@@ -57,7 +47,6 @@
     {{ 'smshr.css' | asset_url | stylesheet_tag }}
     {{ 'splide-core.min.css' | asset_url | stylesheet_tag }}
     {{ 'splide-data.css' | asset_url | stylesheet_tag }}
-
     {% comment %}
       {%- unless settings.type_body_font.system? -%}
         {% comment %}theme-check-disable AssetPreload{% endcomment %}
@@ -70,36 +59,29 @@
         {% comment %}theme-check-enable AssetPreload{% endcomment %}
       {%- endunless -%}
     {% endcomment %}
-
     {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
       {{ 'component-localization-form.css' | asset_url | stylesheet_tag: preload: true }}
       <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-
     <link
       rel="stylesheet"
       href="{{ 'component-predictive-search.css' | asset_url }}"
       media="print"
       onload="this.media='all'"
     >
-
     <script>
       if (Shopify.designMode) {
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
   </head>
-
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
-
     {% comment %} {% sections 'header-group' %} {% endcomment %}
-
     {% section 'announcement-bar' %}
     {% section 'header' %}
-
     <main
       id="MainContent"
       class="content-for-layout focus-none relative"
@@ -108,16 +90,12 @@
     >
       {{ content_for_layout }}
     </main>
-
     {% comment %} {% sections 'footer-group' %} {% endcomment %}
-
     {% section 'footer' %}
-
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
       <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
     </ul>
-
     <script>
       window.shopUrl = '{{ request.origin }}';
       window.routes = {
@@ -130,12 +108,10 @@
         search_url: '{{ routes.search_url }}',
         collections_list: '{{ routes.collections_url }}',
       };
-
       window.cartStrings = {
         error: `{{ 'sections.cart.cart_error' | t }}`,
         quantityError: `{{ 'sections.cart.cart_quantity_error_html' | t: quantity: '[quantity]' }}`,
       };
-
       window.variantStrings = {
         addToCart: `{{ 'products.product.add_to_cart' | t }}`,
         soldOut: `{{ 'products.product.sold_out' | t }}`,
@@ -143,7 +119,6 @@
         unavailable_with_option: `{{ 'products.product.value_unavailable' | t: option_value: '[value]' }}`,
         jersey_number_required: `{{ 'products.product.jersey_number_required' | t }}`,
       };
-
       window.quickOrderListStrings = {
         itemsAdded: `{{ 'sections.quick_order_list.items_added.other' | t: quantity: '[quantity]' }}`,
         itemAdded: `{{ 'sections.quick_order_list.items_added.one' | t: quantity: '[quantity]' }}`,
@@ -155,7 +130,6 @@
         max_error: `{{- 'sections.quick_order_list.max_error' | t: max: '[max]' }}`,
         step_error: `{{- 'sections.quick_order_list.step_error' | t: step: '[step]' }}`,
       };
-
       window.accessibilityStrings = {
         imageAvailable: `{{ 'products.product.media.image_available' | t: index: '[index]' }}`,
         shareSuccess: `{{ 'general.share.success_message' | t }}`,
@@ -165,7 +139,6 @@
         recipientFormCollapsed: `{{ 'recipient.form.collapsed' | t }}`,
         countrySelectorSearchCount: `{{ 'localization.country_results_count' | t: count: '[count]' }}`,
       };
-
       window.customizationStrings = {
         optionName: `{{ 'Veredelung' | handleize }}`,
         initials: `{{ 'Initialen' | handleize }}`,
@@ -178,7 +151,6 @@
         largeNameAndNumber: `{{ 'Spielername Groß + kleine Nummer' | handleize }}`,
       };
     </script>
-
     <script src="{{ 'splide.min.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'splide-carousel.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
@@ -187,5 +159,5 @@
       Shopify.money_format = '{{ shop.money_format }}';
     </script>
     <script src="{{ 'money-format.js' | asset_url }}" defer="defer"></script>
-  </body>
+  {% render "bc_banner" %}</body>
 </html>
