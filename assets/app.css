@@ -970,10 +970,6 @@ video {
   margin-top: 8px;
 }
 
-.mt-\[33px\] {
-  margin-top: 33px;
-}
-
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -1003,6 +999,10 @@ video {
 
 .grid {
   display: grid;
+}
+
+.contents {
+  display: contents;
 }
 
 .\!hidden {
