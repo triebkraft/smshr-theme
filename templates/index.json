@@ -51,13 +51,24 @@
             "cta_label": "ZUM VEREINSSHOP",
             "url": "https:\/\/smshrs.com\/collections"
           }
+        },
+        "slide_gXUtKE": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/front-view-person-holding-open-sign.png",
+            "heading": "Image slide",
+            "caption": "",
+            "cta_label": "CTA label",
+            "url": ""
+          }
         }
       },
       "block_order": [
         "slide_tKD47w",
         "slide_YFNK7V",
         "slide_Wktd6M",
-        "slide_TfacYE"
+        "slide_TfacYE",
+        "slide_gXUtKE"
       ],
       "settings": {
         "change_slides_speed": 5,
