@@ -1,10 +1,11 @@
-{%- comment %}<locksmith:8256>{% endcomment -%}
+{%- comment %}<locksmith:38f5>{% endcomment -%}
   {%- include 'locksmith' -%}
-{%- comment %}</locksmith:8256>{% endcomment -%}
+{%- comment %}</locksmith:38f5>{% endcomment -%}
+
 <!doctype html>
 <html class="js" lang="{{ request.locale.iso_code }}">
-  <head>{% render "load-metafields" %}
-    {{ locksmith_initializations }}
+  <head>{{ locksmith_initializations }}
+{% render "load-metafields" %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -24,10 +25,10 @@
       {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
     </title>
     {% if page_description %}
-      {%- comment %}<locksmith:4892>{% endcomment -%}
+      {%- comment %}<locksmith:3270>{% endcomment -%}
         {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta name="description" content="{{ page_description | escape }}">{% endif -%}
         {%- comment %}original: <meta name="description" content="{{ page_description | escape }}">{%- endcomment %}
-      {%- comment %}</locksmith:4892>{% endcomment -%}
+      {%- comment %}</locksmith:3270>{% endcomment -%}
     {% endif %}
     {% render 'meta-tags' %}
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
