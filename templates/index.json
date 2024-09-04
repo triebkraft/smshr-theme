@@ -56,8 +56,8 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/banner-eroeffnung-2560x1080-v5.jpg",
-            "heading": "Image slide",
-            "caption": "CODE: ERÖFFNUNG",
+            "heading": "CODE: ERÖFFNUNG",
+            "caption": "",
             "cta_label": "JETZT SHOPPEN!",
             "url": ""
           }
