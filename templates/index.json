@@ -51,13 +51,24 @@
             "cta_label": "ZUM VEREINSSHOP",
             "url": "https:\/\/smshrs.com\/collections"
           }
+        },
+        "slide_p4HEdi": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner-eroeffnung-2560x1080-v5.jpg",
+            "heading": "Image slide",
+            "caption": "CODE: ERÖFFNUNG",
+            "cta_label": "JETZT SHOPPEN!",
+            "url": ""
+          }
         }
       },
       "block_order": [
         "slide_tKD47w",
         "slide_YFNK7V",
         "slide_Wktd6M",
-        "slide_TfacYE"
+        "slide_TfacYE",
+        "slide_p4HEdi"
       ],
       "settings": {
         "change_slides_speed": 5,
