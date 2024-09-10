@@ -12,16 +12,6 @@
     "hero": {
       "type": "hero",
       "blocks": {
-        "slide_E9fKH7": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/2024-04-12_PREMIERE_FUeR_DEN_PLANET_HBL_1.jpg",
-            "heading": "25% AUF ALLES!",
-            "caption": "CODE: ERÖFFNUNG",
-            "cta_label": "",
-            "url": ""
-          }
-        },
         "slide_tKD47w": {
           "type": "slide",
           "settings": {
@@ -64,7 +54,6 @@
         }
       },
       "block_order": [
-        "slide_E9fKH7",
         "slide_tKD47w",
         "slide_YFNK7V",
         "slide_Wktd6M",
