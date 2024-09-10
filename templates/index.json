@@ -22,6 +22,16 @@
             "url": "shopify:\/\/collections\/trikots-t"
           }
         },
+        "slide_48BChH": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mann-mittleren-alters-fuehlt-sich-gluecklich-aufgeregt-und-ueberrascht-ping-pong-konzept.png",
+            "heading": "TISCHTENNIS DEAL",
+            "caption": "WIRD DIREKT IM WARENKORB ABGEZOGEN",
+            "cta_label": "JETZT 20% GÖNNEN",
+            "url": "shopify:\/\/collections\/belage"
+          }
+        },
         "slide_tKD47w": {
           "type": "slide",
           "settings": {
@@ -65,6 +75,7 @@
       },
       "block_order": [
         "slide_NAkeY3",
+        "slide_48BChH",
         "slide_tKD47w",
         "slide_YFNK7V",
         "slide_Wktd6M",
