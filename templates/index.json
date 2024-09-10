@@ -12,6 +12,16 @@
     "hero": {
       "type": "hero",
       "blocks": {
+        "slide_NAkeY3": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/happy-junior-football-team-posing.jpg",
+            "heading": "35% RABATT",
+            "caption": "AUF ALLE TEAMSPORT ARTIKEL",
+            "cta_label": "JETZT SPAREN",
+            "url": "shopify:\/\/collections\/trikots-t"
+          }
+        },
         "slide_tKD47w": {
           "type": "slide",
           "settings": {
@@ -54,6 +64,7 @@
         }
       },
       "block_order": [
+        "slide_NAkeY3",
         "slide_tKD47w",
         "slide_YFNK7V",
         "slide_Wktd6M",
