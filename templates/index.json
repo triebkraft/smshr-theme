@@ -211,13 +211,6 @@
             "brand_image": "shopify:\/\/shop_images\/logo-yasaka-1c_1.svg",
             "brand_url": "shopify:\/\/collections\/yasaka"
           }
-        },
-        "brand_item_JiCHPr": {
-          "type": "brand-item",
-          "settings": {
-            "brand_image": "shopify:\/\/shop_images\/logo-andro-1c.svg",
-            "brand_url": ""
-          }
         }
       },
       "block_order": [
@@ -228,8 +221,7 @@
         "brand_item_zwhiVc",
         "brand_item_pdkQxX",
         "brand_item_iwgQ3z",
-        "brand_item_x9Ctjf",
-        "brand_item_JiCHPr"
+        "brand_item_x9Ctjf"
       ],
       "settings": {
         "headline": "Unsere Tischtennis Marken",
