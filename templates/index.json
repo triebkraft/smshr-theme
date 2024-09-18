@@ -22,16 +22,6 @@
             "url": "shopify:\/\/collections\/trikots-t"
           }
         },
-        "slide_48BChH": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/portrait-young-woman-holding-red-face-against-black-background.jpg",
-            "heading": "BELÄGE & HÖLZER SALE",
-            "caption": "WIRD DIREKT IM WARENKORB ABGEZOGEN",
-            "cta_label": "JETZT 20% GÖNNEN",
-            "url": "shopify:\/\/collections\/belage"
-          }
-        },
         "slide_tKD47w": {
           "type": "slide",
           "settings": {
@@ -75,7 +65,6 @@
       },
       "block_order": [
         "slide_NAkeY3",
-        "slide_48BChH",
         "slide_tKD47w",
         "slide_YFNK7V",
         "slide_Wktd6M",
