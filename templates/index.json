@@ -338,53 +338,6 @@
       ],
       "settings": {
       }
-    },
-    "image_with_text_LKDVh3": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_QtJCpU": {
-          "type": "heading",
-          "settings": {
-            "heading": "smshrs. RABATTSYSTEM",
-            "heading_size": "h1"
-          }
-        },
-        "text_i7f86C": {
-          "type": "text",
-          "settings": {
-            "text": "<p>AKTUELLE RABATTE FÜR DICH:<\/p><p>2 Beläge: 15%<\/p><p>4 Beläge: 20%<\/p><p>10 Beläge: 25%<\/p><p>1-149 €: 10%<\/p><p>_ _ _ _ _ _ _ _ _ _<\/p><p>DU BIST ÜBER EINE BESTIMME BESTELLSUMME? <\/p><p>150-199 €: 15%<\/p><p>200-499 €: 20%<\/p><p>Ab 500 €: 25%<\/p>",
-            "text_style": "body"
-          }
-        },
-        "button_rbdBiY": {
-          "type": "button",
-          "settings": {
-            "button_label": "JETZT SPAREN",
-            "button_link": "shopify:\/\/collections\/belage",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_QtJCpU",
-        "text_i7f86C",
-        "button_rbdBiY"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/portrait-young-woman-holding-red-face-against-black-background.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -394,7 +347,6 @@
     "small_teaser_carousel_nWQ74B",
     "brand_grid_AVdfX6",
     "brand_grid_hr8nUK",
-    "feature_section_B3AKqG",
-    "image_with_text_LKDVh3"
+    "feature_section_B3AKqG"
   ]
 }
