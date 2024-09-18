@@ -107,7 +107,6 @@
     "sale_badge_color_scheme": "scheme-5",
     "sold_out_badge_color_scheme": "scheme-3",
     "opening_hours": "<p>Kundenhotline:<\/p><p>Montag - Freitag: <\/p><p>10 - 17 Uhr<\/p>",
-    "copyright_notice": "Smashers GmbH",
     "social_facebook_link": "",
     "social_instagram_link": "https:\/\/www.instagram.com\/smshrs.official\/",
     "social_youtube_link": "https:\/\/www.youtube.com\/@timvsball",
@@ -123,8 +122,9 @@
     "currency_code_enabled": true,
     "cart_type": "notification",
     "show_vendor": false,
-    "show_cart_note": false,
+    "show_cart_note": true,
     "cart_drawer_collection": "",
+    "copyright_notice": "Smashers GmbH",
     "swatchStyle": "square",
     "store_opening_hours": "Das ist eine Info",
     "sections": {
@@ -284,6 +284,21 @@
       },
       "main-login": {
         "type": "main-login",
+        "settings": {
+        }
+      },
+      "main-cart-items-smshr": {
+        "type": "main-cart-items-smshr",
+        "settings": {
+        }
+      },
+      "main-cart-checkout": {
+        "type": "main-cart-checkout",
+        "settings": {
+        }
+      },
+      "cart-recommendations": {
+        "type": "cart-recommendations",
         "settings": {
         }
       }
