@@ -89,7 +89,7 @@
       role="main"
       tabindex="-1"
     >
-      {{ content_for_layout }}
+      {% capture ICART_FULL_PAGE_LAYOUT %}{{ content_for_layout }}{% endcapture %}{% include 'icart-variables', ICART_FULL_PAGE_LAYOUT: ICART_FULL_PAGE_LAYOUT %}
     </main>
     {% comment %} {% sections 'footer-group' %} {% endcomment %}
     {% section 'footer' %}
