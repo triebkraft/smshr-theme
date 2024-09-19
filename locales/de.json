@@ -165,7 +165,7 @@
         },
         "ordered": {
           "status": "Bestellt",
-          "delivery_text": "Lieferung in ca. 5 Arbeitstagen"
+          "delivery_text": "Lieferung in ca. 5 Werktagen"
         },
         "soon": {
           "status": "Bald verfügbar",
