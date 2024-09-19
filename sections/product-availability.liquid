@@ -29,25 +29,25 @@
 
   if availability == 'in_stock'
     assign icon_class = ' fill-green'
-    assign status = 'Auf Lager'
-    assign text = 'Lieferung in 2-3 Tagen'
+    assign status = 'products.product.product_availability.in_stock.status' | t
+    assign text = 'products.product.product_availability.in_stock.delivery_text' | t
     assign text_class = 'text-green'
 
   elsif availability == 'ordered'
     assign icon_class = ' fill-green'
-    assign status = 'Bestellt'
-    assign text = 'Lieferung in 7-14 Tagen'
+    assign status = 'products.product.product_availability.ordered.status' | t
+    assign text = 'products.product.product_availability.ordered.delivery_text' | t
     assign text_class = 'text-green'
 
   elsif availability == 'soon'
     assign icon_class = ' fill-grey500'
-    assign status = 'Bald verfügbar'
-    assign text = 'Artikel ist ca. ab dem dd.mm.YYYY verfügbar'
+    assign status = 'products.product.product_availability.soon.status' | t
+    assign text = 'products.product.product_availability.soon.delivery_text' | t
     assign text_class = 'text-grey500'
   else
     assign icon_class = ' fill-red'
-    assign status = 'Nicht verfügbar'
-    assign text = 'Dieses Produkt ist nicht länger verfügbar'
+    assign status = 'products.product.product_availability.not_available.status' | t
+    assign text = 'products.product.product_availability.not_available.delivery_text' | t
     assign text_class = ' text-red'
   endif
 -%}

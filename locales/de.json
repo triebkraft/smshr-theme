@@ -131,7 +131,7 @@
         "minimum_of": "Mindestens {{ quantity }}",
         "maximum_of": "Maximal {{ quantity }}",
         "multiples_of": "In {{ quantity }}er Schritten",
-        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}<\/span> im Warenkorb",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> im Warenkorb",
         "note": "Mengenregeln anzeigen",
         "min_of": "Mindestens {{ quantity }}",
         "max_of": "Höchstens {{ quantity }}"
@@ -153,10 +153,28 @@
         "view_store_info": "Shop-Informationen anzeigen",
         "check_other_stores": "Verfügbarkeit in anderen Shops überprüfen",
         "pick_up_available": "Abholung verfügbar",
-        "pick_up_available_at_html": "Abholung bei <span class=\"color-foreground\">{{ location_name }}<\/span> verfügbar",
-        "pick_up_unavailable_at_html": "Abholung bei <span class=\"color-foreground\">{{ location_name }}<\/span> derzeit nicht verfügbar",
+        "pick_up_available_at_html": "Abholung bei <span class=\"color-foreground\">{{ location_name }}</span> verfügbar",
+        "pick_up_unavailable_at_html": "Abholung bei <span class=\"color-foreground\">{{ location_name }}</span> derzeit nicht verfügbar",
         "unavailable": "Verfügbarkeit für Abholungen konnte nicht geladen werden",
         "refresh": "Aktualisieren"
+      },
+      "product_availability": {
+        "in_stock": {
+          "status": "Auf Lager",
+          "delivery_text": "Lieferung in 2-3 Tagen"
+        },
+        "ordered": {
+          "status": "Bestellt",
+          "delivery_text": "Lieferung in ca. 5 Werktagen"
+        },
+        "soon": {
+          "status": "Bald verfügbar",
+          "delivery_text": "Artikel ist ca. ab dem dd.mm.YYYY verfügbar"
+        },
+        "not_available": {
+          "status": "Nicht verfügbar",
+          "delivery_text": "Dieses Produkt ist nicht länger verfügbar"
+        }
       },
       "media": {
         "open_media": "Medien {{ index }} in Modal öffnen",
@@ -170,7 +188,7 @@
       },
       "view_full_details": "Vollständige Details anzeigen",
       "include_taxes": "inkl. MwSt.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Versand<\/a> wird beim Checkout berechnet",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Versand</a> wird beim Checkout berechnet",
       "choose_options": "Optionen auswählen",
       "choose_product_options": "Optionen für {{ product_name }} auswählen",
       "value_unavailable": "{{ option_value }} – nicht verfügbar",
@@ -187,7 +205,7 @@
         "title": "Volumenabhängige Preisgestaltung",
         "note": "Volumenabhängige Preisgestaltung verfügbar",
         "minimum": "{{ quantity }}+",
-        "price_at_each": "bei {{ price }}\/Stück",
+        "price_at_each": "bei {{ price }}/Stück",
         "price_range": "{{ minimum }}–{{ maximum }}"
       },
       "product_variants": "Produktvarianten"
