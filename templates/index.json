@@ -353,11 +353,39 @@
           "settings": {
             "video": "shopify:\/\/files\/videos\/Video 23.06.24, 12 02 22.mov"
           }
+        },
+        "reel_item_4aXXqE": {
+          "type": "reel_item",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/6483c5252cb14db697c690b5d50961e8.mov"
+          }
+        },
+        "reel_item_eFQRkY": {
+          "type": "reel_item",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/6256999a80244d5ba0e233e90a79593f.mov"
+          }
+        },
+        "reel_item_cDWWVr": {
+          "type": "reel_item",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/afda8faec9b0401ebf2770462c74b5ef.mov"
+          }
+        },
+        "reel_item_dDUp7a": {
+          "type": "reel_item",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/AVAssetExportPreset1920x1080.mov"
+          }
         }
       },
       "block_order": [
         "reel_item_f4jkmV",
-        "reel_item_46Qaa3"
+        "reel_item_46Qaa3",
+        "reel_item_4aXXqE",
+        "reel_item_eFQRkY",
+        "reel_item_cDWWVr",
+        "reel_item_dDUp7a"
       ],
       "settings": {
       }
