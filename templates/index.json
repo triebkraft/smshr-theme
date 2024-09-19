@@ -371,12 +371,6 @@
           "settings": {
             "video": "shopify:\/\/files\/videos\/afda8faec9b0401ebf2770462c74b5ef.mov"
           }
-        },
-        "reel_item_dDUp7a": {
-          "type": "reel_item",
-          "settings": {
-            "video": "shopify:\/\/files\/videos\/AVAssetExportPreset1920x1080.mov"
-          }
         }
       },
       "block_order": [
@@ -384,8 +378,7 @@
         "reel_item_46Qaa3",
         "reel_item_4aXXqE",
         "reel_item_eFQRkY",
-        "reel_item_cDWWVr",
-        "reel_item_dDUp7a"
+        "reel_item_cDWWVr"
       ],
       "settings": {
       }
