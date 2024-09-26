@@ -107,6 +107,7 @@
     "sale_badge_color_scheme": "scheme-5",
     "sold_out_badge_color_scheme": "scheme-3",
     "opening_hours": "<p>Kundenhotline:</p><p>Montag - Freitag: </p><p>10 - 17 Uhr</p>",
+    "copyright_notice": "Smashers GmbH",
     "social_facebook_link": "",
     "social_instagram_link": "https://www.instagram.com/smshrs.official/",
     "social_youtube_link": "https://www.youtube.com/@timvsball",
@@ -124,7 +125,6 @@
     "show_vendor": false,
     "show_cart_note": true,
     "cart_drawer_collection": "",
-    "copyright_notice": "Smashers GmbH",
     "swatchStyle": "square",
     "store_opening_hours": "Das ist eine Info",
     "sections": {
@@ -307,19 +307,11 @@
 
     ],
     "blocks": {
-      "127709043890318779": {
-        "type": "shopify://apps/aiod-all-in-1-discount/blocks/install-snippets/9537caf0-36d5-4981-a648-8961a8e85652",
-        "disabled": false,
-        "settings": {
-          "aiod_v2_call": "",
-          "aiod_dev_api_call": ""
-        }
-      },
       "9137299313046473183": {
         "type": "shopify://apps/regios-discounts/blocks/regios_discounts_embed/dc1514bb-4830-4102-bffa-e8b300bac5bd",
         "disabled": false,
         "settings": {
-          "theme_type": "auto_detect",
+          "theme_type": "dawn",
           "currency_code_enabled": false,
           "discount_description": "[discount_message]",
           "discount_description_css": "",
