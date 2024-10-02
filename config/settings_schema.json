@@ -4,8 +4,8 @@
     "theme_name": "Dawn",
     "theme_version": "13.0.0",
     "theme_author": "Shopify",
-    "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
-    "theme_support_url": "https://support.shopify.com/"
+    "theme_documentation_url": "https:\/\/help.shopify.com\/manual\/online-store\/themes",
+    "theme_support_url": "https:\/\/support.shopify.com\/"
   },
   {
     "name": "t:settings_schema.color_swatches.name",
@@ -41,39 +41,13 @@
         "type": "textarea",
         "id": "swatch_colors",
         "label": "t:settings_schema.color_swatches.settings.swatch_colors.label",
-        "default": "Black:#000000\nWhite:#f5f5f5\nBlue:#005eff\nRed:#c9002c\nrot/marine:#ff0000\nrot:#ff0000\nschwarz:#000000\nblau:#0000ff",
+        "default": "Black:#000000\nWhite:#f5f5f5\nBlue:#005eff\nRed:#c9002c\nrot\/marine:#ff0000\nrot:#ff0000\nschwarz:#000000\nblau:#0000ff",
         "info": "t:settings_schema.color_swatches.settings.swatch_colors.info"
       },
       {
         "type": "paragraph",
         "content": "t:settings_schema.color_swatches.settings.swatch_colors.info"
-      },
-      // {
-      //   "type": "select",
-      //   "id": "swatchStyle",
-      //   "label": "Swatch style",
-      //   "options": [
-      //     {
-      //       "value": "round",
-      //       "label": "Round"
-      //     },
-      //     {
-      //       "value": "square",
-      //       "label": "Square"
-      //     },
-      //     {
-      //       "value": "square-round-corners",
-      //       "label": "Square round corners"
-      //     },
-      //     {
-      //       "value": "portrait",
-      //       "label": "Portrait"
-      //     }
-      //   ],
-      //   "default": "round",
-      //   "info": "Portrait mode is only available for the variant image type."
-      // },
-      
+      }
     ]
   },
   {
@@ -1344,13 +1318,7 @@
         "type": "richtext",
         "id": "opening_hours",
         "label": "t:settings_schema.store_information.settings.opening_hours.label"
-      },
-      {
-        "type": "text",
-        "id": "copyright_notice",
-        "label": "t:settings_schema.store_information.settings.copyright_notice.label"
-      },
-     
+      }
     ]
   },
   {

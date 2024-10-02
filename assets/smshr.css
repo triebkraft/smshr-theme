@@ -414,7 +414,6 @@ div.cart-count-bubble:not(.active){
 }
 #page-template{
   margin-top: var(--spacing-mega);
-  min-height: 70vh;
 }
 
 .shopify-challenge__container{
