@@ -5,9 +5,16 @@
   {% render 'title-price'%}
 {% endcomment %}
 
-{% assign title = product.title | default: '' %}
+{% liquid
+  assign title = product.title | default: ''
+  assign vendor = product.vendor | capitalize | default: ''
+%}
 
 <div class="flex flex-col gap-small mb-[36px]">
+  <span class="text-body-sm leading-none">
+    {{ vendor | escape }}
+  </span>
+
   <h1 class="text-t-md text-black">
     {{ title | escape }}
   </h1>
@@ -20,7 +27,9 @@
     {%- endif -%}
 
     {% if product.selected_or_first_available_variant.sku %}
-      <p class="text-body-xs text-grey500 mt-mini">{{ product.selected_or_first_available_variant.sku }}</p>
+      <p class="text-body-xs text-grey500 mt-mini">
+        {{ 'products.product.article_number' | t }}: {{ product.selected_or_first_available_variant.sku }}
+      </p>
     {% endif %}
   </div>
 
