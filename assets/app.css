@@ -2309,7 +2309,7 @@ video {
   line-height: 80%;
 }
 
-.leading-\[1\] {
+.leading-none {
   line-height: 1;
 }
 
@@ -3147,6 +3147,10 @@ video {
 }
 
 @media (min-width: 1536px) {
+  .\32xl\:aspect-\[10_\/_3\] {
+    aspect-ratio: 10 / 3;
+  }
+
   .\32xl\:max-w-\[1400px\] {
     max-width: 1400px;
   }

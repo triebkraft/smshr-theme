@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -14,57 +23,64 @@
         "brand_item_xhNJJK": {
           "type": "brand-item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-derbystar-1c_1.svg",
-            "url": "https:\/\/katalog.derbystar.de\/fb-2024\/"
+            "image": "shopify://shop_images/logo-derbystar-1c_1.svg",
+            "url": "https://katalog.derbystar.de/fb-2024/"
           }
         },
         "brand_item_aNeGRW": {
           "type": "brand-item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-erima-1c_1.svg",
-            "url": "shopify:\/\/collections\/gewo2"
+            "image": "shopify://shop_images/logo-erima-1c_1.svg",
+            "url": "shopify://collections/gewo2"
           }
         },
         "brand_item_K86EWA": {
           "type": "brand-item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-uhlsport-1c_1.svg",
-            "url": "https:\/\/uhlsport.group\/catalog\/2024\/pdf\/uhlsport\/uhlsport_Katalog_Teamwear_2024_DE.pdf"
+            "image": "shopify://shop_images/logo-uhlsport-1c_1.svg",
+            "url": "https://uhlsport.group/catalog/2024/pdf/uhlsport/uhlsport_Katalog_Teamwear_2024_DE.pdf"
           }
         },
         "brand_item_Q9LGCt": {
           "type": "brand-item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Kempa.png",
-            "url": "https:\/\/uhlsport.group\/catalog\/2024\/pdf\/kempa\/Kempa_Teamkatalog_2024_DE.pdf"
+            "image": "shopify://shop_images/Kempa.png",
+            "url": "https://uhlsport.group/catalog/2024/pdf/kempa/Kempa_Teamkatalog_2024_DE.pdf"
           }
         },
         "brand_item_9cGXb9": {
           "type": "brand-item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/R.png",
-            "url": "https:\/\/ballsportdirekt.s3.eu-central-1.amazonaws.com\/PDF\/Teamsport_24_-_GER_text_EUR.pdf"
+            "image": "shopify://shop_images/R.png",
+            "url": "https://ballsportdirekt.s3.eu-central-1.amazonaws.com/PDF/Teamsport_24_-_GER_text_EUR.pdf"
           }
         },
         "brand_item_FY8HgX": {
           "type": "brand-item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-jn-1c_1.svg",
-            "url": "https:\/\/www.daiber.de\/tiny\/Catalogues\/Main_2024\/Main2024_neutral_DE.pdf"
+            "image": "shopify://shop_images/logo-jn-1c_1.svg",
+            "url": "https://www.daiber.de/tiny/Catalogues/Main_2024/Main2024_neutral_DE.pdf"
           }
         },
         "brand_item_NMQ6PY": {
           "type": "brand-item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-baden-1c_1.svg",
-            "url": "https:\/\/uhlsport.group\/catalog\/2024\/pdf\/kempa\/Kempa_Teamkatalog_2024_DE.pdf"
+            "image": "shopify://shop_images/logo-baden-1c_1.svg",
+            "url": "https://uhlsport.group/catalog/2024/pdf/kempa/Kempa_Teamkatalog_2024_DE.pdf"
           }
         },
         "brand_item_n7DnqH": {
           "type": "brand-item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo-jako-1c.svg",
-            "url": "https:\/\/cdn.jako.de\/userdata\/files\/blaetterkatalog\/Katalog_Teamsport_DE\/?_gl=1*ta08dy*_gcl_aw*R0NMLjE3MTgwMDU3NTYuRUFJYUlRb2JDaE1JMnZXZ25yS2toZ01WNG9Sb0NSMkZYd2szRUFRWUp5QUJFZ0xwemZEX0J3RQ..*_gcl_au*NTI4OTg5MjkyLjE3MjUwNDkzNDk."
+            "image": "shopify://shop_images/logo-jako-1c.svg",
+            "url": "https://cdn.jako.de/userdata/files/blaetterkatalog/Katalog_Teamsport_DE/?_gl=1*ta08dy*_gcl_aw*R0NMLjE3MTgwMDU3NTYuRUFJYUlRb2JDaE1JMnZXZ25yS2toZ01WNG9Sb0NSMkZYd2szRUFRWUp5QUJFZ0xwemZEX0J3RQ..*_gcl_au*NTI4OTg5MjkyLjE3MjUwNDkzNDk."
+          }
+        },
+        "brand_item_R8c8wa": {
+          "type": "brand-item",
+          "settings": {
+            "image": "shopify://shop_images/logo-hakro-1c.svg",
+            "url": ""
           }
         }
       },
@@ -76,7 +92,8 @@
         "brand_item_9cGXb9",
         "brand_item_FY8HgX",
         "brand_item_NMQ6PY",
-        "brand_item_n7DnqH"
+        "brand_item_n7DnqH",
+        "brand_item_R8c8wa"
       ],
       "settings": {
         "headline": "Brand Catalogue"
@@ -86,10 +103,10 @@
       "type": "team-callout-teaser",
       "settings": {
         "headline": "DEIN VEREINSSHOP",
-        "image": "shopify:\/\/shop_images\/banner-mannschaftsbild-1x1.jpg",
+        "image": "shopify://shop_images/banner-mannschaftsbild-1x1.jpg",
         "copy": "Du möchtest auch einen individuellen Teamshop für Dich und Deinen Verein? Klicke hier und frage jetzt Deinen eigenen Vereinsshop bei uns an.",
         "cta_label": "Kontaktiere uns",
-        "url": "shopify:\/\/pages\/contact"
+        "url": "shopify://pages/contact"
       }
     },
     "feature_section_rH4qeM": {
@@ -98,7 +115,7 @@
         "feature_item_BLAGrE": {
           "type": "feature-item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/minimal-monochromes-thumbs-up-symbol.png",
+            "image": "shopify://shop_images/minimal-monochromes-thumbs-up-symbol.png",
             "description": "Textilien direkt mit Veredelung bestellen",
             "cta_label": "",
             "cta_url": ""
@@ -107,7 +124,7 @@
         "feature_item_Q7HfQX": {
           "type": "feature-item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/minimal-monochromes-thumbs-up-symbol.png",
+            "image": "shopify://shop_images/minimal-monochromes-thumbs-up-symbol.png",
             "description": "Markenunabhängig",
             "cta_label": "",
             "cta_url": ""
@@ -116,7 +133,7 @@
         "feature_item_hBwchB": {
           "type": "feature-item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/minimal-monochromes-thumbs-up-symbol.png",
+            "image": "shopify://shop_images/minimal-monochromes-thumbs-up-symbol.png",
             "description": "Jedes Mitglied kann einzeln bestellen!",
             "cta_label": "",
             "cta_url": ""

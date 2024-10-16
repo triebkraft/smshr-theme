@@ -522,3 +522,7 @@ div.cart-count-bubble:not(.active){
 .list-menu__item{
   -webkit-font-smoothing: subpixel-antialiased;
 }
+
+.cart__dynamic-checkout-buttons,.cart__dynamic-checkout-buttons.additional-checkout-buttons{
+  margin: 0;
+}
