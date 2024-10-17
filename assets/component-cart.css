@@ -92,12 +92,12 @@ cart-items {
   margin-bottom: 1rem;
 } */
 
-.cart__note {
+/* .cart__note {
   height: fit-content;
   top: 2.5rem;
-}
+} */
 
-.cart__note label {
+/* .cart__note label {
   display: flex;
   align-items: flex-end;
   position: absolute;
@@ -105,14 +105,13 @@ cart-items {
   height: 1.8rem;
   top: -3rem;
   color: rgba(var(--color-foreground), 0.75);
-}
+} */
 
-.cart__note .field__input {
+/* .cart__note .field__input {
   height: 100%;
   position: relative;
-  border-radius: var(--inputs-radius);
   padding: 1rem 2rem;
-}
+} */
 
 .cart__note .text-area {
   resize: vertical;

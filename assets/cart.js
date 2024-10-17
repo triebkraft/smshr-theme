@@ -311,7 +311,6 @@ if (!customElements.get('cart-note')) {
     class CartNote extends HTMLElement {
       constructor() {
         super();
-
         this.addEventListener(
           'input',
           debounce((event) => {
