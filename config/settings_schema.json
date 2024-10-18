@@ -1318,6 +1318,11 @@
         "type": "richtext",
         "id": "opening_hours",
         "label": "t:settings_schema.store_information.settings.opening_hours.label"
+      },
+      {
+        "type": "text",
+        "id": "copyright_notice",
+        "label": "t:settings_schema.store_information.settings.copyright_notice.label"
       }
     ]
   },
