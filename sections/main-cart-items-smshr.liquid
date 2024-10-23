@@ -378,3 +378,17 @@
     </form>
   </div>
 </cart-items>
+
+<div class="mt-4">
+  <cart-note class="cart__note field h-fit">
+    <label class="mb-1 inline-block" for="Cart-note">{{ 'sections.cart.note' | t }}</label>
+
+    <textarea
+      class="text-area field__input h-full rounded relative w-full p-base border border-grey100 resize-y placeholder:!invisible"
+      name="note"
+      form="cart"
+      id="Cart-note"
+      placeholder="{{ 'sections.cart.note' | t }}"
+    >{{ cart.note }}</textarea>
+  </cart-note>
+</div>
