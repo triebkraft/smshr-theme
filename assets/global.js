@@ -1440,11 +1440,19 @@ class ProductAvailability extends HTMLElement {
   constructor() {
     super();
     this.onClickRefreshList = this.onClickRefreshList.bind(this);
-    this.fetchAvailability(this.dataset.variantId);
+    const availabilityAttribute = this.querySelector('#availability-attributes');
+
+    let variantId = availabilityAttribute?.dataset?.variantId;
+    this.fetchAvailability(variantId);
   }
 
   fetchAvailability(variantId) {
+    if (!variantId) {
+      throw new Error('Variant Id required to fetch availability');
+    }
+
     let rootUrl = this.dataset.rootUrl;
+
     if (!rootUrl.endsWith('/')) {
       rootUrl = rootUrl + '/';
     }
@@ -1468,6 +1476,7 @@ class ProductAvailability extends HTMLElement {
   }
 
   renderError() {
+    console.log(this.errorHtml);
     // this.innerHTML = '';
     // this.appendChild(this.errorHtml);
     // this.querySelector('button').addEventListener('click', this.onClickRefreshList);
@@ -1479,7 +1488,8 @@ class ProductAvailability extends HTMLElement {
       this.removeAttribute('available');
       return;
     }
-    this.innerHTML = sectionInnerHTML.querySelector('product-availability').outerHTML;
+
+    this.innerHTML = sectionInnerHTML.querySelector('product-availability').innerHTML;
     this.setAttribute('available', '');
   }
 }
