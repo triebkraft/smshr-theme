@@ -54,14 +54,17 @@
 
 <product-availability
   class="product__product-availabilities quick-add-hidden"
-  {% if product_variant.product.selected_or_first_available_variant.available %}
+  {% if product.selected_or_first_available_variant.available %}
     available
   {% endif %}
   data-root-url="{{ routes.root_url }}"
-  data-variant-id="{{ product_variant.product.selected_or_first_available_variant.id }}"
-  data-has-only-default-variant="{{ product_variant.product.has_only_default_variant }}"
 >
-  <div class="flex gap-mini items-center py-micro">
+  <div
+    class="flex gap-mini items-center py-micro"
+    id="availability-attributes"
+    data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+    data-has-only-default-variant="{{ product.has_only_default_variant }}"
+  >
     <div class="{{ icon_class }} w-base h-base">
       {% case availability %}
         {% when 'in_stock' %}
