@@ -12,6 +12,16 @@
     "hero": {
       "type": "hero",
       "blocks": {
+        "slide_qW9TYm": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/banner-eroeffnung-2560x1080-v4_cff51bf5-423f-4644-ad92-0fe95d9ead32.jpg",
+            "heading": "COLD DAYS",
+            "caption": "35 % RABATT!",
+            "cta_label": "JETZT SPAREN",
+            "url": "shopify://products/winter-set"
+          }
+        },
         "slide_NAkeY3": {
           "type": "slide",
           "settings": {
@@ -51,24 +61,14 @@
             "cta_label": "ZUM VEREINSSHOP",
             "url": "https://smshrs.com/collections"
           }
-        },
-        "slide_qW9TYm": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/banner-eroeffnung-2560x1080-v4_cff51bf5-423f-4644-ad92-0fe95d9ead32.jpg",
-            "heading": "COLD DAYS",
-            "caption": "35 % RABATT!",
-            "cta_label": "JETZT SPAREN",
-            "url": "shopify://products/winter-set"
-          }
         }
       },
       "block_order": [
+        "slide_qW9TYm",
         "slide_NAkeY3",
         "slide_tKD47w",
         "slide_Wktd6M",
-        "slide_TfacYE",
-        "slide_qW9TYm"
+        "slide_TfacYE"
       ],
       "settings": {
         "change_slides_speed": 5,
