@@ -97,9 +97,6 @@
               class="pagination-wrapper mx-auto flex flex-wrap justify-center xl:justify-start flex-grow products-wrapper"
             >
               {%- for product in collection.products -%}
-                {%- comment %}<locksmith:918a>{% endcomment -%}
-                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                {%- comment %}</locksmith:918a>{% endcomment -%}
                 <li
                   class="min-[380px]:w-[190px] min-[396px]:w-[198px] lg:basis-[320px] shrink-0 product-item"
                 >
