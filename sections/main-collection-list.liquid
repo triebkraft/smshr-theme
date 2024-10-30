@@ -61,9 +61,6 @@
     role="list"
   >
     {%- for collection in clubs_collection -%}
-      {%- comment %}<locksmith:0657>{% endcomment -%}
-        {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-      {%- comment %}</locksmith:0657>{% endcomment -%}
       <li class="grid-item">
         {% render 'collection-card', card_collection: collection %}
       </li>

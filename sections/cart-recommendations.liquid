@@ -27,9 +27,6 @@
           <div class="splide__track">
             <ul class="splide__list">
               {% for product in recommendations.products %}
-                {%- comment %}<locksmith:8694>{% endcomment -%}
-                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: recommendations, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                {%- comment %}</locksmith:8694>{% endcomment -%}
                 <li class="splide__slide">
                   {% render 'product-card', product: product, class: '!border-0' %}
                 </li>
