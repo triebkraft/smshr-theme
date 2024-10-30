@@ -23,9 +23,6 @@
           <div class="splide__track">
             <ul class="splide__list carousel-list">
               {% for block in video_block %}
-                {%- comment %}<locksmith:bd28>{% endcomment -%}
-                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: block, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                {%- comment %}</locksmith:bd28>{% endcomment -%}
                 {% assign reel = block.settings %}
                 <li class="splide__slide">
                   {% render 'tiktok-vid', video: reel.video %}
@@ -46,9 +43,6 @@
             </svg>
 
             {% for block in link_block %}
-              {%- comment %}<locksmith:5271>{% endcomment -%}
-                {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: block, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-              {%- comment %}</locksmith:5271>{% endcomment -%}
               {% assign link = block.settings %}
               {% render 'button', variant: 'secondary', size: 'sm', text: link.cta_label, url: link.cta_url %}
             {% endfor %}
