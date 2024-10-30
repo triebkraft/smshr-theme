@@ -1,6 +1,6 @@
-{%- comment %}<locksmith:8d1d>{% endcomment -%}
+{%- comment %}<locksmith:04ed>{% endcomment -%}
   {%- include 'locksmith' -%}
-{%- comment %}</locksmith:8d1d>{% endcomment -%}
+{%- comment %}</locksmith:04ed>{% endcomment -%}
 
 <!doctype html>
 <html class="js" lang="{{ request.locale.iso_code }}">
@@ -28,10 +28,10 @@
     </title>
 
     {% if page_description %}
-      {%- comment %}<locksmith:fb14>{% endcomment -%}
+      {%- comment %}<locksmith:2a58>{% endcomment -%}
         {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta name="description" content="{{ page_description | escape }}">{% endif -%}
         {%- comment %}original: <meta name="description" content="{{ page_description | escape }}">{%- endcomment %}
-      {%- comment %}</locksmith:fb14>{% endcomment -%}
+      {%- comment %}</locksmith:2a58>{% endcomment -%}
     {% endif %}
 
     {% render 'meta-tags' %}
