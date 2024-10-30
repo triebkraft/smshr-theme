@@ -97,27 +97,3 @@
 .collection__view-all a:not(.link) {
   margin-top: 1rem;
 }
-
-
-
-
-/* input::placeholder {
-  visibility: hidden;
-} */
-
-/* .text-input ~ label {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: all 150ms ease-in-out;
-} */
-
-/* .text-input:not(:placeholder-shown) ~ label,
-.text-input:focus ~ label,
-.text-input:-webkit-autofill ~ label {
-  transform: scale(0.65);
-  left: 0;
-  top: -2px;
-} */
-
