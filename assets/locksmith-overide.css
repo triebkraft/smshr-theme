@@ -1,0 +1,36 @@
+
+.locksmith-passcode-container, #locksmith-passcode-form{
+  width: 100% !important;
+  max-width: unset !important;
+  margin: 0 !important;
+}
+
+
+.locksmith-form{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  padding: 64px 0;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.locksmith-banner{
+  width: 150px;
+  height:150px;
+  border-radius: 100%;
+  background-color: #D9D9D9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.locksmith-image{
+  width: 120px;
+}
+
+.locksmith-container{
+  width: 100%;
+  padding: 0 16px;
+}

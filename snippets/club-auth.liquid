@@ -1,0 +1,45 @@
+{{ 'locksmith-overide.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign emblem = collection.image | default: collection.metafields.custom.club_emblem.value
+%}
+
+<div class="w-full bg-grey50 py-large">
+  <div class="flex items-center flex-wrap justify-center gap-small">
+    <div class="p-large w-[240px]">
+      {{ emblem | image_url: width: 576 | image_tag: class: 'w-full h-auto', alt: collection.image.alt }}
+    </div>
+
+    <h1 class="text-h-lg text-center break-all">
+      <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
+      {{- collection.title | escape -}}
+    </h1>
+  </div>
+</div>
+
+<div class="locksmith-passcode-container">
+  <div class="locksmith-form">
+    <div class="locksmith-banner">
+      {{ emblem | image_url: width: 576 | image_tag: class: 'locksmith-image', alt: collection.image.alt }}
+    </div>
+    <p class="locksmith-container">
+      <input
+        autofocus
+        id="locksmith_passcode"
+        class="locksmith-passcode {% if locksmith_passcode_attempted %}failed{% endif %} text-input"
+        placeholder="Passwort eingeben"
+      >
+    </p>
+  </div>
+</div>
+
+<script>
+  var passcodeForm = document.getElementById('locksmith_passcode_form');
+  passcodeForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var passcode = document.getElementById('locksmith_passcode').value;
+    /* REMOVE THIS LINE and insert any desired transforms to passcode here */
+    console.log(Locksmith.submitPasscode, 'CODE', passcode);
+    Locksmith.submitPasscode(passcode, event);
+  });
+</script>
