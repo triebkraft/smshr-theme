@@ -9,14 +9,8 @@
       "id":{{collection.id}},
       "product_data":{
             {% paginate collection.products by limit %}
-            {%- comment %}<locksmith:83da>{% endcomment -%}
-              {%- assign locksmith_2f74_forloop__size = 0 %}{% for product in collection.products %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_2f74_forloop__size = locksmith_2f74_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_2f74_forloop__index = nil -%}
-            {%- comment %}</locksmith:83da>{% endcomment -%}
             {% for product in collection.products %}
-                {%- comment %}<locksmith:67b4>{% endcomment -%}
-                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_2f74_forloop__index == nil %}{% assign locksmith_2f74_forloop__index = 1 %}{% assign locksmith_2f74_forloop__index0 = 0 %}{% else %}{% assign locksmith_2f74_forloop__index = locksmith_2f74_forloop__index | plus: 1 %}{% assign locksmith_2f74_forloop__index0 = locksmith_2f74_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_2f74_forloop__index == 1 %}{% assign locksmith_2f74_forloop__first = true %}{% else %}{% assign locksmith_2f74_forloop__first = false %}{% endif %}{% if locksmith_2f74_forloop__index == locksmith_2f74_forloop__size %}{% assign locksmith_2f74_forloop__last = true %}{% else %}{% assign locksmith_2f74_forloop__last = false %}{% endif %}{% assign locksmith_2f74_forloop__rindex = locksmith_2f74_forloop__size | minus: locksmith_2f74_forloop__index | minus: 1 %}{% assign locksmith_2f74_forloop__rindex0 = locksmith_2f74_forloop__size | minus: locksmith_2f74_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
-                {%- comment %}</locksmith:67b4>{% endcomment -%}
-                "{{ locksmith_2f74_forloop__index }}" : {{product | json }}{%- if locksmith_2f74_forloop__index != collection.products.length -%},{%-endif-%}
+                "{{ forloop.index }}" : {{product | json }}{%- if forloop.index != collection.products.length -%},{%-endif-%}
             {% endfor %}
             {% endpaginate %}
       }
