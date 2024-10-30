@@ -13,9 +13,9 @@
 	{% assign cartProdWiseCollIdArr = "" | split: '' %}
 	{% assign cartCollName = "" %}
 	{% for collection in item.product.collections %}
-	  {%- comment %}<locksmith:0918>{% endcomment -%}
+	  {%- comment %}<locksmith:04ef>{% endcomment -%}
 	    {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: collection, subject_parent: item.product, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-	  {%- comment %}</locksmith:0918>{% endcomment -%}
+	  {%- comment %}</locksmith:04ef>{% endcomment -%}
 	  {% assign cartCollId = collection.id | split: ',' %}
 	  {% assign cartProdCollIdArr = cartProdCollIdArr | concat: cartCollId %}
 	  {% assign cartProdWiseCollIdArr = cartProdWiseCollIdArr | concat: cartCollId %}

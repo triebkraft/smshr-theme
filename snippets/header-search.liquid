@@ -150,16 +150,16 @@
                     <div class="relative">
                       <div class="splide__track">
                         <ul class="splide__list carousel-list">
-                          {%- comment %}<locksmith:98a1>{% endcomment -%}
-                            {%- assign locksmith_6f8c_forloop__size = 0 %}{% for product in popular_picks.products %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: popular_picks, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_6f8c_forloop__size = locksmith_6f8c_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_6f8c_forloop__index = nil -%}
-                          {%- comment %}</locksmith:98a1>{% endcomment -%}
+                          {%- comment %}<locksmith:25e5>{% endcomment -%}
+                            {%- assign locksmith_2762_forloop__size = 0 %}{% for product in popular_picks.products %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: popular_picks, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_2762_forloop__size = locksmith_2762_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_2762_forloop__index = nil -%}
+                          {%- comment %}</locksmith:25e5>{% endcomment -%}
                           {% for product in popular_picks.products %}
-                            {%- comment %}<locksmith:6fd7>{% endcomment -%}
-                              {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: popular_picks, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_6f8c_forloop__index == nil %}{% assign locksmith_6f8c_forloop__index = 1 %}{% assign locksmith_6f8c_forloop__index0 = 0 %}{% else %}{% assign locksmith_6f8c_forloop__index = locksmith_6f8c_forloop__index | plus: 1 %}{% assign locksmith_6f8c_forloop__index0 = locksmith_6f8c_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_6f8c_forloop__index == 1 %}{% assign locksmith_6f8c_forloop__first = true %}{% else %}{% assign locksmith_6f8c_forloop__first = false %}{% endif %}{% if locksmith_6f8c_forloop__index == locksmith_6f8c_forloop__size %}{% assign locksmith_6f8c_forloop__last = true %}{% else %}{% assign locksmith_6f8c_forloop__last = false %}{% endif %}{% assign locksmith_6f8c_forloop__rindex = locksmith_6f8c_forloop__size | minus: locksmith_6f8c_forloop__index | minus: 1 %}{% assign locksmith_6f8c_forloop__rindex0 = locksmith_6f8c_forloop__size | minus: locksmith_6f8c_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
-                            {%- comment %}</locksmith:6fd7>{% endcomment -%}
+                            {%- comment %}<locksmith:c915>{% endcomment -%}
+                              {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: popular_picks, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_2762_forloop__index == nil %}{% assign locksmith_2762_forloop__index = 1 %}{% assign locksmith_2762_forloop__index0 = 0 %}{% else %}{% assign locksmith_2762_forloop__index = locksmith_2762_forloop__index | plus: 1 %}{% assign locksmith_2762_forloop__index0 = locksmith_2762_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_2762_forloop__index == 1 %}{% assign locksmith_2762_forloop__first = true %}{% else %}{% assign locksmith_2762_forloop__first = false %}{% endif %}{% if locksmith_2762_forloop__index == locksmith_2762_forloop__size %}{% assign locksmith_2762_forloop__last = true %}{% else %}{% assign locksmith_2762_forloop__last = false %}{% endif %}{% assign locksmith_2762_forloop__rindex = locksmith_2762_forloop__size | minus: locksmith_2762_forloop__index | minus: 1 %}{% assign locksmith_2762_forloop__rindex0 = locksmith_2762_forloop__size | minus: locksmith_2762_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+                            {%- comment %}</locksmith:c915>{% endcomment -%}
                             <li class="splide__slide">
                               {% liquid
-                                if locksmith_6f8c_forloop__first
+                                if locksmith_2762_forloop__first
                                   assign card_class = ' lg:!pl-0'
                                 else
                                   assign card_class = ' '

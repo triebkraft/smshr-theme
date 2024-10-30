@@ -28,18 +28,18 @@
       class="collection-list grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
       role="list"
     >
-      {%- comment %}<locksmith:921a>{% endcomment -%}
-        {%- assign locksmith_2fab_forloop__size = 0 %}{%- for collection in collections -%}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: collection, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_2fab_forloop__size = locksmith_2fab_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_2fab_forloop__index = nil -%}
-      {%- comment %}</locksmith:921a>{% endcomment -%}
+      {%- comment %}<locksmith:92bd>{% endcomment -%}
+        {%- assign locksmith_831e_forloop__size = 0 %}{%- for collection in collections -%}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: collection, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_831e_forloop__size = locksmith_831e_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_831e_forloop__index = nil -%}
+      {%- comment %}</locksmith:92bd>{% endcomment -%}
       {%- for collection in collections -%}
-        {%- comment %}<locksmith:b972>{% endcomment -%}
-          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_2fab_forloop__index == nil %}{% assign locksmith_2fab_forloop__index = 1 %}{% assign locksmith_2fab_forloop__index0 = 0 %}{% else %}{% assign locksmith_2fab_forloop__index = locksmith_2fab_forloop__index | plus: 1 %}{% assign locksmith_2fab_forloop__index0 = locksmith_2fab_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_2fab_forloop__index == 1 %}{% assign locksmith_2fab_forloop__first = true %}{% else %}{% assign locksmith_2fab_forloop__first = false %}{% endif %}{% if locksmith_2fab_forloop__index == locksmith_2fab_forloop__size %}{% assign locksmith_2fab_forloop__last = true %}{% else %}{% assign locksmith_2fab_forloop__last = false %}{% endif %}{% assign locksmith_2fab_forloop__rindex = locksmith_2fab_forloop__size | minus: locksmith_2fab_forloop__index | minus: 1 %}{% assign locksmith_2fab_forloop__rindex0 = locksmith_2fab_forloop__size | minus: locksmith_2fab_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
-        {%- comment %}</locksmith:b972>{% endcomment -%}
+        {%- comment %}<locksmith:7461>{% endcomment -%}
+          {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_831e_forloop__index == nil %}{% assign locksmith_831e_forloop__index = 1 %}{% assign locksmith_831e_forloop__index0 = 0 %}{% else %}{% assign locksmith_831e_forloop__index = locksmith_831e_forloop__index | plus: 1 %}{% assign locksmith_831e_forloop__index0 = locksmith_831e_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_831e_forloop__index == 1 %}{% assign locksmith_831e_forloop__first = true %}{% else %}{% assign locksmith_831e_forloop__first = false %}{% endif %}{% if locksmith_831e_forloop__index == locksmith_831e_forloop__size %}{% assign locksmith_831e_forloop__last = true %}{% else %}{% assign locksmith_831e_forloop__last = false %}{% endif %}{% assign locksmith_831e_forloop__rindex = locksmith_831e_forloop__size | minus: locksmith_831e_forloop__index | minus: 1 %}{% assign locksmith_831e_forloop__rindex0 = locksmith_831e_forloop__size | minus: locksmith_831e_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+        {%- comment %}</locksmith:7461>{% endcomment -%}
         <li
           class="collection-list__item grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {% if settings.animations_reveal_on_scroll %}
             data-cascade
-            style="--animation-order: {{ locksmith_2fab_forloop__index }};"
+            style="--animation-order: {{ locksmith_831e_forloop__index }};"
           {% endif %}
         >
           {% render 'card-collection',

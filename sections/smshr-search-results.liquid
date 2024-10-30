@@ -93,9 +93,9 @@
             class="pagination-wrapper mx-auto flex flex-wrap justify-center xl:justify-start flex-grow products-wrapper"
           >
             {%- for item in search.results -%}
-              {%- comment %}<locksmith:08ce>{% endcomment -%}
+              {%- comment %}<locksmith:cebe>{% endcomment -%}
                 {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: item, subject_parent: search, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-              {%- comment %}</locksmith:08ce>{% endcomment -%}
+              {%- comment %}</locksmith:cebe>{% endcomment -%}
               {%- case item.object_type -%}
                 {%- when 'product' -%}
                   <li

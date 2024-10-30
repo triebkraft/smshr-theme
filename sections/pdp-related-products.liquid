@@ -21,16 +21,16 @@
         <div class="relative">
           <div class="splide__track">
             <ul class="splide__list">
-              {%- comment %}<locksmith:97c0>{% endcomment -%}
-                {%- assign locksmith_7d30_forloop__size = 0 %}{% for product in recommendations.products %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: recommendations, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_7d30_forloop__size = locksmith_7d30_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_7d30_forloop__index = nil -%}
-              {%- comment %}</locksmith:97c0>{% endcomment -%}
+              {%- comment %}<locksmith:d4da>{% endcomment -%}
+                {%- assign locksmith_9b34_forloop__size = 0 %}{% for product in recommendations.products %}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: recommendations, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_9b34_forloop__size = locksmith_9b34_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_9b34_forloop__index = nil -%}
+              {%- comment %}</locksmith:d4da>{% endcomment -%}
               {% for product in recommendations.products %}
-                {%- comment %}<locksmith:f4be>{% endcomment -%}
-                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: recommendations, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_7d30_forloop__index == nil %}{% assign locksmith_7d30_forloop__index = 1 %}{% assign locksmith_7d30_forloop__index0 = 0 %}{% else %}{% assign locksmith_7d30_forloop__index = locksmith_7d30_forloop__index | plus: 1 %}{% assign locksmith_7d30_forloop__index0 = locksmith_7d30_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_7d30_forloop__index == 1 %}{% assign locksmith_7d30_forloop__first = true %}{% else %}{% assign locksmith_7d30_forloop__first = false %}{% endif %}{% if locksmith_7d30_forloop__index == locksmith_7d30_forloop__size %}{% assign locksmith_7d30_forloop__last = true %}{% else %}{% assign locksmith_7d30_forloop__last = false %}{% endif %}{% assign locksmith_7d30_forloop__rindex = locksmith_7d30_forloop__size | minus: locksmith_7d30_forloop__index | minus: 1 %}{% assign locksmith_7d30_forloop__rindex0 = locksmith_7d30_forloop__size | minus: locksmith_7d30_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
-                {%- comment %}</locksmith:f4be>{% endcomment -%}
+                {%- comment %}<locksmith:ab43>{% endcomment -%}
+                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: recommendations, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_9b34_forloop__index == nil %}{% assign locksmith_9b34_forloop__index = 1 %}{% assign locksmith_9b34_forloop__index0 = 0 %}{% else %}{% assign locksmith_9b34_forloop__index = locksmith_9b34_forloop__index | plus: 1 %}{% assign locksmith_9b34_forloop__index0 = locksmith_9b34_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_9b34_forloop__index == 1 %}{% assign locksmith_9b34_forloop__first = true %}{% else %}{% assign locksmith_9b34_forloop__first = false %}{% endif %}{% if locksmith_9b34_forloop__index == locksmith_9b34_forloop__size %}{% assign locksmith_9b34_forloop__last = true %}{% else %}{% assign locksmith_9b34_forloop__last = false %}{% endif %}{% assign locksmith_9b34_forloop__rindex = locksmith_9b34_forloop__size | minus: locksmith_9b34_forloop__index | minus: 1 %}{% assign locksmith_9b34_forloop__rindex0 = locksmith_9b34_forloop__size | minus: locksmith_9b34_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+                {%- comment %}</locksmith:ab43>{% endcomment -%}
                 <li class="splide__slide">
                   {% liquid
-                    if locksmith_7d30_forloop__first
+                    if locksmith_9b34_forloop__first
                       assign card_class = ' lg:!pl-0'
                     else
                       assign card_class = ' '

@@ -151,22 +151,22 @@
                 {% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %}
               "
             >
-              {%- comment %}<locksmith:f6f6>{% endcomment -%}
-                {%- assign locksmith_c1c9_forloop__size = 0 %}{%- for product in collection.products -%}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_c1c9_forloop__size = locksmith_c1c9_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_c1c9_forloop__index = nil -%}
-              {%- comment %}</locksmith:f6f6>{% endcomment -%}
+              {%- comment %}<locksmith:884f>{% endcomment -%}
+                {%- assign locksmith_35cd_forloop__size = 0 %}{%- for product in collection.products -%}{% capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_35cd_forloop__size = locksmith_35cd_forloop__size | plus: 1 %}{% endif %}{% endfor %}{% assign locksmith_35cd_forloop__index = nil -%}
+              {%- comment %}</locksmith:884f>{% endcomment -%}
               {%- for product in collection.products -%}
-                {%- comment %}<locksmith:ea4a>{% endcomment -%}
-                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_c1c9_forloop__index == nil %}{% assign locksmith_c1c9_forloop__index = 1 %}{% assign locksmith_c1c9_forloop__index0 = 0 %}{% else %}{% assign locksmith_c1c9_forloop__index = locksmith_c1c9_forloop__index | plus: 1 %}{% assign locksmith_c1c9_forloop__index0 = locksmith_c1c9_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_c1c9_forloop__index == 1 %}{% assign locksmith_c1c9_forloop__first = true %}{% else %}{% assign locksmith_c1c9_forloop__first = false %}{% endif %}{% if locksmith_c1c9_forloop__index == locksmith_c1c9_forloop__size %}{% assign locksmith_c1c9_forloop__last = true %}{% else %}{% assign locksmith_c1c9_forloop__last = false %}{% endif %}{% assign locksmith_c1c9_forloop__rindex = locksmith_c1c9_forloop__size | minus: locksmith_c1c9_forloop__index | minus: 1 %}{% assign locksmith_c1c9_forloop__rindex0 = locksmith_c1c9_forloop__size | minus: locksmith_c1c9_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
-                {%- comment %}</locksmith:ea4a>{% endcomment -%}
+                {%- comment %}<locksmith:5e0b>{% endcomment -%}
+                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: product, subject_parent: collection, variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% if locksmith_35cd_forloop__index == nil %}{% assign locksmith_35cd_forloop__index = 1 %}{% assign locksmith_35cd_forloop__index0 = 0 %}{% else %}{% assign locksmith_35cd_forloop__index = locksmith_35cd_forloop__index | plus: 1 %}{% assign locksmith_35cd_forloop__index0 = locksmith_35cd_forloop__index0 | plus: 1 %}{% endif %}{% if locksmith_35cd_forloop__index == 1 %}{% assign locksmith_35cd_forloop__first = true %}{% else %}{% assign locksmith_35cd_forloop__first = false %}{% endif %}{% if locksmith_35cd_forloop__index == locksmith_35cd_forloop__size %}{% assign locksmith_35cd_forloop__last = true %}{% else %}{% assign locksmith_35cd_forloop__last = false %}{% endif %}{% assign locksmith_35cd_forloop__rindex = locksmith_35cd_forloop__size | minus: locksmith_35cd_forloop__index | minus: 1 %}{% assign locksmith_35cd_forloop__rindex0 = locksmith_35cd_forloop__size | minus: locksmith_35cd_forloop__index0 | minus: 1 %}{% else %}{% continue %}{% endif -%}
+                {%- comment %}</locksmith:5e0b>{% endcomment -%}
                 {% assign lazy_load = false %}
-                {%- if locksmith_c1c9_forloop__index > 2 -%}
+                {%- if locksmith_35cd_forloop__index > 2 -%}
                   {%- assign lazy_load = true -%}
                 {%- endif -%}
                 <li
                   class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                   {% if settings.animations_reveal_on_scroll %}
                     data-cascade
-                    style="--animation-order: {{ locksmith_c1c9_forloop__index }};"
+                    style="--animation-order: {{ locksmith_35cd_forloop__index }};"
                   {% endif %}
                 >
                   {% render 'card-product',
