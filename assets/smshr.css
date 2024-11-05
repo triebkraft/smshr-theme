@@ -526,3 +526,15 @@ div.cart-count-bubble:not(.active){
 .cart__dynamic-checkout-buttons,.cart__dynamic-checkout-buttons.additional-checkout-buttons{
   margin: 0;
 }
+
+
+.text-input {
+  height: var(--spacing-huge);
+  padding: var(--spacing-base);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid var(--grey-100);
+}
+
