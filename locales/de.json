@@ -329,6 +329,9 @@
     }
   },
   "sections": {
+    "club":{
+      "submit": "einreichen"
+    },
     "service_guide": {
       "phone": "Telefon",
       "email": "E-mail",
