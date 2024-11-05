@@ -1,6 +1,12 @@
+{%- comment %}<locksmith:6c7f>{%- endcomment %}
+{%- include 'locksmith' -%}
+{%- comment %}</locksmith:6c7f>{%- endcomment %}
+
 <!doctype html>
 <html class="js" lang="{{ request.locale.iso_code }}">
-  <head>{% render "load-metafields" %}    <meta charset="utf-8">
+  <head>
+    {% render 'load-metafields' %}
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
@@ -19,7 +25,11 @@
       {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
     </title>
     {% if page_description %}
-      <meta name="description" content="{{ page_description | escape }}">
+      {%- comment %}<locksmith:1266>{%- endcomment %}
+      {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture -%}
+      {%- if var == 'true' %}<meta name="description" content="{{ page_description | escape }}">{% endif -%}
+      {%- comment %}original: <meta name="description" content="{{ page_description | escape }}">{%- endcomment %}
+      {%- comment %}</locksmith:1266>{%- endcomment %}
     {% endif %}
     {% render 'meta-tags' %}
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
@@ -80,7 +90,8 @@
       role="main"
       tabindex="-1"
     >
-      {% capture ICART_FULL_PAGE_LAYOUT %}{{ content_for_layout }}{% endcapture %}{% include 'icart-variables', ICART_FULL_PAGE_LAYOUT: ICART_FULL_PAGE_LAYOUT %}
+      {% capture ICART_FULL_PAGE_LAYOUT %}{{ content_for_layout }}{% endcapture -%}
+      {%- include 'icart-variables', ICART_FULL_PAGE_LAYOUT: ICART_FULL_PAGE_LAYOUT %}
     </main>
     {% comment %} {% sections 'footer-group' %} {% endcomment %}
     {% section 'footer' %}
@@ -151,5 +162,6 @@
       Shopify.money_format = '{{ shop.money_format }}';
     </script>
     <script src="{{ 'money-format.js' | asset_url }}" defer="defer"></script>
-  {% render "bc_banner" %}</body>
+    {% render 'bc_banner' %}
+  </body>
 </html>
