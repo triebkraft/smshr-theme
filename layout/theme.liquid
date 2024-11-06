@@ -1,6 +1,11 @@
+{%- comment %}<locksmith:d31d>{% endcomment -%}
+  {%- include 'locksmith' -%}
+{%- comment %}</locksmith:d31d>{% endcomment -%}
+
 <!doctype html>
 <html class="js" lang="{{ request.locale.iso_code }}">
   <head>
+    {{ locksmith_initializations }}
     {% render 'load-metafields' %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +26,10 @@
       {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
     </title>
     {% if page_description %}
-      <meta name="description" content="{{ page_description | escape }}">
+      {%- comment %}<locksmith:e246>{% endcomment -%}
+        {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta name="description" content="{{ page_description | escape }}">{% endif -%}
+        {%- comment %}original: <meta name="description" content="{{ page_description | escape }}">{%- endcomment %}
+      {%- comment %}</locksmith:e246>{% endcomment -%}
     {% endif %}
     {% render 'meta-tags' %}
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
