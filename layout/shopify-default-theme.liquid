@@ -1,6 +1,6 @@
-{%- comment %}<locksmith:302a>{%- endcomment %}
-{%- include 'locksmith' -%}
-{%- comment %}</locksmith:302a>{%- endcomment %}
+{%- comment %}<locksmith:2a17>{% endcomment -%}
+  {%- include 'locksmith' -%}
+{%- comment %}</locksmith:2a17>{% endcomment -%}
 
 <!doctype html>
 <html class="js" lang="{{ request.locale.iso_code }}">
@@ -28,11 +28,10 @@
     </title>
 
     {% if page_description %}
-      {%- comment %}<locksmith:fc7e>{%- endcomment %}
-      {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture -%}
-      {%- if var == 'true' %}<meta name="description" content="{{ page_description | escape }}">{% endif -%}
-      {%- comment %}original: <meta name="description" content="{{ page_description | escape }}">{%- endcomment %}
-      {%- comment %}</locksmith:fc7e>{%- endcomment %}
+      {%- comment %}<locksmith:f755>{% endcomment -%}
+        {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta name="description" content="{{ page_description | escape }}">{% endif -%}
+        {%- comment %}original: <meta name="description" content="{{ page_description | escape }}">{%- endcomment %}
+      {%- comment %}</locksmith:f755>{% endcomment -%}
     {% endif %}
 
     {% render 'meta-tags' %}
