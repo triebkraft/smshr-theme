@@ -320,7 +320,7 @@
     }
   },
   "sections": {
-    "club":{
+    "club": {
       "submit": "Absenden"
     },
     "service_guide": {
@@ -617,12 +617,6 @@
       "send_on_label": "Senden am (optional)",
       "expanded": "Formular für den Empfänger des Geschenkgutscheins erweitert",
       "collapsed": "Formular für den Empfänger des Geschenkgutscheins minimiert"
-    }
-  },
-  "locksmith": {
-    "forms": {
-      "submit_button_text": "Continue",
-      "loading_text": "One moment..."
     }
   }
 }
