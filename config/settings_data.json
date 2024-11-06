@@ -320,8 +320,14 @@
           "price_on_sale_class": "",
           "delay": 0,
           "customer_metafields_to_check": "",
-          "calculate_discount_based_on_quantity": false,
-          "debug": false
+          "calculate_discount_based_on_quantity": false
+        }
+      },
+      "3408556835904117202": {
+        "type": "shopify://apps/regios-discounts/blocks/regios_add_to_cart_embed/dc1514bb-4830-4102-bffa-e8b300bac5bd",
+        "disabled": false,
+        "settings": {
+          "interval": 1000
         }
       }
     },
