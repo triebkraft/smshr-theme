@@ -39,39 +39,73 @@
                   class="mega-menu__list min-h-[80px] !bg-white pt-large pb-huge flex gap-mega justify-center {% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
                   role="list"
                 >
+                  {% liquid
+                    assign menu_items = link.links
+                    assign menu_without_children = menu_items | where: 'levels', 0
+                  %}
+
                   {%- for childlink in link.links -%}
-                    <li class="flex flex-col gap-base min-w-[120px]">
-                      <a
-                        id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
-                        href="{{ childlink.url }}"
-                        class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} text-sky hover:opacity-80{% endif %} text-t-xs text-black"
-                        {% if childlink.current %}
-                          aria-current="page"
-                        {% endif %}
-                      >
-                        {{ childlink.title | escape }}
-                      </a>
-                      {%- if childlink.links != blank -%}
-                        <div
-                          class="list-unstyled max-h-[216px] flex flex-col flex-wrap gap-x-huge gap-small"
-                          role="list"
+                    {% if childlink.levels > 0 %}
+                      <li class="flex flex-col gap-base min-w-[120px]">
+                        <a
+                          id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
+                          href="{{ childlink.url }}"
+                          class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} text-sky hover:opacity-80{% endif %} text-t-xs text-black"
+                          {% if childlink.current %}
+                            aria-current="page"
+                          {% endif %}
                         >
-                          {%- for grandchildlink in childlink.links -%}
-                            <a
-                              id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
-                              href="{{ grandchildlink.url }}"
-                              class="mega-menu__link text-body-xs text-grey500 leading-4 hover:text-sky link{% if grandchildlink.current %} text-sky hover:opacity-80{% endif %}"
-                              {% if grandchildlink.current %}
-                                aria-current="page"
-                              {% endif %}
-                            >
-                              {{ grandchildlink.title | escape }}
-                            </a>
-                          {%- endfor -%}
-                        </div>
-                      {%- endif -%}
-                    </li>
+                          {{ childlink.title | escape }}
+                        </a>
+                        {%- if childlink.links != blank -%}
+                          <div
+                            class="list-unstyled max-h-[216px] flex flex-col flex-wrap gap-x-huge gap-small"
+                            role="list"
+                          >
+                            {%- for grandchildlink in childlink.links -%}
+                              <a
+                                id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                href="{{ grandchildlink.url }}"
+                                class="mega-menu__link text-body-xs text-grey500 leading-4 hover:text-sky link{% if grandchildlink.current %} text-sky hover:opacity-80{% endif %}"
+                                {% if grandchildlink.current %}
+                                  aria-current="page"
+                                {% endif %}
+                              >
+                                {{ grandchildlink.title | escape }}
+                              </a>
+                            {%- endfor -%}
+                          </div>
+                        {%- endif -%}
+                      </li>
+                    {% endif %}
                   {%- endfor -%}
+
+                  <li class="flex flex-col gap-base min-w-[120px]">
+                    <a
+                      id="HeaderMenu-{{ link.handle }}-special"
+                      href="#"
+                      class="mega-menu__link mega-menu__link--level-2 link text-t-xs text-black"
+                    >
+                      Special
+                    </a>
+                    {%- for childlink in menu_without_children -%}
+                      <div
+                        class="list-unstyled max-h-[216px] flex flex-col flex-wrap gap-x-huge gap-small"
+                        role="list"
+                      >
+                        <a
+                          id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
+                          href="{{ childlink.url }}"
+                          class="mega-menu__link text-body-xs text-grey500 leading-4 hover:text-sky link{% if childlink.current %} text-sky hover:opacity-80{% endif %}"
+                          {% if childlink.current %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          {{ childlink.title | escape }}
+                        </a>
+                      </div>
+                    {%- endfor -%}
+                  </li>
                 </ul>
               </div>
             </details>
