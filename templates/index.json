@@ -257,21 +257,21 @@
           "type": "brand-item",
           "settings": {
             "brand_image": "shopify://shop_images/logo-nike-1c.svg",
-            "brand_url": ""
+            "brand_url": "shopify://collections/teamsport-1"
           }
         },
         "brand_item_WfgKTj": {
           "type": "brand-item",
           "settings": {
             "brand_image": "shopify://shop_images/logo-adidas-1c.svg",
-            "brand_url": ""
+            "brand_url": "shopify://collections/teamsport-1"
           }
         },
         "brand_item_3jGya4": {
           "type": "brand-item",
           "settings": {
             "brand_image": "shopify://shop_images/logo-puma-1c.svg",
-            "brand_url": ""
+            "brand_url": "shopify://collections/teamsport-1"
           }
         },
         "brand_item_4gy8DQ": {
