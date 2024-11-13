@@ -267,6 +267,13 @@
             "brand_url": ""
           }
         },
+        "brand_item_3jGya4": {
+          "type": "brand-item",
+          "settings": {
+            "brand_image": "shopify://shop_images/logo-puma-1c.svg",
+            "brand_url": ""
+          }
+        },
         "brand_item_4gy8DQ": {
           "type": "brand-item",
           "settings": {
@@ -295,13 +302,6 @@
             "brand_url": "shopify://collections/hummel"
           }
         },
-        "brand_item_XEpzy6": {
-          "type": "brand-item",
-          "settings": {
-            "brand_image": "shopify://shop_images/logo-jn-1c_1.svg",
-            "brand_url": ""
-          }
-        },
         "brand_item_BdKLDB": {
           "type": "brand-item",
           "settings": {
@@ -315,13 +315,6 @@
             "brand_image": "shopify://shop_images/logo-jako-1c.svg",
             "brand_url": ""
           }
-        },
-        "brand_item_gFWPr3": {
-          "type": "brand-item",
-          "settings": {
-            "brand_image": "shopify://shop_images/logo-hakro-1c.svg",
-            "brand_url": ""
-          }
         }
       },
       "block_order": [
@@ -329,17 +322,43 @@
         "brand_item_GzBGVp",
         "brand_item_QtgMQT",
         "brand_item_WfgKTj",
+        "brand_item_3jGya4",
         "brand_item_4gy8DQ",
         "brand_item_Xk6kpP",
         "brand_item_EYAqWf",
         "brand_item_m8p3iE",
-        "brand_item_XEpzy6",
         "brand_item_BdKLDB",
-        "brand_item_THWpgA",
-        "brand_item_gFWPr3"
+        "brand_item_THWpgA"
       ],
       "settings": {
         "headline": "Unsere teamsport marken",
+        "all_brands_url": ""
+      }
+    },
+    "brand_grid_NjfeMa": {
+      "type": "brand-grid",
+      "blocks": {
+        "brand_item_MBxLa4": {
+          "type": "brand-item",
+          "settings": {
+            "brand_image": "shopify://shop_images/logo-hakro-1c.svg",
+            "brand_url": ""
+          }
+        },
+        "brand_item_Ey8mef": {
+          "type": "brand-item",
+          "settings": {
+            "brand_image": "shopify://shop_images/logo-jn-1c_1.svg",
+            "brand_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "brand_item_MBxLa4",
+        "brand_item_Ey8mef"
+      ],
+      "settings": {
+        "headline": "Unsere workwear marken",
         "all_brands_url": ""
       }
     },
@@ -390,6 +409,7 @@
     "small_teaser_carousel_nWQ74B",
     "brand_grid_AVdfX6",
     "brand_grid_hr8nUK",
+    "brand_grid_NjfeMa",
     "feature_section_B3AKqG"
   ]
 }
