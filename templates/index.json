@@ -253,6 +253,20 @@
             "brand_url": "shopify://collections/derbystar"
           }
         },
+        "brand_item_QtgMQT": {
+          "type": "brand-item",
+          "settings": {
+            "brand_image": "shopify://shop_images/logo-nike-1c.svg",
+            "brand_url": ""
+          }
+        },
+        "brand_item_WfgKTj": {
+          "type": "brand-item",
+          "settings": {
+            "brand_image": "shopify://shop_images/logo-adidas-1c.svg",
+            "brand_url": ""
+          }
+        },
         "brand_item_4gy8DQ": {
           "type": "brand-item",
           "settings": {
@@ -313,6 +327,8 @@
       "block_order": [
         "brand_item_ikDTdi",
         "brand_item_GzBGVp",
+        "brand_item_QtgMQT",
+        "brand_item_WfgKTj",
         "brand_item_4gy8DQ",
         "brand_item_Xk6kpP",
         "brand_item_EYAqWf",
