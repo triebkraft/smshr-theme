@@ -105,6 +105,16 @@
     "teaser_carousel_fzVJcx": {
       "type": "teaser-carousel",
       "blocks": {
+        "teaser_N6w9Mj": {
+          "type": "teaser",
+          "settings": {
+            "headline": "cold days action",
+            "image": "shopify://shop_images/DSC00146.jpg",
+            "teaser_copy": "<p>sichere dir 35 % auf Funktionsunterwäsche und Zubehör wie Handschuhe, Schals oder Mützen</p>",
+            "price": 3499,
+            "url": "shopify://collections/accessoires"
+          }
+        },
         "teaser_3m3pzP": {
           "type": "teaser",
           "settings": {
@@ -117,6 +127,7 @@
         }
       },
       "block_order": [
+        "teaser_N6w9Mj",
         "teaser_3m3pzP"
       ],
       "settings": {
