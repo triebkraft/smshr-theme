@@ -16,10 +16,10 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "image_banner_m8FMN7": {
+    "image_banner_DULfVd": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify://shop_images/Location_34b9f542-3ecb-44bc-a2d0-8700d071cc2a.jpg",
+        "image": "shopify://shop_images/Location-v2.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -122,7 +122,7 @@
   },
   "order": [
     "hero",
-    "image_banner_m8FMN7",
+    "image_banner_DULfVd",
     "main",
     "image_text_teaser_K9iUEc",
     "image_text_teaser_MGEwB4",
