@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
@@ -9,26 +18,23 @@
     },
     "main": {
       "type": "page-content",
-      "settings": {
-      }
+      "settings": {}
     },
     "image_text_teaser_K9iUEc": {
       "type": "image-text-teaser",
       "settings": {
         "title": "GESCHÄFTSLEITUNG",
         "content": "Tim Schweizer",
-        "image": "shopify:\/\/shop_images\/DSC05634-Verbessert-SR_1.jpg"
+        "image": "shopify://shop_images/DSC05634-Verbessert-SR_1.jpg"
       }
     },
     "image_text_teaser_MGEwB4": {
       "type": "image-text-teaser",
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "title": "GESCHÄFTSLEITUNG",
         "content": "Pascal Schweizer",
-        "image": "shopify:\/\/shop_images\/DSC05655_1.jpg"
+        "image": "shopify://shop_images/DSC05655_1.jpg"
       }
     },
     "image_text_teaser_X4fpAM": {
@@ -36,15 +42,23 @@
       "settings": {
         "title": "ASSISTENTIN DER GL",
         "content": "Jessica Roth",
-        "image": "shopify:\/\/shop_images\/DSC05654_1.jpg"
+        "image": "shopify://shop_images/DSC05654_1.jpg"
       }
     },
     "image_text_teaser_aR74R9": {
       "type": "image-text-teaser",
       "settings": {
-        "title": "LOGISTIK\/VEREDELUNG",
+        "title": "LOGISTIK/VEREDELUNG",
         "content": "Dietmar Schweizer",
-        "image": "shopify:\/\/shop_images\/DSC05647_1.jpg"
+        "image": "shopify://shop_images/DSC05647_1.jpg"
+      }
+    },
+    "image_text_teaser_jtBqJM": {
+      "type": "image-text-teaser",
+      "settings": {
+        "title": "MARKETING MANAGER",
+        "content": "Kai Trexler",
+        "image": "shopify://shop_images/kai.jpg"
       }
     },
     "rtf_table_pLdfMU": {
@@ -53,22 +67,22 @@
         "table_block_f4heKX": {
           "type": "table_block",
           "settings": {
-            "content_1": "<h3>Kundenservice<\/h3><p>Hast du Fragen?<\/p><p>Wir helfen dir gerne weiter!<\/p>",
-            "content_2": "<p><strong>Telefon:<\/strong> +49 7951 474059 0<\/p><p><strong>Servicezeiten:<\/strong>\u2028<\/p><p>Montag-Freitag: <\/p><p>10:00-12:00 Uhr\u2028<\/p><p>13:00-17:00 Uhr<\/p><p><\/p><p><strong>E-Mail: <\/strong>info@smshrs.com<\/p>"
+            "content_1": "<h3>Kundenservice</h3><p>Hast du Fragen?</p><p>Wir helfen dir gerne weiter!</p>",
+            "content_2": "<p><strong>Telefon:</strong> +49 7951 474059 0</p><p><strong>Servicezeiten:</strong> </p><p>Montag-Freitag: </p><p>10:00-12:00 Uhr </p><p>13:00-17:00 Uhr</p><p></p><p><strong>E-Mail: </strong>info@smshrs.com</p>"
           }
         },
         "table_block_FmY8BR": {
           "type": "table_block",
           "settings": {
-            "content_1": "<h2>Retouren<\/h2><p>Fragen zu Rücksendungen?<\/p>",
-            "content_2": "<p><strong>E-Mail: <\/strong>info@smshrs.com<\/p>"
+            "content_1": "<h2>Retouren</h2><p>Fragen zu Rücksendungen?</p>",
+            "content_2": "<p><strong>E-Mail: </strong>info@smshrs.com</p>"
           }
         },
         "table_block_ydU6HJ": {
           "type": "table_block",
           "settings": {
-            "content_1": "<h2>B2B<\/h2><p>Deine Ansprechpartner: <\/p><p>Pascal Schweizer<\/p>",
-            "content_2": "<p><strong>Telefon:<\/strong> +49 7951 474059 14<\/p><p><strong>E-Mail: <\/strong>p.schweizer@smshrs.com<\/p>"
+            "content_1": "<h2>B2B</h2><p>Deine Ansprechpartner: </p><p>Pascal Schweizer</p>",
+            "content_2": "<p><strong>Telefon:</strong> +49 7951 474059 14</p><p><strong>E-Mail: </strong>p.schweizer@smshrs.com</p>"
           }
         }
       },
@@ -77,8 +91,7 @@
         "table_block_FmY8BR",
         "table_block_ydU6HJ"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "text_teaser_ya8TDf": {
       "type": "text-teaser",
@@ -87,7 +100,7 @@
         "content_1": "Danke, dass Ihr Euch die Zeit genommen habt, unsere Über Uns-Seite zu Lesen. Als kleines Dankeschön schenken wir Euch einen einmaligen Rabattcode.",
         "content_2": "Gebt einfach \"ABOUTFREE\" beim Checkout ein und spart bei eurer nächsten Bestellung den Versand.",
         "cta_label": "JETZT SPAREN",
-        "cta_url": "shopify:\/\/collections\/all"
+        "cta_url": "shopify://collections/all"
       }
     }
   },
@@ -98,6 +111,7 @@
     "image_text_teaser_MGEwB4",
     "image_text_teaser_X4fpAM",
     "image_text_teaser_aR74R9",
+    "image_text_teaser_jtBqJM",
     "rtf_table_pLdfMU",
     "text_teaser_ya8TDf"
   ]
