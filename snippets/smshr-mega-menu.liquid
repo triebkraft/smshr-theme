@@ -81,13 +81,6 @@
                   {%- endfor -%}
 
                   <li class="flex flex-col gap-base min-w-[120px]">
-                    <a
-                      id="HeaderMenu-{{ link.handle }}-special"
-                      href="#"
-                      class="mega-menu__link mega-menu__link--level-2 link text-t-xs text-black"
-                    >
-                      Special
-                    </a>
                     {%- for childlink in menu_without_children -%}
                       <div
                         class="list-unstyled max-h-[216px] flex flex-col flex-wrap gap-x-huge gap-small"
@@ -96,7 +89,7 @@
                         <a
                           id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
                           href="{{ childlink.url }}"
-                          class="mega-menu__link text-body-xs text-grey500 leading-4 hover:text-sky link{% if childlink.current %} text-sky hover:opacity-80{% endif %}"
+                          class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} text-sky hover:opacity-80{% endif %} text-t-xs text-black"
                           {% if childlink.current %}
                             aria-current="page"
                           {% endif %}
