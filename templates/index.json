@@ -78,7 +78,7 @@
     "collection_carousel_KmEPmQ": {
       "type": "collection-carousel",
       "settings": {
-        "heading": "Top Produkte",
+        "heading": "bestseller",
         "products_to_show": 10,
         "collection": "top-produkte"
       }
