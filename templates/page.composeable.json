@@ -9,8 +9,7 @@
     },
     "main": {
       "type": "page-content",
-      "settings": {
-      }
+      "settings": {}
     },
     "image_text_teaser_gGRKwh": {
       "type": "image-text-teaser",
@@ -69,8 +68,7 @@
         "service_block_XUicHh",
         "service_block_6qqRax"
       ],
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [

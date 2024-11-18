@@ -2,8 +2,7 @@
   "sections": {
     "main": {
       "type": "main-addresses",
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
