@@ -12,6 +12,16 @@
     "hero": {
       "type": "hero",
       "blocks": {
+        "slide_9Uj3bw": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/black-weed-banner-2560x1080.jpg",
+            "heading": "black week",
+            "caption": "",
+            "cta_label": "jetzt sparen",
+            "url": "shopify://collections/teamsport-1"
+          }
+        },
         "slide_qW9TYm": {
           "type": "slide",
           "settings": {
@@ -64,6 +74,7 @@
         }
       },
       "block_order": [
+        "slide_9Uj3bw",
         "slide_qW9TYm",
         "slide_NAkeY3",
         "slide_tKD47w",
