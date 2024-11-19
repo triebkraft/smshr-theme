@@ -45,8 +45,17 @@
                   %}
 
                   {%- for childlink in link.links -%}
+                    {% assign no_of_columns = childlink.links.size | divided_by: 9.0 | ceil %}
+
+                    <style>
+                      .childlink_container--{{childlink.title | strip}}--{{ forloop.index0 }} {
+                        display: grid;
+                        grid-template-columns: repeat({{ no_of_columns }}, max-content);
+                      }
+                    </style>
+
                     {% if childlink.levels > 0 %}
-                      <li class="flex flex-col gap-base min-w-[120px]">
+                      <li class="flex flex-col gap-base min-w-[120px] shrink-0">
                         <a
                           id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
                           href="{{ childlink.url }}"
@@ -59,7 +68,7 @@
                         </a>
                         {%- if childlink.links != blank -%}
                           <div
-                            class="list-unstyled max-h-[216px] flex flex-col flex-wrap gap-x-huge gap-small"
+                            class="childlink_container--{{childlink.title | strip}}--{{ forloop.index0}} list-unstyled max-h-[216px]  gap-x-5 gap-small"
                             role="list"
                           >
                             {%- for grandchildlink in childlink.links -%}
@@ -82,8 +91,17 @@
 
                   <li class="flex flex-col gap-base min-w-[120px]">
                     {%- for childlink in menu_without_children -%}
+                      {% assign no_of_columns = menu_without_children.size | divided_by: 9.0 | ceil %}
+
+                      <style>
+                        .childlink_container--{{childlink.title | strip}}--{{ forloop.index0 }} {
+                          display: grid;
+                          grid-template-columns: repeat({{ no_of_columns }}, max-content);
+                        }
+                      </style>
+
                       <div
-                        class="list-unstyled max-h-[216px] flex flex-col flex-wrap gap-x-huge gap-small"
+                        class="childlink_container--{{childlink.title | strip}}--{{ forloop.index0}} list-unstyled max-h-[216px]  gap-x-5 gap-small"
                         role="list"
                       >
                         <a
