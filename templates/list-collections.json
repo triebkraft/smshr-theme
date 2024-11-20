@@ -146,9 +146,25 @@
         "feature_item_Q7HfQX"
       ],
       "settings": {}
+    },
+    "video_4TM94q": {
+      "type": "video",
+      "settings": {
+        "heading": "Video",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video": "shopify://files/videos/WhatsApp Video 2024-08-26 at 15.22.59(1).mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
+    "video_4TM94q",
     "main",
     "brand_cataglogue",
     "team_callout",
