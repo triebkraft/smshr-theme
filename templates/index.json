@@ -421,6 +421,56 @@
         "feature_item_cVMLLy"
       ],
       "settings": {}
+    },
+    "tiktok_carousel_eXgY7g": {
+      "type": "tiktok-carousel",
+      "blocks": {
+        "reel_item_ETVQ6h": {
+          "type": "reel_item",
+          "settings": {
+            "video": "shopify://files/videos/Video 21.03.24, 13 25 09.mov"
+          }
+        },
+        "reel_item_B8khNQ": {
+          "type": "reel_item",
+          "settings": {
+            "video": "shopify://files/videos/Video 23.06.24, 12 02 22.mov"
+          }
+        },
+        "reel_item_jGwPka": {
+          "type": "reel_item",
+          "settings": {
+            "video": "shopify://files/videos/6483c5252cb14db697c690b5d50961e8.mov"
+          }
+        },
+        "reel_item_Qday6R": {
+          "type": "reel_item",
+          "settings": {
+            "video": "shopify://files/videos/6256999a80244d5ba0e233e90a79593f.mov"
+          }
+        },
+        "reel_item_aEHVtz": {
+          "type": "reel_item",
+          "settings": {
+            "video": "shopify://files/videos/afda8faec9b0401ebf2770462c74b5ef.mov"
+          }
+        },
+        "reel_item_nEyimT": {
+          "type": "reel_item",
+          "settings": {
+            "video": "shopify://files/videos/AVAssetExportPreset1920x1080.mov"
+          }
+        }
+      },
+      "block_order": [
+        "reel_item_ETVQ6h",
+        "reel_item_B8khNQ",
+        "reel_item_jGwPka",
+        "reel_item_Qday6R",
+        "reel_item_aEHVtz",
+        "reel_item_nEyimT"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -432,6 +482,7 @@
     "brand_grid_AVdfX6",
     "brand_grid_hr8nUK",
     "brand_grid_NjfeMa",
-    "feature_section_B3AKqG"
+    "feature_section_B3AKqG",
+    "tiktok_carousel_eXgY7g"
   ]
 }
