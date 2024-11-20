@@ -116,7 +116,7 @@
           "type": "feature-item",
           "settings": {
             "image": "shopify://shop_images/icon-bestellung-ab-1-1c.svg",
-            "description": "Bestelle einzelne Teile bequem über euren  Vereinsshop mit eurem Rabatt.",
+            "description": "Bestelle einzelne Teile bequem nach Hause",
             "cta_label": "",
             "cta_url": ""
           }
@@ -134,7 +134,7 @@
           "type": "feature-item",
           "settings": {
             "image": "shopify://shop_images/icon-auswahl-1c.svg",
-            "description": "Wähle aus über 20 verschiedenen Marken die perfekte für deinen Verein",
+            "description": "Wähle aus über 20 verschiedenen Marken",
             "cta_label": "",
             "cta_url": ""
           }
