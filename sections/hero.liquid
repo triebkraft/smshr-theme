@@ -93,14 +93,14 @@
           if block.settings.image
             assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round
             assign image_url = block.settings.image | image_url: width: 5000, height: height
-            assign mobile_image_url = block.settings.mobile_image | image_url: width: 5000, height: height
+            assign mobile_image_url = block.settings.mobile_image | image_url: height: height
           endif
         %}
 
-        {% if image_url %}
+        {% if image_url or mobile_image_url %}
           <style>
             #Slide-{{ section.id }}-{{ forloop.index }} .banner__media{
-              background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%), url("{{ mobile_image_url }}") lightgray 50% / cover no-repeat;
+              background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%), url("{{ mobile_image_url | default: image_url }}") lightgray 50% / cover no-repeat;
             }
 
           
@@ -109,13 +109,6 @@
                 background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%), url("{{ image_url }}") lightgray 50% / cover no-repeat;
               }
             }
-
-            @media screen and (min-width: 800px and max-width:2400px) {
-               #Slide-{{ section.id }}-{{ forloop.index }} .banner__media{
-                background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%), url("{{ image_url }}") lightgray -55.915px -195.903px / 104.368% 164.948% no-repeat;
-              }
-            }
-
 
           </style>
 
