@@ -142,8 +142,7 @@
       },
       "product-detail": {
         "type": "product-detail",
-        "settings": {
-        }
+        "settings": {}
       },
       "announcement-bar": {
         "type": "announcement-bar",
@@ -158,8 +157,7 @@
         "block_order": [
           "announcement_GfUqBx"
         ],
-        "settings": {
-        }
+        "settings": {}
       },
       "header": {
         "type": "header",
@@ -169,13 +167,11 @@
       },
       "breadcrumbs": {
         "type": "breadcrumbs",
-        "settings": {
-        }
+        "settings": {}
       },
       "product-description": {
         "type": "product-description",
-        "settings": {
-        }
+        "settings": {}
       },
       "hero": {
         "type": "hero",
@@ -264,48 +260,38 @@
           "media_with_caption_mjBHrT",
           "media_with_caption_qQE4xU"
         ],
-        "settings": {
-        }
+        "settings": {}
       },
       "product-content": {
         "type": "product-content",
-        "settings": {
-        }
+        "settings": {}
       },
       "pdp-related-products": {
         "type": "pdp-related-products",
-        "settings": {
-        }
+        "settings": {}
       },
       "main-register": {
         "type": "main-register",
-        "settings": {
-        }
+        "settings": {}
       },
       "main-login": {
         "type": "main-login",
-        "settings": {
-        }
+        "settings": {}
       },
       "main-cart-items-smshr": {
         "type": "main-cart-items-smshr",
-        "settings": {
-        }
+        "settings": {}
       },
       "main-cart-checkout": {
         "type": "main-cart-checkout",
-        "settings": {
-        }
+        "settings": {}
       },
       "cart-recommendations": {
         "type": "cart-recommendations",
-        "settings": {
-        }
+        "settings": {}
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
       "9137299313046473183": {
         "type": "shopify://apps/regios-discounts/blocks/regios_discounts_embed/dc1514bb-4830-4102-bffa-e8b300bac5bd",
