@@ -93,6 +93,7 @@
           if block.settings.image
             assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round
             assign image_url = block.settings.image | image_url: width: 5000, height: height
+            assign mobile_image_url = block.settings.mobile_image | image_url: width: 5000, height: height
           endif
         %}
 
@@ -116,15 +117,17 @@
             }
           </style>
         {% endif %}
-        <{%- if block.settings.cta_label != blank -%}div{% else %}a{% endif %}
-          class="slideshow__slide grid__item grid--1-col slider__slide aspect-[131_/_220] md:aspect-[40_/_27] xl:aspect-[64_/27] 2xl:aspect-[10_/_3] max-h-[540px]"
+
+        <{% if block.settings.cta_label == blank %}a{% else %}div{% endif %}
           id="Slide-{{ section.id }}-{{ forloop.index }}"
+         {% if block.settings.cta_label == blank %}href="{{block.settings.url}}"{% endif %}
+          class="slideshow__slide grid__item grid--1-col slider__slide aspect-[131_/_220] md:aspect-[40_/_27] xl:aspect-[64_/27] 2xl:aspect-[10_/_3] max-h-[540px]"
           {{ block.shopify_attributes }}
           role="group"
           aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
           aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
           tabindex="-1"
-          {%- if block.settings.cta_label != blank -%}href={{image_url}}{% else %}{% endif %}
+          
         >
           <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">
             {%- if block.settings.image == blank -%}
@@ -175,7 +178,7 @@
               {%- endif -%}
             </div>
           </div>
-        </{%- if block.settings.cta_label != blank -%}div{% else %}a{% endif %}>
+        </{% if block.settings.cta_label != blank %}div{% else %}a{% endif %}>
       {%- endfor -%}
     </div>
   </slideshow-component>

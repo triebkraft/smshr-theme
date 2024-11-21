@@ -1237,7 +1237,6 @@
             "mobile_image": {
               "label": "Mobile Image",
               "info": "image to show on mobile devices"
-
             },
             "heading": {
               "label": "Headline"
