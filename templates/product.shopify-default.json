@@ -6,18 +6,15 @@
       "blocks": {
         "title_K3rW7f": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "price_8JCAGW": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "quantity_selector_jaiiVf": {
           "type": "quantity_selector",
-          "settings": {
-          }
+          "settings": {}
         },
         "buy_buttons_fYctzq": {
           "type": "buy_buttons",
@@ -28,8 +25,7 @@
         },
         "description_yH7EBn": {
           "type": "description",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [

@@ -116,7 +116,7 @@
             }
           </style>
         {% endif %}
-        <div
+        <{%- if block.settings.cta_label != blank -%}div{% else %}a{% endif %}
           class="slideshow__slide grid__item grid--1-col slider__slide aspect-[131_/_220] md:aspect-[40_/_27] xl:aspect-[64_/27] 2xl:aspect-[10_/_3] max-h-[540px]"
           id="Slide-{{ section.id }}-{{ forloop.index }}"
           {{ block.shopify_attributes }}
@@ -127,32 +127,6 @@
         >
           <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">
             {%- if block.settings.image == blank -%}
-              {% comment %}
-                {%- liquid
-                    assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round
-
-                    assign sizes = '100vw'
-                    assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840, 5000'
-                    assign fetch_priority = 'auto'
-                    if section.index == 1
-                      assign fetch_priority = 'high'
-                    endif
-                  -%}
-                  {%- if forloop.first %}
-                    {{
-                      block.settings.image
-                      | image_url: width: 5000
-                      | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
-                    }}
-                  {%- else -%}
-                    {{
-                      block.settings.image
-                      | image_url: width: 5000
-                      | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
-                    }}
-                  {%- endif -%}
-                {%- else -%}
-              {% endcomment %}
               {%- assign placeholder_slide = forloop.index | modulo: 2 -%}
               {%- if placeholder_slide == 1 -%}
                 {{ 'hero-apparel-2' | placeholder_svg_tag: 'placeholder-svg' }}
@@ -200,7 +174,7 @@
               {%- endif -%}
             </div>
           </div>
-        </div>
+        </{%- if block.settings.cta_label != blank -%}div{% else %}a{% endif %}>
       {%- endfor -%}
     </div>
   </slideshow-component>
@@ -246,7 +220,15 @@
         {
           "type": "image_picker",
           "id": "image",
-          "label": "t:sections.hero.blocks.slide.settings.image.label"
+          "label": "t:sections.hero.blocks.slide.settings.image.label",
+          "info":"t:sections.hero.blocks.slide.settings.image.info"
+
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "t:sections.hero.blocks.slide.settings.mobile_image.label",
+          "info":"t:sections.hero.blocks.slide.settings.mobile_image.info"
         },
         {
           "type": "text",
@@ -258,7 +240,7 @@
         {
           "type": "text",
           "id": "caption",
-          "label": "t:sections.hero.blocks.slide.settings.heading.label"
+          "label": "t:sections.hero.blocks.slide.settings.caption.label"
         },
 
         {
