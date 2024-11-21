@@ -73,7 +73,7 @@
         "slide_TfacYE"
       ],
       "settings": {
-        "change_slides_speed": 100,
+        "change_slides_speed": 5,
         "accessibility_info": "Slideshow about our brand"
       }
     },
