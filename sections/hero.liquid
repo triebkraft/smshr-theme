@@ -124,6 +124,7 @@
           aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
           aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
           tabindex="-1"
+          {%- if block.settings.cta_label != blank -%}href={{image_url}}{% else %}{% endif %}
         >
           <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">
             {%- if block.settings.image == blank -%}
