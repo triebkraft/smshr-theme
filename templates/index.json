@@ -338,12 +338,14 @@
         "brand_item_MBxLa4": {
           "type": "brand-item",
           "settings": {
+            "brand_image": "shopify://shop_images/logo-hakro-1c.svg",
             "brand_url": ""
           }
         },
         "brand_item_Ey8mef": {
           "type": "brand-item",
           "settings": {
+            "brand_image": "shopify://shop_images/logo-jn-1c_1.svg",
             "brand_url": ""
           }
         }
