@@ -180,7 +180,7 @@
               {%- endif -%}
             </div>
           </div>
-        </{% if block.settings.cta_label != blank %}div{% else %}a{% endif %}>
+        </{% if block.settings.cta_label == blank %}a{% else %}div{% endif %}>
       {%- endfor -%}
     </div>
   </slideshow-component>
