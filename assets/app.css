@@ -1626,6 +1626,11 @@ video {
   gap: 8px;
 }
 
+.gap-x-5 {
+  -moz-column-gap: 1.25rem;
+       column-gap: 1.25rem;
+}
+
 .gap-x-huge {
   -moz-column-gap: 48px;
        column-gap: 48px;
@@ -1660,11 +1665,6 @@ video {
 
 .gap-y-normal {
   row-gap: 20px;
-}
-
-.gap-x-5 {
-  -moz-column-gap: 1.25rem;
-       column-gap: 1.25rem;
 }
 
 .space-x-3 > :not([hidden]) ~ :not([hidden]) {
