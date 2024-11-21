@@ -109,24 +109,15 @@
           "type": "teaser",
           "settings": {
             "headline": "cold days offense",
+            "image": "shopify://shop_images/DSC00146-1x1_e6a56e51-97a6-4200-99e7-3187347adc87.jpg",
             "teaser_copy": "<p>Schütze Dich vor der Kälte und sichere </p><p>Dir JETZT 35 % Rabatt!</p>",
             "price": 3499,
             "url": "shopify://products/winter-set"
           }
-        },
-        "teaser_3m3pzP": {
-          "type": "teaser",
-          "settings": {
-            "headline": "\"THE SMASH\"",
-            "teaser_copy": "<p>Sportlich, stylisch und vielseitig: </p><p>Hol dir jetzt das ultimative Trikot </p><p>für alle deine Lieblingssportarten!</p>",
-            "price": 2990,
-            "url": "shopify://products/smshrs-trikot"
-          }
         }
       },
       "block_order": [
-        "teaser_N6w9Mj",
-        "teaser_3m3pzP"
+        "teaser_N6w9Mj"
       ],
       "settings": {
         "headline": "Highlights"
