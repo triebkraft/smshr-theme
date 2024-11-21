@@ -15,7 +15,6 @@
         "slide_9Uj3bw": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/black-weed-banner-2560x1080-v2.jpg",
             "heading": "ab dem 25. November",
             "caption": "SPARE WAS DAS ZEUG HÄLT!",
             "cta_label": "jetzt sparen",
@@ -25,7 +24,6 @@
         "slide_NAkeY3": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/happy-junior-football-team-posing.jpg",
             "heading": "40% Teamsport SALE",
             "caption": "CODE: TEAMSPORT",
             "cta_label": "JETZT SPAREN",
@@ -35,7 +33,6 @@
         "slide_tKD47w": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/banner-the-smash-2560x1080-final.jpg",
             "heading": "\"THE SMASH\"",
             "caption": "AB 150 € GRATIS IN DEN WARENKORB LEGEN!",
             "cta_label": "JETZT KAUFEN",
@@ -45,7 +42,6 @@
         "slide_Wktd6M": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/banner-firmenkleidung-2560x1080_288c920c-2503-45c5-8f1f-a08e4647cd73.jpg",
             "heading": "Firmenbekleidung",
             "caption": "",
             "cta_label": "JETZT ANFRAGEN",
@@ -55,7 +51,6 @@
         "slide_TfacYE": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/banner-mannschaftsbild-2560x1080.jpg",
             "heading": "VEREINSSHOP",
             "caption": "ERSTELLT JETZT EUREN EIGENEN SHOP!",
             "cta_label": "ZUM VEREINSSHOP",
@@ -63,7 +58,13 @@
           }
         }
       },
-      "block_order": ["slide_9Uj3bw", "slide_NAkeY3", "slide_tKD47w", "slide_Wktd6M", "slide_TfacYE"],
+      "block_order": [
+        "slide_9Uj3bw",
+        "slide_NAkeY3",
+        "slide_tKD47w",
+        "slide_Wktd6M",
+        "slide_TfacYE"
+      ],
       "settings": {
         "change_slides_speed": 5,
         "accessibility_info": "Slideshow about our brand"
@@ -89,7 +90,9 @@
           }
         }
       },
-      "block_order": ["regios_discounts_collection_page_discount_dMEcKM"],
+      "block_order": [
+        "regios_discounts_collection_page_discount_dMEcKM"
+      ],
       "settings": {
         "include_margins": true
       }
@@ -101,14 +104,15 @@
           "type": "teaser",
           "settings": {
             "headline": "cold days offense",
-            "image": "shopify://shop_images/DSC00146-1x1_e6a56e51-97a6-4200-99e7-3187347adc87.jpg",
             "teaser_copy": "<p>Schütze Dich vor der Kälte und sichere </p><p>Dir JETZT 35 % Rabatt!</p>",
             "price": 3499,
             "url": "shopify://products/winter-set"
           }
         }
       },
-      "block_order": ["teaser_N6w9Mj"],
+      "block_order": [
+        "teaser_N6w9Mj"
+      ],
       "settings": {
         "headline": "Highlights"
       }
@@ -120,7 +124,6 @@
           "type": "small-teaser",
           "settings": {
             "title": "Teamsport",
-            "image": "shopify://shop_images/DSCF0292-v3_7fc63f15-2c30-462e-806a-b36cc463f7e6.jpg",
             "url": "shopify://collections/teamsport-1"
           }
         },
@@ -128,7 +131,6 @@
           "type": "small-teaser",
           "settings": {
             "title": "Tischtennis",
-            "image": "shopify://shop_images/DSC05736.jpg",
             "url": "shopify://collections/poloshirts"
           }
         },
@@ -136,12 +138,15 @@
           "type": "small-teaser",
           "settings": {
             "title": "VEREINSSHOP",
-            "image": "shopify://shop_images/banner-mannschaftsbild-1x1_4cc4f1e5-1bc3-4653-87f2-be72f40b3023.jpg",
             "url": "https://smshrs.com/collections"
           }
         }
       },
-      "block_order": ["small_teaser_tKM4mJ", "small_teaser_8AzDne", "small_teaser_aiE89K"],
+      "block_order": [
+        "small_teaser_tKM4mJ",
+        "small_teaser_8AzDne",
+        "small_teaser_aiE89K"
+      ],
       "settings": {
         "headline": "Kategorien",
         "variant": "small"
@@ -153,56 +158,48 @@
         "brand_item_iPd8FB": {
           "type": "brand-item",
           "settings": {
-            "brand_image": "shopify://shop_images/logo-joola-1c.svg",
             "brand_url": "shopify://collections/joola"
           }
         },
         "brand_item_bUHp7E": {
           "type": "brand-item",
           "settings": {
-            "brand_image": "shopify://shop_images/logo-tibhar-1c.svg",
             "brand_url": "shopify://collections/tibhar"
           }
         },
         "brand_item_6FeGT8": {
           "type": "brand-item",
           "settings": {
-            "brand_image": "shopify://shop_images/logo-victas-1c.svg",
             "brand_url": "shopify://collections/victas"
           }
         },
         "brand_item_KC4A6c": {
           "type": "brand-item",
           "settings": {
-            "brand_image": "shopify://shop_images/logo-gewo-1c.svg",
             "brand_url": "shopify://collections/gewo"
           }
         },
         "brand_item_zwhiVc": {
           "type": "brand-item",
           "settings": {
-            "brand_image": "shopify://shop_images/logo-donic-1c.svg",
             "brand_url": "shopify://collections/donic"
           }
         },
         "brand_item_pdkQxX": {
           "type": "brand-item",
           "settings": {
-            "brand_image": "shopify://shop_images/logo-xiom-1c.svg",
             "brand_url": "shopify://collections/xiom"
           }
         },
         "brand_item_iwgQ3z": {
           "type": "brand-item",
           "settings": {
-            "brand_image": "shopify://shop_images/logo-nittaku-1c.svg",
             "brand_url": "shopify://collections/nittaku"
           }
         },
         "brand_item_x9Ctjf": {
           "type": "brand-item",
           "settings": {
-            "brand_image": "shopify://shop_images/logo-yasaka-1c.svg",
             "brand_url": "shopify://collections/yasaka"
           }
         }
@@ -228,77 +225,66 @@
         "brand_item_ikDTdi": {
           "type": "brand-item",
           "settings": {
-            "brand_image": "shopify://shop_images/logo-smshrs-1c.svg",
             "brand_url": "shopify://products/smshrs-trikot"
           }
         },
         "brand_item_GzBGVp": {
           "type": "brand-item",
           "settings": {
-            "brand_image": "shopify://shop_images/logo-derbystar-1c_3c67fc20-3f9d-45f6-b119-bfa9f59770c8.svg",
             "brand_url": "shopify://collections/derbystar"
           }
         },
         "brand_item_QtgMQT": {
           "type": "brand-item",
           "settings": {
-            "brand_image": "shopify://shop_images/logo-adidas-1c_385accff-33b8-4184-8584-fb0196723bfc.svg",
             "brand_url": "shopify://collections/teamsport-1"
           }
         },
         "brand_item_WfgKTj": {
           "type": "brand-item",
           "settings": {
-            "brand_image": "shopify://shop_images/logo-puma-1c_239c149b-adc3-41cf-9e57-27e33c0d5e5f.svg",
             "brand_url": "shopify://collections/teamsport-1"
           }
         },
         "brand_item_3jGya4": {
           "type": "brand-item",
           "settings": {
-            "brand_image": "shopify://shop_images/logo-nike-1c_892d9adc-270c-4e19-bbbb-626d01d068a8.svg",
             "brand_url": "shopify://collections/teamsport-1"
           }
         },
         "brand_item_4gy8DQ": {
           "type": "brand-item",
           "settings": {
-            "brand_image": "shopify://shop_images/logo-uhlsport-1c.svg",
             "brand_url": "shopify://collections/uhlsport"
           }
         },
         "brand_item_Xk6kpP": {
           "type": "brand-item",
           "settings": {
-            "brand_image": "shopify://shop_images/logo-kempa-1c_6b9e11ed-f644-43cd-b2d8-bffc75a3e74c.svg",
             "brand_url": "shopify://collections/kempa"
           }
         },
         "brand_item_EYAqWf": {
           "type": "brand-item",
           "settings": {
-            "brand_image": "shopify://shop_images/logo-erima-1c.svg",
             "brand_url": "shopify://collections/erima-2"
           }
         },
         "brand_item_m8p3iE": {
           "type": "brand-item",
           "settings": {
-            "brand_image": "shopify://shop_images/logo-hummel-1c_ebc1c884-bc65-4483-b2da-d6f62b42530c.svg",
             "brand_url": "shopify://collections/hummel"
           }
         },
         "brand_item_BdKLDB": {
           "type": "brand-item",
           "settings": {
-            "brand_image": "shopify://shop_images/logo-baden-1c.svg",
             "brand_url": "shopify://collections/baden"
           }
         },
         "brand_item_THWpgA": {
           "type": "brand-item",
           "settings": {
-            "brand_image": "shopify://shop_images/logo-mizuno-1c_91709975-a3ba-4436-b5a5-770c4feb661e.svg",
             "brand_url": ""
           }
         }
@@ -327,19 +313,20 @@
         "brand_item_MBxLa4": {
           "type": "brand-item",
           "settings": {
-            "brand_image": "shopify://shop_images/logo-hakro-1c.svg",
             "brand_url": ""
           }
         },
         "brand_item_Ey8mef": {
           "type": "brand-item",
           "settings": {
-            "brand_image": "shopify://shop_images/logo-jn-1c_1.svg",
             "brand_url": ""
           }
         }
       },
-      "block_order": ["brand_item_MBxLa4", "brand_item_Ey8mef"],
+      "block_order": [
+        "brand_item_MBxLa4",
+        "brand_item_Ey8mef"
+      ],
       "settings": {
         "headline": "Unsere workwear marken",
         "all_brands_url": ""
@@ -351,7 +338,6 @@
         "feature_item_pLdMgN": {
           "type": "feature-item",
           "settings": {
-            "image": "shopify://shop_images/icon-lieferzeit-1c.svg",
             "description": "Riesige Auswahl & Lieferzeit i.d.R. 1-2 Werktage",
             "cta_label": "",
             "cta_url": ""
@@ -360,7 +346,6 @@
         "feature_item_YnyEXV": {
           "type": "feature-item",
           "settings": {
-            "image": "shopify://shop_images/icon-kundenservice-1c.svg",
             "description": "Hast Du Fragen? Unsere Experten helfen gerne weiter.",
             "cta_label": "",
             "cta_url": ""
@@ -369,63 +354,16 @@
         "feature_item_cVMLLy": {
           "type": "feature-item",
           "settings": {
-            "image": "shopify://shop_images/icon-retoure-1c.svg",
             "description": "Falsches Produkt gewählt? Rücksendung kein Problem!",
             "cta_label": "",
             "cta_url": ""
           }
         }
       },
-      "block_order": ["feature_item_pLdMgN", "feature_item_YnyEXV", "feature_item_cVMLLy"],
-      "settings": {}
-    },
-    "tiktok_carousel_eXgY7g": {
-      "type": "tiktok-carousel",
-      "blocks": {
-        "reel_item_ETVQ6h": {
-          "type": "reel_item",
-          "settings": {
-            "video": "shopify://files/videos/Video 21.03.24, 13 25 09.mov"
-          }
-        },
-        "reel_item_B8khNQ": {
-          "type": "reel_item",
-          "settings": {
-            "video": "shopify://files/videos/Video 23.06.24, 12 02 22.mov"
-          }
-        },
-        "reel_item_jGwPka": {
-          "type": "reel_item",
-          "settings": {
-            "video": "shopify://files/videos/6483c5252cb14db697c690b5d50961e8.mov"
-          }
-        },
-        "reel_item_Qday6R": {
-          "type": "reel_item",
-          "settings": {
-            "video": "shopify://files/videos/6256999a80244d5ba0e233e90a79593f.mov"
-          }
-        },
-        "reel_item_aEHVtz": {
-          "type": "reel_item",
-          "settings": {
-            "video": "shopify://files/videos/afda8faec9b0401ebf2770462c74b5ef.mov"
-          }
-        },
-        "reel_item_nEyimT": {
-          "type": "reel_item",
-          "settings": {
-            "video": "shopify://files/videos/AVAssetExportPreset1920x1080.mov"
-          }
-        }
-      },
       "block_order": [
-        "reel_item_ETVQ6h",
-        "reel_item_B8khNQ",
-        "reel_item_jGwPka",
-        "reel_item_Qday6R",
-        "reel_item_aEHVtz",
-        "reel_item_nEyimT"
+        "feature_item_pLdMgN",
+        "feature_item_YnyEXV",
+        "feature_item_cVMLLy"
       ],
       "settings": {}
     }
@@ -439,7 +377,6 @@
     "brand_grid_AVdfX6",
     "brand_grid_hr8nUK",
     "brand_grid_NjfeMa",
-    "feature_section_B3AKqG",
-    "tiktok_carousel_eXgY7g"
+    "feature_section_B3AKqG"
   ]
 }
