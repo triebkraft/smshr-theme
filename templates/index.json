@@ -130,6 +130,7 @@
           "type": "small-teaser",
           "settings": {
             "title": "Teamsport",
+            "image": "shopify://shop_images/Leggings-Amaze-Scrunch-Pro-124144_11_0814ea67-e751-4726-b0c8-3ebd14476fb1.jpg",
             "url": "shopify://collections/teamsport-1"
           }
         },
@@ -144,6 +145,7 @@
           "type": "small-teaser",
           "settings": {
             "title": "VEREINSSHOP",
+            "image": "shopify://shop_images/banner-mannschaftsbild-1x1_4cc4f1e5-1bc3-4653-87f2-be72f40b3023.jpg",
             "url": "https://smshrs.com/collections"
           }
         }
