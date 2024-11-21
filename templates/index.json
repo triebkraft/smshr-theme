@@ -138,6 +138,7 @@
           "type": "small-teaser",
           "settings": {
             "title": "Tischtennis",
+            "image": "shopify://shop_images/DSC05736.jpg",
             "url": "shopify://collections/poloshirts"
           }
         },
