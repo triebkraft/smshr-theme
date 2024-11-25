@@ -16,7 +16,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/black-weed-banner-2560x1080-v2.jpg",
-            "heading": "ab dem 25. November",
+            "heading": "jetzt schnell zuschlagen",
             "caption": "SPARE WAS DAS ZEUG HÄLT!",
             "cta_label": "jetzt sparen",
             "url": "shopify://collections/teamsport-1"
@@ -63,7 +63,13 @@
           }
         }
       },
-      "block_order": ["slide_9Uj3bw", "slide_NAkeY3", "slide_tKD47w", "slide_Wktd6M", "slide_TfacYE"],
+      "block_order": [
+        "slide_9Uj3bw",
+        "slide_NAkeY3",
+        "slide_tKD47w",
+        "slide_Wktd6M",
+        "slide_TfacYE"
+      ],
       "settings": {
         "change_slides_speed": 5,
         "accessibility_info": "Slideshow about our brand"
@@ -89,7 +95,9 @@
           }
         }
       },
-      "block_order": ["regios_discounts_collection_page_discount_dMEcKM"],
+      "block_order": [
+        "regios_discounts_collection_page_discount_dMEcKM"
+      ],
       "settings": {
         "include_margins": true
       }
@@ -108,7 +116,9 @@
           }
         }
       },
-      "block_order": ["teaser_N6w9Mj"],
+      "block_order": [
+        "teaser_N6w9Mj"
+      ],
       "settings": {
         "headline": "Highlights"
       }
@@ -141,7 +151,11 @@
           }
         }
       },
-      "block_order": ["small_teaser_tKM4mJ", "small_teaser_8AzDne", "small_teaser_aiE89K"],
+      "block_order": [
+        "small_teaser_tKM4mJ",
+        "small_teaser_8AzDne",
+        "small_teaser_aiE89K"
+      ],
       "settings": {
         "headline": "Kategorien",
         "variant": "small"
@@ -339,7 +353,10 @@
           }
         }
       },
-      "block_order": ["brand_item_MBxLa4", "brand_item_Ey8mef"],
+      "block_order": [
+        "brand_item_MBxLa4",
+        "brand_item_Ey8mef"
+      ],
       "settings": {
         "headline": "Unsere workwear marken",
         "all_brands_url": ""
@@ -376,7 +393,11 @@
           }
         }
       },
-      "block_order": ["feature_item_pLdMgN", "feature_item_YnyEXV", "feature_item_cVMLLy"],
+      "block_order": [
+        "feature_item_pLdMgN",
+        "feature_item_YnyEXV",
+        "feature_item_cVMLLy"
+      ],
       "settings": {}
     },
     "tiktok_carousel_eXgY7g": {
