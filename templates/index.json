@@ -38,6 +38,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/banner-the-smash-2560x1080-final.jpg",
+            "mobile_image": "shopify://shop_images/banner-the-smash-2560x1080-final.jpg",
             "heading": "\"THE SMASH\"",
             "caption": "AB 150 € GRATIS IN DEN WARENKORB LEGEN!",
             "cta_label": "JETZT KAUFEN",
