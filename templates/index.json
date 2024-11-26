@@ -29,8 +29,8 @@
             "image": "shopify://shop_images/banner-vereinsshop-signatur-v3.jpg",
             "mobile_image": "shopify://shop_images/banner-vereinsshop-mobil-v2.jpg",
             "heading": "",
-            "caption": "ERSTELLT JETZT EUREN EIGENEN SHOP!",
-            "cta_label": "ZUM VEREINSSHOP",
+            "caption": "",
+            "cta_label": "",
             "url": "https://smshrs.com/collections"
           }
         },
