@@ -23,6 +23,17 @@
             "url": "shopify://collections/teamsport-1"
           }
         },
+        "slide_TfacYE": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/banner-vereinsshop-signatur-v3.jpg",
+            "mobile_image": "shopify://shop_images/banner-vereinsshop-mobil-v2.jpg",
+            "heading": "",
+            "caption": "ERSTELLT JETZT EUREN EIGENEN SHOP!",
+            "cta_label": "ZUM VEREINSSHOP",
+            "url": "https://smshrs.com/collections"
+          }
+        },
         "slide_NAkeY3": {
           "type": "slide",
           "settings": {
@@ -55,25 +66,14 @@
             "cta_label": "JETZT ANFRAGEN",
             "url": "shopify://pages/contact"
           }
-        },
-        "slide_TfacYE": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/banner-mannschaftsbild-2560x1080.jpg",
-            "mobile_image": "shopify://shop_images/banner-mannschaftsbild-2560x1080.jpg",
-            "heading": "VEREINSSHOP",
-            "caption": "ERSTELLT JETZT EUREN EIGENEN SHOP!",
-            "cta_label": "ZUM VEREINSSHOP",
-            "url": "https://smshrs.com/collections"
-          }
         }
       },
       "block_order": [
         "slide_9Uj3bw",
+        "slide_TfacYE",
         "slide_NAkeY3",
         "slide_tKD47w",
-        "slide_Wktd6M",
-        "slide_TfacYE"
+        "slide_Wktd6M"
       ],
       "settings": {
         "change_slides_speed": 5,
