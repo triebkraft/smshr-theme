@@ -1,4 +1,5 @@
 {% comment %}theme-check-disable UndefinedObject{% endcomment %}
+{{ 'footer.css' | asset_url | stylesheet_tag }}
 
 {% liquid
   assign default_address = shop.address.street | append: shop.address.city
