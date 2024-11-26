@@ -63,7 +63,9 @@ body{
   outline: 0;
   box-shadow: none;
 }
-
+*{
+  word-break: break-all;
+}
 @media screen and (max-width: 600px) {
   .animate-announcement-text {
     display: inline-block;
@@ -346,6 +348,10 @@ select {
   margin-bottom: var(--spacing-base);
   margin-left:  var(--spacing-base);
   margin-right:  var(--spacing-base);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 splide-carousel{

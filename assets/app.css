@@ -718,8 +718,16 @@ video {
   position: absolute;
 }
 
+.\!absolute {
+  position: absolute !important;
+}
+
 .relative {
   position: relative;
+}
+
+.\!relative {
+  position: relative !important;
 }
 
 .sticky {
@@ -1025,12 +1033,12 @@ video {
   aspect-ratio: 131 / 200;
 }
 
-.aspect-\[131_\/_220\] {
-  aspect-ratio: 131 / 220;
-}
-
 .aspect-\[1_\/_2\] {
   aspect-ratio: 1 / 2;
+}
+
+.aspect-\[25_\/_36\] {
+  aspect-ratio: 25 / 36;
 }
 
 .aspect-\[292_\/_520\] {
@@ -1067,6 +1075,30 @@ video {
 
 .aspect-video {
   aspect-ratio: 16 / 9;
+}
+
+.aspect-\[16_\/_27\] {
+  aspect-ratio: 16 / 27;
+}
+
+.aspect-\[64_\/_27\] {
+  aspect-ratio: 64 / 27;
+}
+
+.aspect-\[64_\/_50\] {
+  aspect-ratio: 64 / 50;
+}
+
+.aspect-\[365_\/_540\] {
+  aspect-ratio: 365 / 540;
+}
+
+.aspect-\[24_\/_27\] {
+  aspect-ratio: 24 / 27;
+}
+
+.aspect-\[375_\/_556\] {
+  aspect-ratio: 375 / 556;
 }
 
 .h-10 {
@@ -1196,6 +1228,10 @@ video {
 
 .h-normal {
   height: 20px;
+}
+
+.\!h-auto {
+  height: auto !important;
 }
 
 .max-h-\[216px\] {
@@ -1582,6 +1618,10 @@ video {
   gap: 0.75rem;
 }
 
+.gap-5 {
+  gap: 1.25rem;
+}
+
 .gap-8 {
   gap: 2rem;
 }
@@ -1687,6 +1727,10 @@ video {
 
 .self-baseline {
   align-self: baseline;
+}
+
+.\!overflow-auto {
+  overflow: auto !important;
 }
 
 .overflow-hidden {
@@ -2415,6 +2459,17 @@ video {
   background-color: unset;
 }
 
+@media (min-width: 300px) {
+  .min-\[300px\]\:text-h-md {
+    line-height: 80%;
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: "National 2 Compressed";
+    letter-spacing: 3%;
+  }
+}
+
 @media (min-width: 800px) {
   .md\:text-h-lg {
     line-height: 80%;
@@ -2429,6 +2484,26 @@ video {
     line-height: 80%;
     font-weight: 700;
     font-size: 40px;
+    text-transform: uppercase;
+    font-family: "National 2 Compressed";
+    letter-spacing: 3%;
+  }
+
+  .md\:text-mb-lg {
+    line-height: 80%;
+    font-weight: 700;
+    font-size: 60px;
+    text-transform: uppercase;
+    font-family: "National 2 Compressed";
+    letter-spacing: 3%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:text-h-lg {
+    line-height: 80%;
+    font-weight: 700;
+    font-size: 80px;
     text-transform: uppercase;
     font-family: "National 2 Compressed";
     letter-spacing: 3%;
@@ -2599,6 +2674,12 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+@media (min-width: 300px) {
+  .min-\[300px\]\:flex-row {
+    flex-direction: row;
+  }
+}
+
 @media (min-width: 380px) {
   .min-\[380px\]\:w-\[190px\] {
     width: 190px;
@@ -2612,12 +2693,66 @@ video {
 }
 
 @media (min-width: 400px) {
+  .tabletUp\:aspect-\[20_\/_27\] {
+    aspect-ratio: 20 / 27;
+  }
+
+  .tabletUp\:aspect-\[1100_\/_464\] {
+    aspect-ratio: 1100 / 464;
+  }
+
   .tabletUp\:h-huge {
     height: 48px;
+  }
+
+  .min-\[400px\]\:aspect-\[40_\/_17\] {
+    aspect-ratio: 40 / 17;
+  }
+}
+
+@media (min-width: 480px) {
+  .min-\[480px\]\:aspect-\[40_\/_17\] {
+    aspect-ratio: 40 / 17;
   }
 }
 
 @media (min-width: 640px) {
+  .sm\:block {
+    display: block;
+  }
+
+  .sm\:hidden {
+    display: none;
+  }
+
+  .sm\:aspect-\[40_\/_17\] {
+    aspect-ratio: 40 / 17;
+  }
+
+  .sm\:aspect-\[32_\/_17\] {
+    aspect-ratio: 32 / 17;
+  }
+
+  .sm\:aspect-\[32_\/_27\] {
+    aspect-ratio: 32 / 27;
+  }
+
+  .sm\:aspect-\[64_\/_27\] {
+    aspect-ratio: 64 / 27;
+  }
+
+  .sm\:aspect-auto {
+    aspect-ratio: auto;
+  }
+
+  .sm\:aspect-\[1100_\/_464\] {
+    aspect-ratio: 1100 / 464;
+  }
+
+  .sm\:h-auto {
+    height: auto;
+  }
+
   .sm\:shrink-0 {
     flex-shrink: 0;
   }
@@ -2636,6 +2771,11 @@ video {
 
   .sm\:flex-row {
     flex-direction: row;
+  }
+
+  .sm\:object-fill {
+    -o-object-fit: fill;
+       object-fit: fill;
   }
 
   .sm\:p-huge {
@@ -2679,12 +2819,12 @@ video {
     aspect-ratio: 326 / 580;
   }
 
-  .md\:aspect-\[40_\/_27\] {
-    aspect-ratio: 40 / 27;
-  }
-
   .md\:aspect-\[64\/45\] {
     aspect-ratio: 64/45;
+  }
+
+  .md\:aspect-\[40_\/_27\] {
+    aspect-ratio: 40 / 27;
   }
 
   .md\:h-96 {
@@ -2866,6 +3006,14 @@ video {
 
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:aspect-\[51_\/_27\] {
+    aspect-ratio: 51 / 27;
+  }
+
+  .lg\:aspect-\[51\.2_\/_27\] {
+    aspect-ratio: 51.2 / 27;
   }
 
   .lg\:\!h-\[167px\] {
@@ -3051,8 +3199,16 @@ video {
     aspect-ratio: 64 /27;
   }
 
+  .xl\:aspect-\[64_\/_27\] {
+    aspect-ratio: 64 / 27;
+  }
+
   .xl\:h-\[540px\] {
     height: 540px;
+  }
+
+  .xl\:h-full {
+    height: 100%;
   }
 
   .xl\:w-\[1280px\] {
