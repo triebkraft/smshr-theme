@@ -27,6 +27,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/happy-junior-football-team-posing.jpg",
+            "mobile_image": "shopify://shop_images/happy-junior-football-team-posing.jpg",
             "heading": "40% Teamsport SALE",
             "caption": "CODE: TEAMSPORT",
             "cta_label": "JETZT SPAREN",
