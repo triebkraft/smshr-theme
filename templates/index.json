@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
@@ -6,10 +15,11 @@
         "slide_9Uj3bw": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/black-weed-banner-2560x1080-v2.jpg",
-            "heading": "jetzt schnell zuschlagen",
-            "caption": "SPARE WAS DAS ZEUG HÄLT!",
-            "cta_label": "jetzt sparen",
+            "image": "shopify://shop_images/black-weed-banner-desk-2560x1080-V2.jpg",
+            "mobile_image": "shopify://shop_images/black-weed-banner-mobil-2560x1080-V2.jpg",
+            "heading": "",
+            "caption": "",
+            "cta_label": "",
             "url": "shopify://collections/teamsport-1"
           }
         },
