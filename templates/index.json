@@ -34,28 +34,6 @@
             "url": "https://smshrs.com/collections"
           }
         },
-        "slide_NAkeY3": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/happy-junior-football-team-posing.jpg",
-            "mobile_image": "shopify://shop_images/happy-junior-football-team-posing.jpg",
-            "heading": "40% Teamsport SALE",
-            "caption": "CODE: TEAMSPORT",
-            "cta_label": "JETZT SPAREN",
-            "url": "shopify://collections/trikots-t"
-          }
-        },
-        "slide_tKD47w": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/banner-the-smash-2560x1080-final.jpg",
-            "mobile_image": "shopify://shop_images/banner-the-smash-2560x1080-final.jpg",
-            "heading": "\"THE SMASH\"",
-            "caption": "AB 150 € GRATIS IN DEN WARENKORB LEGEN!",
-            "cta_label": "JETZT KAUFEN",
-            "url": "shopify://products/smshrs-trikot"
-          }
-        },
         "slide_Wktd6M": {
           "type": "slide",
           "settings": {
@@ -71,8 +49,6 @@
       "block_order": [
         "slide_9Uj3bw",
         "slide_TfacYE",
-        "slide_NAkeY3",
-        "slide_tKD47w",
         "slide_Wktd6M"
       ],
       "settings": {
