@@ -159,7 +159,7 @@
           "announcement_GfUqBx"
         ],
         "custom_css": [
-          ".text-h-xs.text-teal {font-size: 20px !important; color: white;}",
+          ".text-h-xs.text-teal {font-size: 24px !important; color: white;}",
           "@media (max-width: 768px) {/* für mobile Geräte */ .text-h-xs.text-teal {font-size: 14px !important; }}"
         ],
         "settings": {}
