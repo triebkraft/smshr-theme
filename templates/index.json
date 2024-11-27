@@ -33,11 +33,23 @@
             "cta_label": "",
             "url": "https://smshrs.com/collections"
           }
+        },
+        "slide_EheUYf": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/banner-cold-days-2560x1080.jpg",
+            "mobile_image": "shopify://shop_images/banner-cold-days-mobil-1080x1600.jpg",
+            "heading": "",
+            "caption": "",
+            "cta_label": "",
+            "url": "shopify://collections/funktionsunterwasche"
+          }
         }
       },
       "block_order": [
         "slide_9Uj3bw",
-        "slide_TfacYE"
+        "slide_TfacYE",
+        "slide_EheUYf"
       ],
       "settings": {
         "change_slides_speed": 5,
