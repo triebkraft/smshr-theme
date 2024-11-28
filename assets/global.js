@@ -1304,6 +1304,15 @@ class VariantSelects extends HTMLElement {
     if (modalContent && newModalContent) modalContent.innerHTML = newModalContent.innerHTML;
   }
 
+  updateProductCarousel(html) {
+    const mediaCarouselSource = html.getElementById(`product-media-carousel`);
+    const mediaCarouselDestination = document.getElementById(`product-media-carousel`);
+
+    if (!!(mediaCarouselDestination && mediaCarouselSource)) {
+      mediaCarouselDestination.innerHTML = mediaCarouselSource.innerHTML;
+    }
+  }
+
   renderProductInfo() {
     const requestedVariantId = this.currentVariant.id;
     const sectionId = this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section;
@@ -1336,6 +1345,7 @@ class VariantSelects extends HTMLElement {
         );
 
         this.updateMedia(html);
+        this.updateProductCarousel(html);
 
         const pricePerItemDestination = document.getElementById(`Price-Per-Item-${this.dataset.section}`);
         const pricePerItemSource = html.getElementById(

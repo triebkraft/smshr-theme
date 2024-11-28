@@ -73,9 +73,15 @@ class SplideCarousel extends HTMLElement {
 
   createCarouselWithThumbnail(carousel_id, options) {
     const id = `#${carousel_id}`;
+    const initialActiveIndex = Array.from(this.querySelectorAll('.splide__slide') ?? []).findIndex(
+      (elem) => elem.getAttribute('data-is_active') === 'true'
+    );
 
     try {
-      const splide = new Splide(id, options);
+      const splide = new Splide(id, {
+        ...options,
+        start: initialActiveIndex >= 0 ? initialActiveIndex : 0,
+      });
 
       function initThumbnail(thumbnail, index) {
         thumbnail?.addEventListener('click', function () {

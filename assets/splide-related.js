@@ -48,7 +48,6 @@ function createRelatedProducts(carouselId, options) {
       options
     );
 
-    console.log(carouselOptions);
     const related_carousel = new Splide(idSelector, carouselOptions);
 
     related_carousel.on('arrows:updated', disableCarouselArrows(idSelector));

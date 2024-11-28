@@ -9,7 +9,7 @@
   {% render 'product-image-carousel' %}
 {% endcomment %}
 
-<div>
+<div id="product-media-carousel">
   {% if product.media.size > 1 %}
     <splide-carousel
       data-id="main-carousel"
@@ -41,9 +41,18 @@
           </div>
 
           <div class="splide__track border border-grey100">
+            {% assign selected_variant = product.selected_or_first_available_variant %}
             <ul class="splide__list">
               {% for media in product.media %}
-                <li class="splide__slide">
+                {% liquid
+                  assign is_active_index = false
+
+                  if media.src == selected_variant.featured_image.src
+                    assign is_active_index = true
+                  endif
+                %}
+
+                <li class="splide__slide" data-is_active="{{ is_active_index }}">
                   {% if media.media_type == 'image' %}
                     <img
                       src="{{ media.src | image_url: width: 640 }}"
