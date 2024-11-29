@@ -20,6 +20,13 @@
 
       {% render 'delivery-option', product: product %}
 
+      {% render 'black-deal-badge',
+        badge_text: section.settings.badge_text,
+        black_edition_text: section.settings.black_edition_text,
+        black_info_icon: section.settings.info_icon,
+        black_edition_image: section.settings.black_edition_image
+      %}
+      
       {% render 'product-cta',
         product: product,
         product_form_id: product_form_id,

@@ -1,0 +1,21 @@
+{% comment %}
+  {% render 'black-deal-badge',
+    badge_text: section.settings.badge_text,
+    color_scheme: section.settings.color_scheme,
+    black_edition_text: section.settings.black_edition_text,
+    black_edition_image: section.settings.black_edition_image
+  %}
+{% endcomment %}
+
+<div class="black-edition-box">
+  <div class="black-deal">
+    <span>{{ badge_text }}</span>
+  </div>
+  <div class="black-edition">
+    <div class="edition-left-content">
+      <div class="info-icon"><img src="{{ black_info_icon | img_url: master }}"/></div>
+      <div class="info-icon-text">{{ black_edition_text }}</div>    
+    </div>
+    <div class="product-img"><img src="{{ black_edition_image | img_url: master }}"/></div>
+  </div>
+</div>
