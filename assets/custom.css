@@ -1,0 +1,14 @@
+.black-edition-box .black-deal { background-color: #002f35; clip-path: polygon(75% 0%, 100% 0, 89% 100%, 0% 100%, 0 50%, 0% 0%); padding: 7px 25px 7px 15px; border-radius: 6px 0 0 0; display: inline-block; margin: 10px 0; }
+.black-edition-box .black-deal span{ font-size: 16px; color: #fff; font-weight: 500; }
+.black-edition-box .black-edition{ display: flex; align-items: center; background-color: #f4f4f4; padding: 10px; border-radius: 7px; }
+.black-edition-box .edition-left-content{ display: flex; align-items: center; width: calc(100% - 50px); padding-right: 5px; }
+.black-edition-box .edition-left-content .info-icon{ width: 30px; }
+.black-edition-box .edition-left-content .info-icon-text{ width: calc(100% - 30px); padding-left: 10px; }
+.black-edition-box .product-img{ width: 50px; }
+.black-edition-box .edition-left-content .info-icon-text p { font-size: 12px; font-weight: 500; line-height: 1.2; color: #000; word-break: auto-phrase; }
+.black-edition-box .product-img img { width: 30px; margin: 0 0 0 auto; }
+
+
+
+
+
