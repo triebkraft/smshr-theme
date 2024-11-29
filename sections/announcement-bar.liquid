@@ -1,12 +1,12 @@
 {%- if section.blocks.first.settings.text != blank -%}
-  <div class="bg-sky py-[7px] md:py-[9px] text-center">
+  <div class="bg-black py-[7px] md:py-[9px] text-center">
     <div class="page-width px-base">
       <div
         role="region"
         aria-label="{{ 'sections.header.announcement' | t }}"
         class="overflow-hidden"
       >
-        <p class="text-teal text-h-xs !text-[16px] uppercase animate-announcement-text !leading-[80%] overflow-hidden">
+        <p class="text-white text-h-xs !text-[24px] animate-announcement-text overflow-hidden">
           {{ section.blocks.first.settings.text | escape }}
         </p>
       </div>

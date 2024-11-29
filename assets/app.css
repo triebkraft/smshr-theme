@@ -714,20 +714,20 @@ video {
   position: fixed;
 }
 
-.absolute {
-  position: absolute;
-}
-
 .\!absolute {
   position: absolute !important;
 }
 
-.relative {
-  position: relative;
+.absolute {
+  position: absolute;
 }
 
 .\!relative {
   position: relative !important;
+}
+
+.relative {
+  position: relative;
 }
 
 .sticky {
@@ -1037,16 +1037,16 @@ video {
   aspect-ratio: 1 / 2;
 }
 
-.aspect-\[25_\/_36\] {
-  aspect-ratio: 25 / 36;
-}
-
 .aspect-\[292_\/_520\] {
   aspect-ratio: 292 / 520;
 }
 
 .aspect-\[352_\/_342\] {
   aspect-ratio: 352 / 342;
+}
+
+.aspect-\[375_\/_556\] {
+  aspect-ratio: 375 / 556;
 }
 
 .aspect-\[3_\/_2\] {
@@ -1077,28 +1077,8 @@ video {
   aspect-ratio: 16 / 9;
 }
 
-.aspect-\[16_\/_27\] {
-  aspect-ratio: 16 / 27;
-}
-
-.aspect-\[64_\/_27\] {
-  aspect-ratio: 64 / 27;
-}
-
-.aspect-\[64_\/_50\] {
-  aspect-ratio: 64 / 50;
-}
-
-.aspect-\[365_\/_540\] {
-  aspect-ratio: 365 / 540;
-}
-
-.aspect-\[24_\/_27\] {
-  aspect-ratio: 24 / 27;
-}
-
-.aspect-\[375_\/_556\] {
-  aspect-ratio: 375 / 556;
+.\!h-auto {
+  height: auto !important;
 }
 
 .h-10 {
@@ -1230,16 +1210,8 @@ video {
   height: 20px;
 }
 
-.\!h-auto {
-  height: auto !important;
-}
-
 .max-h-\[216px\] {
   max-height: 216px;
-}
-
-.max-h-\[540px\] {
-  max-height: 540px;
 }
 
 .min-h-\[70vh\] {
@@ -1727,10 +1699,6 @@ video {
 
 .self-baseline {
   align-self: baseline;
-}
-
-.\!overflow-auto {
-  overflow: auto !important;
 }
 
 .overflow-hidden {
@@ -2251,8 +2219,8 @@ video {
   font-size: 10px !important;
 }
 
-.\!text-\[16px\] {
-  font-size: 16px !important;
+.\!text-\[24px\] {
+  font-size: 24px !important;
 }
 
 .text-body-md {
@@ -2488,15 +2456,6 @@ video {
     font-family: "National 2 Compressed";
     letter-spacing: 3%;
   }
-
-  .md\:text-mb-lg {
-    line-height: 80%;
-    font-weight: 700;
-    font-size: 60px;
-    text-transform: uppercase;
-    font-family: "National 2 Compressed";
-    letter-spacing: 3%;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -2693,26 +2652,8 @@ video {
 }
 
 @media (min-width: 400px) {
-  .tabletUp\:aspect-\[20_\/_27\] {
-    aspect-ratio: 20 / 27;
-  }
-
-  .tabletUp\:aspect-\[1100_\/_464\] {
-    aspect-ratio: 1100 / 464;
-  }
-
   .tabletUp\:h-huge {
     height: 48px;
-  }
-
-  .min-\[400px\]\:aspect-\[40_\/_17\] {
-    aspect-ratio: 40 / 17;
-  }
-}
-
-@media (min-width: 480px) {
-  .min-\[480px\]\:aspect-\[40_\/_17\] {
-    aspect-ratio: 40 / 17;
   }
 }
 
@@ -2725,32 +2666,12 @@ video {
     display: none;
   }
 
-  .sm\:aspect-\[40_\/_17\] {
-    aspect-ratio: 40 / 17;
-  }
-
-  .sm\:aspect-\[32_\/_17\] {
-    aspect-ratio: 32 / 17;
-  }
-
-  .sm\:aspect-\[32_\/_27\] {
-    aspect-ratio: 32 / 27;
-  }
-
-  .sm\:aspect-\[64_\/_27\] {
-    aspect-ratio: 64 / 27;
-  }
-
-  .sm\:aspect-auto {
-    aspect-ratio: auto;
-  }
-
   .sm\:aspect-\[1100_\/_464\] {
     aspect-ratio: 1100 / 464;
   }
 
-  .sm\:h-auto {
-    height: auto;
+  .sm\:aspect-auto {
+    aspect-ratio: auto;
   }
 
   .sm\:shrink-0 {
@@ -2771,11 +2692,6 @@ video {
 
   .sm\:flex-row {
     flex-direction: row;
-  }
-
-  .sm\:object-fill {
-    -o-object-fit: fill;
-       object-fit: fill;
   }
 
   .sm\:p-huge {
@@ -2823,10 +2739,6 @@ video {
     aspect-ratio: 64/45;
   }
 
-  .md\:aspect-\[40_\/_27\] {
-    aspect-ratio: 40 / 27;
-  }
-
   .md\:h-96 {
     height: 24rem;
   }
@@ -2861,10 +2773,6 @@ video {
 
   .md\:w-\[640px\] {
     width: 640px;
-  }
-
-  .md\:w-\[85\%\] {
-    width: 85%;
   }
 
   .md\:w-auto {
@@ -3006,14 +2914,6 @@ video {
 
   .lg\:hidden {
     display: none;
-  }
-
-  .lg\:aspect-\[51_\/_27\] {
-    aspect-ratio: 51 / 27;
-  }
-
-  .lg\:aspect-\[51\.2_\/_27\] {
-    aspect-ratio: 51.2 / 27;
   }
 
   .lg\:\!h-\[167px\] {
@@ -3195,20 +3095,8 @@ video {
     aspect-ratio: 2;
   }
 
-  .xl\:aspect-\[64_\/27\] {
-    aspect-ratio: 64 /27;
-  }
-
-  .xl\:aspect-\[64_\/_27\] {
-    aspect-ratio: 64 / 27;
-  }
-
   .xl\:h-\[540px\] {
     height: 540px;
-  }
-
-  .xl\:h-full {
-    height: 100%;
   }
 
   .xl\:w-\[1280px\] {
@@ -3267,10 +3155,6 @@ video {
 }
 
 @media (min-width: 1536px) {
-  .\32xl\:aspect-\[10_\/_3\] {
-    aspect-ratio: 10 / 3;
-  }
-
   .\32xl\:max-w-\[1400px\] {
     max-width: 1400px;
   }
