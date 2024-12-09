@@ -144,7 +144,7 @@
       "product-detail": {
         "type": "product-detail",
         "settings": {
-          "badge_text": "Black Week Deal",
+          "badge_text": "Christmas Sale",
           "black_edition_text": "<p>AB 60 € bekommst du ein KOSTENLOSES <br/>\"BLACK EDITION\" SHIRT zu jeder Bestellung </p>",
           "info_icon": "shopify://shop_images/info-circle.svg",
           "black_edition_image": "shopify://shop_images/black-friday-shirt-schwarz_1.png"
