@@ -206,7 +206,7 @@
           "type": "brand-item",
           "settings": {
             "brand_image": "shopify://shop_images/logo-mizuno-1c.svg",
-            "brand_url": ""
+            "brand_url": "shopify://collections/mizuno"
           }
         }
       },
