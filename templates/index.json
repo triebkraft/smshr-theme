@@ -201,6 +201,13 @@
             "brand_image": "shopify://shop_images/logo-yasaka-1c.svg",
             "brand_url": "shopify://collections/yasaka"
           }
+        },
+        "brand_item_qggggY": {
+          "type": "brand-item",
+          "settings": {
+            "brand_image": "shopify://shop_images/logo-mizuno-1c.svg",
+            "brand_url": ""
+          }
         }
       },
       "block_order": [
@@ -211,7 +218,8 @@
         "brand_item_zwhiVc",
         "brand_item_pdkQxX",
         "brand_item_iwgQ3z",
-        "brand_item_x9Ctjf"
+        "brand_item_x9Ctjf",
+        "brand_item_qggggY"
       ],
       "settings": {
         "headline": "Unsere Tischtennis Marken",
@@ -270,6 +278,12 @@
             "brand_url": "shopify://collections/kempa"
           }
         },
+        "brand_item_HJ6Tc4": {
+          "type": "brand-item",
+          "settings": {
+            "brand_url": ""
+          }
+        },
         "brand_item_EYAqWf": {
           "type": "brand-item",
           "settings": {
@@ -307,6 +321,7 @@
         "brand_item_3jGya4",
         "brand_item_4gy8DQ",
         "brand_item_Xk6kpP",
+        "brand_item_HJ6Tc4",
         "brand_item_EYAqWf",
         "brand_item_m8p3iE",
         "brand_item_BdKLDB",
