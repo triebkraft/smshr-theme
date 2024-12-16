@@ -239,7 +239,7 @@
           "type": "brand-item",
           "settings": {
             "brand_image": "shopify://shop_images/logo-adidas-1c_385accff-33b8-4184-8584-fb0196723bfc.svg",
-            "brand_url": "shopify://collections/teamsport-1"
+            "brand_url": "shopify://collections/adidas"
           }
         },
         "brand_item_WfgKTj": {
@@ -253,7 +253,7 @@
           "type": "brand-item",
           "settings": {
             "brand_image": "shopify://shop_images/logo-nike-1c_892d9adc-270c-4e19-bbbb-626d01d068a8.svg",
-            "brand_url": "shopify://collections/teamsport-1"
+            "brand_url": "shopify://collections/nike"
           }
         },
         "brand_item_4gy8DQ": {
@@ -294,8 +294,8 @@
         "brand_item_THWpgA": {
           "type": "brand-item",
           "settings": {
-            "brand_image": "shopify://shop_images/logo-mizuno-1c_91709975-a3ba-4436-b5a5-770c4feb661e.svg",
-            "brand_url": ""
+            "brand_image": "shopify://shop_images/logo-jako-1c.svg",
+            "brand_url": "shopify://collections/jako"
           }
         }
       },
