@@ -986,6 +986,10 @@ video {
   margin-top: 8px;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -1416,6 +1420,10 @@ video {
 
 .max-w-\[960px\] {
   max-width: 960px;
+}
+
+.max-w-4xl {
+  max-width: 56rem;
 }
 
 .flex-1 {
@@ -2283,10 +2291,6 @@ video {
 
 .\!leading-5 {
   line-height: 1.25rem !important;
-}
-
-.\!leading-\[80\%\] {
-  line-height: 80% !important;
 }
 
 .leading-4 {
