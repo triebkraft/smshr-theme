@@ -14,21 +14,25 @@
   }
 {%- endstyle -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="contact page-width page-width--narrow section-{{ section.id }}-padding">
+<div class="gradient">
+  <div class="contact smshr-section section-{{ section.id }}-padding">
     {%- if section.settings.heading != blank -%}
-      <h2 class="title title-wrapper--no-top-margin inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      <h2 class="title text-h-md text-center {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         {{ section.settings.heading }}
       </h2>
     {%- else -%}
       <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
     {%- endif -%}
     {%- liquid
-      assign contact_form_class = 'isolate'
-      if settings.animations_reveal_on_scroll
-        assign contact_form_class = 'isolate scroll-trigger animate--slide-in'
-      endif
+      assign contact_form_class = 'isolate mt-10 max-w-4xl mx-auto'
     -%}
+
+    {% comment %}
+      if settings.animations_reveal_on_scroll
+        assign contact_form_class = 'isolate mt-10 scroll-trigger animate--slide-in'
+      endif
+    {% endcomment %}
+
     {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
       {%- if form.posted_successfully? -%}
         <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
@@ -54,7 +58,7 @@
       <div class="contact__fields">
         <div class="field">
           <input
-            class="field__input"
+            class="field__input input"
             autocomplete="name"
             type="text"
             id="ContactForm-name"
@@ -69,7 +73,7 @@
             autocomplete="email"
             type="email"
             id="ContactForm-email"
-            class="field__input"
+            class="field__input input"
             name="contact[email]"
             spellcheck="false"
             autocapitalize="off"
@@ -97,11 +101,13 @@
           {%- endif -%}
         </div>
       </div>
+
+      {% comment %} <div class="contact__fields items-start"> {% endcomment %}
       <div class="field">
         <input
           type="tel"
           id="ContactForm-phone"
-          class="field__input"
+          class="field__input input"
           autocomplete="tel"
           name="contact[{{ 'templates.contact.form.phone' | t }}]"
           pattern="[0-9\-]*"
@@ -112,9 +118,9 @@
       </div>
       <div class="field">
         <textarea
-          rows="10"
+          rows="5"
           id="ContactForm-body"
-          class="text-area field__input"
+          class="text-area field__input input text-area"
           name="contact[{{ 'templates.contact.form.comment' | t }}]"
           placeholder="{{ 'templates.contact.form.comment' | t }}"
         >
@@ -124,10 +130,19 @@
           {{- 'templates.contact.form.comment' | t -}}
         </label>
       </div>
-      <div class="contact__button">
-        <button type="submit" class="button">
-          {{ 'templates.contact.form.send' | t }}
-        </button>
+      {% comment %} </div> {% endcomment %}
+      <div class="mt-4 flex justify-center">
+        {%- liquid
+          assign btn_text = 'templates.contact.form.send' | t
+        -%}
+
+        {% render 'button',
+          variant: 'primary',
+          size: 'lg',
+          text: btn_text,
+          classes: 'w-full max-w-[480px]',
+          type: 'submit'
+        %}
       </div>
     {%- endform -%}
   </div>

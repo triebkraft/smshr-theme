@@ -1,0 +1,15 @@
+{% liquid
+  assign contact = settings.social_whatapp_contact | default: '491732125674'
+  assign message = settings.social_whatapp_message | default: 'Hello there'
+
+  assign encoded_message = message | replace: ' ', '%20'
+  assign whatsapp_url = 'https://wa.me/' | append: contact | append: '?text=' | append: encoded_message
+%}
+
+<a
+  href="{{ whatsapp_url }}"
+  class="sticky flex items-center w-10 bottom-4 left-2 mb-2 z-50 md:hidden"
+  target="_blank"
+>
+  {% render 'icon-whatsapp', class: 'w-10 h-10' %}
+</a>
