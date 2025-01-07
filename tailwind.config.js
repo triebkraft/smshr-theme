@@ -80,6 +80,9 @@ module.exports = {
       backgroundImage: {
         btnGradient: 'linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%)',
       },
+      boxShadow: {
+        whatsapp: '2px 2px 3px #999',
+      },
       spacing: {
         micro: 2,
         mini: 4,

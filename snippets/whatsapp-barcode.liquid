@@ -1,0 +1,17 @@
+{% liquid
+  assign contact = settings.social_whatapp_contact | default: '491732125674'
+  assign message = settings.social_whatapp_message | default: 'Hello there'
+
+  assign encoded_message = message | replace: ' ', '%20'
+  assign whatsapp_url = 'https://wa.me/' | append: contact | append: '?text=' | append: encoded_message
+%}
+
+<img
+  id="barcode"
+  src="https://quickchart.io/qr?text={{ whatsapp_url }}&size=120&margin=2"
+  alt=""
+  title="Whatsapp QR code"
+  width="120"
+  height="120"
+  class="hidden md:block"
+>
