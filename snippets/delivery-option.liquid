@@ -72,13 +72,13 @@
     <div class="{{ icon_class }} w-base h-base">
       {% case availability %}
         {% when 'in_stock' %}
-          {% render 'icon-truck-fast', svgClass: {{icon_class}} %}
+          {% render 'icon-truck-fast', svgClass: icon_class %}
         {% when 'ordered' %}
-          {% render 'icon-clock', svgClass: {{icon_class}} %}
+          {% render 'icon-clock', svgClass: icon_class %}
         {% when 'soon' %}
-          {% render 'icon-clock', svgClass: {{icon_class}} %}
+          {% render 'icon-clock', svgClass: icon_class %}
         {% when 'unavailable' %}
-          {% render 'icon-circle-exclamation', svgClass: {{icon_class}} %}
+          {% render 'icon-circle-exclamation', svgClass: icon_class %}
       {% endcase %}
     </div>
 
@@ -91,3 +91,22 @@
     </p>
   </div>
 </product-availability>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% render 'icon-truck-fast', svgClass: {{icon_class}} %}"
+  to: "{% render 'icon-truck-fast', svgClass: icon_class %}"
+  position: 2045..2097
+- from: "{% render 'icon-clock', svgClass: {{icon_class}} %}"
+  to: "{% render 'icon-clock', svgClass: icon_class %}"
+  position: 2137..2184
+- from: "{% render 'icon-clock', svgClass: {{icon_class}} %}"
+  to: "{% render 'icon-clock', svgClass: icon_class %}"
+  position: 2221..2268
+- from: "{% render 'icon-circle-exclamation', svgClass: {{icon_class}} %}"
+  to: "{% render 'icon-circle-exclamation', svgClass: icon_class %}"
+  position: 2312..2372
+{% endcomment %}

@@ -357,7 +357,7 @@
                           </show-more-button>
                         {%- endif %}
                       </div>
-                    {% when 'farbe', %}
+                    {% when 'farbe' %}
                       <div
                         id="Facet-{{ forloop.index }}-{{ section.id }}"
                         class="parent-display mt-small facets__display-vertical"
@@ -554,3 +554,13 @@
     </form>
   </facet-filters-form>
 </div>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% when 'farbe', %}"
+  to: "{% when 'farbe' %}"
+  position: 17873..17891
+{% endcomment %}

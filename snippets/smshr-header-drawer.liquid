@@ -49,7 +49,7 @@
                             class="menu-drawer__close-button link link--text focus-inset flex gap-mini items-start pb-base"
                             aria-expanded="true"
                           >
-                            {% render 'icon-chevron-left' class="w-4 h-4" %}
+                            {% render 'icon-chevron-left' %}
                             {% comment %} {{ link.title | escape }} {% endcomment %}
                             <span class="text-t-xs inline-block"> Back </span>
                           </button>
@@ -151,3 +151,13 @@
     </div>
   </details>
 </header-drawer>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: '{% render ''icon-chevron-left'' class="w-4 h-4" %}'
+  to: "{% render 'icon-chevron-left' %}"
+  position: 2639..2671
+{% endcomment %}
